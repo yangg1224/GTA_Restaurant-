@@ -146,9 +146,35 @@ simulated_dataset_treated <-
                  size = number_of_observations_treated , 
                  replace = TRUE,
                  prob = c(0.1, 0.9)),
+    
+
   )  
 
+#Q11
 
+#big restaurant (number of employees >30)
+Q11_b<-
+  filter(simulated_dataset_treated, simulated_dataset_treated$Q8 == ">30") 
+
+Q11_b$Q11<- 
+  tibble(
+     fixed_cost= rnorm(n=nrow(Q11_b) , mean=14275, sd=3248) %>% round(digits = 0)
+    )
+#small restaurant (number of employees <30)
+Q11_s<-
+  filter(simulated_dataset_treated, simulated_dataset_treated$Q8 != ">30") 
+
+Q11_s$Q11<- 
+  tibble(
+    fixed_cost = rnorm(n=nrow(Q11_s) , mean=4567, sd=843) %>% round(digits = 0))
+
+## combine two sub group and rename the column Q11
+simulated_dataset_treated<- rbind(Q11_b,Q11_s) 
+
+
+
+
+# Control group
 number_of_observations_control <- 1637
 simulated_dataset_control <- 
   tibble(
@@ -194,7 +220,7 @@ simulated_dataset_control <-
   )  
 
 # Create the simulated dataset
-simulated_dataset <- 
+simulated_dataset <-
   rbind(simulated_dataset_control, simulated_dataset_treated)
 
 # Is there a more efficient way to do this?
