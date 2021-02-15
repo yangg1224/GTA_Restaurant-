@@ -12,6 +12,7 @@
 library(tidyverse)
 
 
+# Q2: first three digits of your postal code?
 # Function that takes a region and generates a random FSA code within that region
 # An FSA code is the first three letters of a postal code
 fsa_generate <- function(region) {
@@ -88,8 +89,8 @@ fsa_generate <- function(region) {
 
 
 #### Simulate questions ####
-# Q1: What is the first three digits of your postal code?
-# Q2: Which municipality is your restaurant located in?
+# Q1: Which municipality is your restaurant located in?
+# Q2: What is the first three digits of your postal code?
 # Q3: What is the type of your restaurant?
 # Q4: Is your restaurant a franchise?
 # Q5: How long has your restaurant been open (in years)?
@@ -107,7 +108,7 @@ number_of_observations_treated <- 1637
 simulated_dataset_treated <- 
   tibble(
     type = rep("Treated", number_of_observations_treated),
-    Q2 = sample(x = c("Toronto", "Durham", "York", "Peel", "Halton"),
+    Q1 = sample(x = c("Toronto", "Durham", "York", "Peel", "Halton"),
                 size = number_of_observations_treated,
                 replace = TRUE,
                 prob = c(0.295, 0.128, 0.219, 0.246, 0.11)),
@@ -153,7 +154,7 @@ number_of_observations_control <- 1637
 simulated_dataset_control <- 
   tibble(
     type = rep("Control", number_of_observations_control),
-    Q2 = sample(x = c("Toronto", "Durham", "York", "Peel", "Halton"),
+    Q1 = sample(x = c("Toronto", "Durham", "York", "Peel", "Halton"),
                 size = number_of_observations_control,
                 replace = TRUE,
                 prob = c(0.295, 0.128, 0.219, 0.246, 0.11)),
@@ -217,7 +218,7 @@ write_csv(simulated_dataset, 'inputs/simulated_data.csv')
 #### Make some graphs very quickly
 
 simulated_dataset %>% 
-  ggplot(aes(x = Q2)) +
+  ggplot(aes(x = Q1)) +
   geom_bar(stat="count") +
   labs(x = "Toronto regions",
        y = "Number of restaurants") +
