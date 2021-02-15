@@ -217,6 +217,7 @@ write_csv(simulated_dataset, 'inputs/simulated_data.csv')
 
 #### Make some graphs very quickly
 
+# Plot number of restaurants by region
 simulated_dataset %>% 
   ggplot(aes(x = Q1)) +
   geom_bar(stat="count") +
@@ -226,7 +227,7 @@ simulated_dataset %>%
   facet_wrap(vars(type))
 
 
-
+# Visualize restaurants of each type
 simulated_dataset %>% 
   ggplot(aes(x = Q3)) +
   geom_bar(stat="count") +
@@ -235,7 +236,7 @@ simulated_dataset %>%
        y = "Number of restaurants") +
   scale_fill_brewer(palette = "Set1")
 
-
+# Distribution of years in operation
 simulated_dataset %>% 
   ggplot(aes(x = Q5)) +
   geom_histogram() +
