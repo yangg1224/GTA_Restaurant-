@@ -95,6 +95,7 @@ fsa_generate <- function(region) {
 # Q5: How long has your restaurant been open (in years)?
 # Q6: Have you offered a takeout service in the past month?
 # Q7: Have you offered a delivery service in the past month?
+# Q8: Number of employees in the restaurant
 # Q9: On average, how much do your restaurant employees earn per hour ($CAD)?
 # Q10: Has your restaurant been a site of a potential COVID case?
 
@@ -133,12 +134,18 @@ simulated_dataset_treated <-
                 replace = TRUE,
                 prob = c(0.41,0.59)),
     
+    Q8 = sample(x=c("1-10","10-20","20-30",">30"),
+                size = number_of_observations_treated ,
+                replace = TRUE,
+                prob = (c(0.35,0.47,0.12,0.06))
+                ),
+    
     Q9 = rnorm(n= number_of_observations_treated , mean=18.34, sd= 2.5) %>% round(digits = 2),
     
     Q10 = sample(x=c("Yes","No"),
                  size = number_of_observations_treated , 
                  replace = TRUE,
-                 prob = c(0.1, 0.9))
+                 prob = c(0.1, 0.9)),
   )  
 
 
@@ -172,6 +179,11 @@ simulated_dataset_control <-
                 size = number_of_observations_control ,
                 replace = TRUE,
                 prob = c(0.47,0.53)),
+    
+    Q8 = sample(x=c("1-10","10-20","20-30",">30"),
+                size = number_of_observations_control ,
+                replace = TRUE,
+                prob = c(0.51,0.45,0.035,0.005)),
     
     Q9 = rnorm(n= number_of_observations_control , mean=17.35, sd= 2.5) %>% round(digits = 2),
     
