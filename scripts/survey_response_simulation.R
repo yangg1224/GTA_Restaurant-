@@ -156,11 +156,11 @@ big_restaurant<-
 
 big_restaurant<- cbind(big_restaurant,
   tibble(
-     Q11 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+     Q11 = sample(sample(x=c("Increase","Decrease","No change"), 
                          size=nrow(big_restaurant),
                          replace=TRUE,
                          prob=c(0.62,0.01,0.37))),
-     Q12 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+     Q12 = sample(sample(x=c("Increase","Decrease","No change"), 
                          size=nrow(big_restaurant),
                          replace=TRUE,
                          prob=c(0.91,0.01,0.01))),
@@ -172,11 +172,11 @@ small_restaurant<-
 
 small_restaurant<- cbind(small_restaurant,
   tibble(
-    Q11 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+    Q11 = sample(sample(x=c("Increase","Decrease","No change"), 
                         size=nrow(small_restaurant),
                         replace=TRUE,
                         prob=c(0.52,0.02,0.46))),
-    Q12 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+    Q12 = sample(sample(x=c("Increase","Decrease","No change"), 
                         size=nrow(small_restaurant),
                         replace=TRUE,
                         prob=c(0.84,0.03,0.13))),
@@ -240,11 +240,11 @@ big_restaurant_c<-
 
 big_restaurant_c<- cbind(big_restaurant_c,
                        tibble(
-                         Q11 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                         Q11 = sample(sample(x=c("Increase","Decrease","No change"), 
                                              size=nrow(big_restaurant_c),
                                              replace=TRUE,
                                              prob=c(0.02,0.01,0.97))),
-                         Q12 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                         Q12 = sample(sample(x=c("Increase","Decrease","No change"), 
                                              size=nrow(big_restaurant_c),
                                              replace=TRUE,
                                              prob=c(0.02,0.01,0.97))),
@@ -256,11 +256,11 @@ small_restaurant_c<-
 
 small_restaurant_c<- cbind(small_restaurant_c,
                          tibble(
-                           Q11 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                           Q11 = sample(sample(x=c("Increase","Decrease","No change"), 
                                                size=nrow(small_restaurant_c),
                                                replace=TRUE,
                                                prob=c(0.01,0.01,0.98))),
-                           Q12 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                           Q12 = sample(sample(x=c("Increase","Decrease","No change"), 
                                                size=nrow(small_restaurant_c),
                                                replace=TRUE,
                                                prob=c(0.01,0.02,0.97))),
