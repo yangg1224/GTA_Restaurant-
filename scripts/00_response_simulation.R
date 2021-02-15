@@ -1,8 +1,8 @@
 #### Preamble ####
 # Purpose: This script simulates the responses to a survey about restaurants in Toronto.
-# Author: Yingying Zhou, Xinyi Xu
+# Author: Yingying Zhou, Xinyi Xu, Adrian Wong
 # Data: 14 February 2021
-# Contact: yingying.zhou@utoronto.ca; xiny.xu@mail.utoronto.ca; 
+# Contact: yingying.zhou@utoronto.ca; xiny.xu@mail.utoronto.ca; adr.wong@mail.utoronto.ca 
 # License: MIT
 # Pre-requisites: 
 # - None
@@ -10,8 +10,11 @@
 
 #### Workspace setup ####
 library(tidyverse)
+#install.packages("here")
+library(here)
 
 
+# For Q2: first three digits of your postal code?
 # Function that takes a region and generates a random FSA code within that region
 # An FSA code is the first three letters of a postal code
 fsa_generate <- function(region) {
@@ -88,8 +91,8 @@ fsa_generate <- function(region) {
 
 
 #### Simulate questions ####
-# Q1: What is the first three digits of your postal code?
-# Q2: Which municipality is your restaurant located in?
+# Q1: Which municipality is your restaurant located in?
+# Q2: What is the first three digits of your postal code?
 # Q3: What is the type of your restaurant?
 # Q4: Is your restaurant a franchise?
 # Q5: How long has your restaurant been open (in years)?
@@ -101,13 +104,12 @@ fsa_generate <- function(region) {
 
 
 # Do this one for treated and once for control and then bring them together
-
 set.seed(116)
 number_of_observations_treated <- 1637
 simulated_dataset_treated <- 
   tibble(
     type = rep("Treated", number_of_observations_treated),
-    Q2 = sample(x = c("Toronto", "Durham", "York", "Peel", "Halton"),
+    Q1 = sample(x = c("Toronto", "Durham", "York", "Peel", "Halton"),
                 size = number_of_observations_treated,
                 replace = TRUE,
                 prob = c(0.295, 0.128, 0.219, 0.246, 0.11)),
@@ -193,7 +195,7 @@ number_of_observations_control <- 1637
 simulated_dataset_control <- 
   tibble(
     type = rep("Control", number_of_observations_control),
-    Q2 = sample(x = c("Toronto", "Durham", "York", "Peel", "Halton"),
+    Q1 = sample(x = c("Toronto", "Durham", "York", "Peel", "Halton"),
                 size = number_of_observations_control,
                 replace = TRUE,
                 prob = c(0.295, 0.128, 0.219, 0.246, 0.11)),
@@ -278,27 +280,43 @@ simulated_dataset_control<- rbind(small_restaurant_c,big_restaurant_c)
 simulated_dataset <-
   rbind(simulated_dataset_control, simulated_dataset_treated)
 
-# Is there a more efficient way to do this?
-# I essentially loop through all of the rows and generate an FSA code based on the row's region
+# Loop through all of the rows and generate an FSA code based on the row's region
 for (i in 1:nrow(simulated_dataset)){
-  simulated_dataset$Q1[i] = fsa_generate(simulated_dataset$Q2[i])
+  simulated_dataset$Q2[i] = fsa_generate(simulated_dataset$Q1[i])
 }
 
+<<<<<<< HEAD:scripts/survey_response_simulation.R
 # Order Q1 before Q2 (not actually necessary)
 simulated_dataset <- simulated_dataset[c(1, 14, 2:13)]
+=======
+# Order Q2 after Q1 (not actually necessary but useful if doing index-based calculations on columns)
+simulated_dataset <- simulated_dataset[c(1:2, 11, 3:10)]
+
+
+
+
+
+>>>>>>> 40c806680ba975d218bf1fcf564237da81ab7467:scripts/00_response_simulation.R
 
 
 
 #### Save and clean-up
-write_csv(simulated_dataset, 'inputs/simulated_data.csv')
+write_csv(simulated_dataset, here('inputs','data','simulated_data.csv'))
+
+
+
+
+
+
 
 
 
 
 #### Make some graphs very quickly
 
+# Plot number of restaurants by region
 simulated_dataset %>% 
-  ggplot(aes(x = Q2)) +
+  ggplot(aes(x = Q1)) +
   geom_bar(stat="count") +
   labs(x = "Toronto regions",
        y = "Number of restaurants") +
@@ -306,7 +324,7 @@ simulated_dataset %>%
   facet_wrap(vars(type))
 
 
-
+# Visualize restaurants of each type
 simulated_dataset %>% 
   ggplot(aes(x = Q3)) +
   geom_bar(stat="count") +
@@ -315,7 +333,7 @@ simulated_dataset %>%
        y = "Number of restaurants") +
   scale_fill_brewer(palette = "Set1")
 
-
+# Distribution of years in operation
 simulated_dataset %>% 
   ggplot(aes(x = Q5)) +
   geom_histogram() +
@@ -323,3 +341,9 @@ simulated_dataset %>%
   labs(x = "Years in operation",
        y = "Number of restaurants") +
   scale_color_brewer(palette = "Set1")
+
+simulated_dataset %>% 
+  ggplot(aes(x = Q1, y = type, color=Q1)) +
+  geom_jitter(show.legend = FALSE) +
+  labs(title = "Experimental Conditions across Regions", x = "Region", y = "Experimental Condition") +
+  theme_minimal()
