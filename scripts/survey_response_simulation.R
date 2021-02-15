@@ -149,27 +149,41 @@ simulated_dataset_treated <-
     
 
   )  
-
-#Q11
-
+# Q11 Q12 Q13
 #big restaurant (number of employees >30)
-Q11_b<-
+big_restaurant<-
   filter(simulated_dataset_treated, simulated_dataset_treated$Q8 == ">30") 
 
-Q11_b$Q11<- 
+big_restaurant<- cbind(big_restaurant,
   tibble(
-     fixed_cost= rnorm(n=nrow(Q11_b) , mean=14275, sd=3248) %>% round(digits = 0)
-    )
+     Q11 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                         size=nrow(big_restaurant),
+                         replace=TRUE,
+                         prob=c(0.62,0.01,0.37))),
+     Q12 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                         size=nrow(big_restaurant),
+                         replace=TRUE,
+                         prob=c(0.91,0.01,0.01))),
+     Q13 = rnorm(n=nrow(big_restaurant) , mean=142754, sd=32486) %>% round(digits = 0)
+    ))
 #small restaurant (number of employees <30)
-Q11_s<-
+small_restaurant<-
   filter(simulated_dataset_treated, simulated_dataset_treated$Q8 != ">30") 
 
-Q11_s$Q11<- 
+small_restaurant<- cbind(small_restaurant,
   tibble(
-    fixed_cost = rnorm(n=nrow(Q11_s) , mean=4567, sd=843) %>% round(digits = 0))
-
-## combine two sub group and rename the column Q11
-simulated_dataset_treated<- rbind(Q11_b,Q11_s) 
+    Q11 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                        size=nrow(small_restaurant),
+                        replace=TRUE,
+                        prob=c(0.52,0.02,0.46))),
+    Q12 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                        size=nrow(small_restaurant),
+                        replace=TRUE,
+                        prob=c(0.84,0.03,0.13))),
+    Q13 = rnorm(n=nrow(small_restaurant) , mean=45673, sd=8435) %>% round(digits = 0)
+  ))
+## combine two sub group 
+simulated_dataset_treated<- rbind(small_restaurant,big_restaurant) 
 
 
 
@@ -219,6 +233,47 @@ simulated_dataset_control <-
                  prob = c(0.01, 0.99))
   )  
 
+# Q11 Q12 Q13 control group
+#big restaurant (number of employees >30)
+big_restaurant_c<-
+  filter(simulated_dataset_control, simulated_dataset_control$Q8 == ">30") 
+
+big_restaurant_c<- cbind(big_restaurant_c,
+                       tibble(
+                         Q11 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                                             size=nrow(big_restaurant_c),
+                                             replace=TRUE,
+                                             prob=c(0.02,0.01,0.97))),
+                         Q12 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                                             size=nrow(big_restaurant_c),
+                                             replace=TRUE,
+                                             prob=c(0.02,0.01,0.97))),
+                         Q13 = rnorm(n=nrow(big_restaurant_c) , mean=131264, sd=32486) %>% round(digits = 0)
+                       ))
+#small restaurant (number of employees <30)
+small_restaurant_c<-
+  filter(simulated_dataset_control, simulated_dataset_control$Q8 != ">30") 
+
+small_restaurant_c<- cbind(small_restaurant_c,
+                         tibble(
+                           Q11 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                                               size=nrow(small_restaurant_c),
+                                               replace=TRUE,
+                                               prob=c(0.01,0.01,0.98))),
+                           Q12 = sample(sample(x=c("Increase","Decrease","Stay the same"), 
+                                               size=nrow(small_restaurant_c),
+                                               replace=TRUE,
+                                               prob=c(0.01,0.02,0.97))),
+                           Q13 = rnorm(n=nrow(small_restaurant_c) , mean=45673, sd=8435) %>% round(digits = 0)
+                         ))
+## combine two sub group 
+simulated_dataset_control<- rbind(small_restaurant_c,big_restaurant_c) 
+
+
+
+
+
+
 # Create the simulated dataset
 simulated_dataset <-
   rbind(simulated_dataset_control, simulated_dataset_treated)
@@ -230,7 +285,7 @@ for (i in 1:nrow(simulated_dataset)){
 }
 
 # Order Q1 before Q2 (not actually necessary)
-simulated_dataset <- simulated_dataset[c(1, 10, 2:9)]
+simulated_dataset <- simulated_dataset[c(1, 14, 2:13)]
 
 
 
