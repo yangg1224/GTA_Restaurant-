@@ -12,6 +12,81 @@
 library(tidyverse)
 
 
+# Function that takes a region and generates a random FSA code within that region
+# An FSA code is the first three letters of a postal code
+fsa_generate <- function(region) {
+  
+  # Toronto FSAs
+  if(region=="Toronto") {
+    return(paste("M", sample(c(0:9), 1), sample(LETTERS, 1), sep = ""))
+    
+    # Durham FSAs
+  } else if(region=="Durham") {
+    m <- sample(c(1, 9, 0), 1)
+    if (m==1){
+      l <- sample(c('G','H','J','K','L','M','N','P','R','V','W','X','Y','S','T','Z','B'), 1)
+    } else if(m==9){
+      l <- sample(c('P', 'L'), 1)
+    } else {
+      l <- sample(c('B','E','C'), 1)
+    }
+    return(paste("L", m, l, sep = ""))
+    
+    # York FSAs
+  } else if(region=="York") {
+    m <- sample(c(0, 3, 4, 6, 7, 9), 1)
+    if (m==0){
+      l <- sample(c('H','E','G','J','N'), 1)
+    } else if(m==3){
+      l <- sample(c('P', 'R','S','X','Y','Z'), 1)
+    } else if(m==4){
+      l <- sample(c('A','B','C','E','S','G','H','L','P'), 1)
+    } else if(m==6){
+      l <- sample(c('A','B','C','E','G'), 1)
+    } else if(m==7){
+      l <- sample(c('B', 'E'), 1)
+    } else {
+      l = "N"
+    }
+    return(paste("L", m, l, sep = ""))
+    
+    # Peel FSAs 
+  } else if(region=="Peel") {
+    m <- sample(c(4, 5, 6, 7), 1)
+    if (m==4){
+      l <- sample(c('T','V','W','X','Y','Z'), 1)
+    } else if(m==5){
+      l <- sample(c('A','B','C','E','G','H','J','K','L','M','N','P','R','S','T','V','W'), 1)
+    } else if(m==6){
+      l <- sample(c('P','R','S','T','V','W','X','Y','Z'), 1)
+    } else {
+      l <- sample(c('A','C','K'), 1)
+    }
+    return(paste("L", m, l, sep = ""))
+    
+    # Halton FSAs
+  } else if(region=="Halton") {
+    m <- sample(c(0, 6, 7, 9), 1)
+    if (m==0){
+      l = "P"
+    } else if(m==6){
+      l <- sample(c('H','J','K','L','M'), 1)
+    } else if(m==7){
+      l <- sample(c('L','M','N','P','R','S','T'), 1)
+    } else if(m==9){
+      l <- sample(c('E', 'T'), 1)
+    } else {
+      l = "N"
+    }
+    return(paste("L", m, l, sep = ""))
+    
+    # Return NULL if unknown region is used as an argument
+  } else{
+    return(NULL)
+  }
+}
+
+
 #### Simulate questions ####
 # Q1: What is the first three digits of your postal code?
 # Q2: Which municipality is your restaurant located in?
@@ -22,6 +97,7 @@ library(tidyverse)
 # Q7: Have you offered a delivery service in the past month?
 # Q9: On average, how much do your restaurant employees earn per hour ($CAD)?
 # Q10: Has your restaurant been a site of a potential COVID case?
+
 
 # Do this one for treated and once for control and then bring them together
 
@@ -105,14 +181,23 @@ simulated_dataset_control <-
                  prob = c(0.01, 0.99))
   )  
 
+# Create the simulated dataset
 simulated_dataset <- 
   rbind(simulated_dataset_control, simulated_dataset_treated)
+
+# Is there a more efficient way to do this?
+# I essentially loop through all of the rows and generate an FSA code based on the row's region
+for (i in 1:nrow(simulated_dataset)){
+  simulated_dataset$Q1[i] = fsa_generate(simulated_dataset$Q2[i])
+}
+
+# Order Q1 before Q2 (not actually necessary)
+simulated_dataset <- simulated_dataset[c(1, 10, 2:9)]
+
 
 
 #### Save and clean-up
 write_csv(simulated_dataset, 'inputs/simulated_data.csv')
-
-
 
 
 
