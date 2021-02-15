@@ -1,8 +1,8 @@
 #### Preamble ####
 # Purpose: This script simulates the responses to a survey about restaurants in Toronto.
-# Author: Yingying Zhou
+# Author: Yingying Zhou, Xinyi Xu
 # Data: 14 February 2021
-# Contact: yingying.zhou@utoronto.ca
+# Contact: yingying.zhou@utoronto.ca; xiny.xu@mail.utoronto.ca; 
 # License: MIT
 # Pre-requisites: 
 # - None
@@ -18,6 +18,10 @@ library(tidyverse)
 # Q3: What is the type of your restaurant?
 # Q4: Is your restaurant a franchise?
 # Q5: How long has your restaurant been open (in years)?
+# Q6: Have you offered a takeout service in the past month?
+# Q7: Have you offered a delivery service in the past month?
+# Q9: On average, how much do your restaurant employees earn per hour ($CAD)?
+# Q10: Has your restaurant been a site of a potential COVID case?
 
 # Do this one for treated and once for control and then bring them together
 
@@ -41,8 +45,24 @@ simulated_dataset_treated <-
                 replace = TRUE,
                 prob = c(0.35, 0.65)),
     
-    Q5 = rnorm(n = number_of_observations_treated, mean = 9, sd = 7) %>% round(digits = 0) %>% abs() # round years to nearest integer and non-negative
+    Q5 = rnorm(n = number_of_observations_treated, mean = 9, sd = 7) %>% round(digits = 0) %>% abs(), # round years to nearest integer and non-negative
     
+    Q6 = sample(x=c("Yes","No"),
+                size = number_of_observations_treated ,
+                replace = TRUE,
+                prob = c(0.87,0.13)),
+    
+    Q7 = sample(x=c("Yes","No"),
+                size = number_of_observations_treated ,
+                replace = TRUE,
+                prob = c(0.41,0.59)),
+    
+    Q9 = rnorm(n= number_of_observations_treated , mean=18.34, sd= 2.5) %>% round(digits = 2),
+    
+    Q10 = sample(x=c("Yes","No"),
+                 size = number_of_observations_treated , 
+                 replace = TRUE,
+                 prob = c(0.1, 0.9))
   )  
 
 
@@ -65,8 +85,24 @@ simulated_dataset_control <-
                 replace = TRUE,
                 prob = c(0.35, 0.65)),
     
-    Q5 = rnorm(n = number_of_observations_control, mean = 9, sd = 7) %>% round(digits = 0) %>% abs() # round years to nearest integer and non-negative
+    Q5 = rnorm(n = number_of_observations_control, mean = 9, sd = 7) %>% round(digits = 0) %>% abs() ,# round years to nearest integer and non-negative
     
+    Q6 = sample(x=c("Yes","No"),
+                size = number_of_observations_control ,
+                replace = TRUE,
+                prob = c(0.88,0.12)),
+    
+    Q7 = sample(x=c("Yes","No"),
+                size = number_of_observations_control ,
+                replace = TRUE,
+                prob = c(0.47,0.53)),
+    
+    Q9 = rnorm(n= number_of_observations_control , mean=17.35, sd= 2.5) %>% round(digits = 2),
+    
+    Q10 = sample(x=c("Yes","No"),
+                 size = number_of_observations_control , 
+                 replace = TRUE,
+                 prob = c(0.01, 0.99))
   )  
 
 simulated_dataset <- 
