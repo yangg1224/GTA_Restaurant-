@@ -1,0 +1,58 @@
+---
+title: "TITLE"
+author: "Adrian Wong, Yingying Zhou, Xinyi Xu, Yang Wu "
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+ bookdown::pdf_document2:
+ toc: no
+subtitle: "SUBTITLE"
+abstract: "ABSTRACT"
+thanks: 'Code and data are available at: https://github.com/yangg1224/groupproject-.git'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+```
+
+# Introduction
+```{r}
+
+```
+
+# Data
+
+## Intervention 
+
+## Data Gathering Method 
+
+## Descriptive Analysis
+
+```{r}
+
+```
+
+# Discussion
+
+## Overview 
+
+## Findings 
+
+### Finding ONE
+
+### Finding TWO
+
+### Finding THREE
+
+## Limitation
+
+## Future Directions 
+
+```{r}
+
+```
+
+\newpage
+
+# References
