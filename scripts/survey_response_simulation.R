@@ -98,9 +98,10 @@ fsa_generate <- function(region) {
 # Q8: Number of employees in the restaurant
 # Q9: On average, how much do your restaurant employees earn per hour ($CAD)?
 # Q10: Has your restaurant been a site of a potential COVID case?
-# Q11: Fixed cost per month to run the restaurant
-# Q12: flexible costs per month to run the restaurant 
-# Q13: Revenue per restaurant per month
+# Q11: How has your FIXED costs to run the restaurant changed within this month?
+# Q12: How has your FLEX/VARIABLE costs to run the restaurant changed within this month?
+# Q13: How much revenue did your restaurant make in the past month? ($CAD)
+
 # Do this one for treated and once for control and then bring them together
 
 set.seed(116)
@@ -294,6 +295,11 @@ simulated_dataset <- simulated_dataset[c(1, 14, 2:13)]
 write_csv(simulated_dataset, 'inputs/simulated_data.csv')
 
 
+#### Exploratory Data Analysis ####
+#### Statistical Inference ####
+revenue_c <- simulated_dataset_control$Q13
+revenue_t <- simulated_dataset_treated$Q13
+t.test(revenue_c, revenue_t)
 
 
 #### Make some graphs very quickly
@@ -324,3 +330,9 @@ simulated_dataset %>%
   labs(x = "Years in operation",
        y = "Number of restaurants") +
   scale_color_brewer(palette = "Set1")
+
+simulated_dataset %>% 
+  ggplot(aes(x = Q1, y = type, color=Q1)) +
+  geom_jitter(show.legend = FALSE) +
+  labs(title = "Experimental Conditions across Regions", x = "Region", y = "Experimental Condition") +
+  theme_minimal()
