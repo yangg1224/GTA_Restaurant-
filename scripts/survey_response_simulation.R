@@ -98,8 +98,9 @@ fsa_generate <- function(region) {
 # Q8: Number of employees in the restaurant
 # Q9: On average, how much do your restaurant employees earn per hour ($CAD)?
 # Q10: Has your restaurant been a site of a potential COVID case?
-
-
+# Q11: Fixed cost per month to run the restaurant
+# Q12: flexible costs per month to run the restaurant 
+# Q13: Revenue per restaurant per month
 # Do this one for treated and once for control and then bring them together
 
 set.seed(116)
@@ -150,9 +151,9 @@ simulated_dataset_treated <-
 
   )  
 # Q11 Q12 Q13
-#big restaurant (number of employees >30)
+#big restaurant (number of employees >20)
 big_restaurant<-
-  filter(simulated_dataset_treated, simulated_dataset_treated$Q8 == ">30") 
+  filter(simulated_dataset_treated, simulated_dataset_treated$Q8 == ">30" | simulated_dataset_treated$Q8 == "20-30") 
 
 big_restaurant<- cbind(big_restaurant,
   tibble(
@@ -166,9 +167,9 @@ big_restaurant<- cbind(big_restaurant,
                          prob=c(0.91,0.01,0.01))),
      Q13 = rnorm(n=nrow(big_restaurant) , mean=142754, sd=32486) %>% round(digits = 0)
     ))
-#small restaurant (number of employees <30)
+#small restaurant (number of employees <20)
 small_restaurant<-
-  filter(simulated_dataset_treated, simulated_dataset_treated$Q8 != ">30") 
+  filter(simulated_dataset_treated, simulated_dataset_treated$Q8 != ">30" & simulated_dataset_treated$Q8 != "20-30") 
 
 small_restaurant<- cbind(small_restaurant,
   tibble(
@@ -234,9 +235,9 @@ simulated_dataset_control <-
   )  
 
 # Q11 Q12 Q13 control group
-#big restaurant (number of employees >30)
+#big restaurant (number of employees >20)
 big_restaurant_c<-
-  filter(simulated_dataset_control, simulated_dataset_control$Q8 == ">30") 
+  filter(simulated_dataset_control, simulated_dataset_control$Q8 == ">30" | simulated_dataset_control$Q8 == "20-30") 
 
 big_restaurant_c<- cbind(big_restaurant_c,
                        tibble(
@@ -250,9 +251,9 @@ big_restaurant_c<- cbind(big_restaurant_c,
                                              prob=c(0.02,0.01,0.97))),
                          Q13 = rnorm(n=nrow(big_restaurant_c) , mean=131264, sd=32486) %>% round(digits = 0)
                        ))
-#small restaurant (number of employees <30)
+#small restaurant (number of employees <20)
 small_restaurant_c<-
-  filter(simulated_dataset_control, simulated_dataset_control$Q8 != ">30") 
+  filter(simulated_dataset_control, simulated_dataset_control$Q8 != ">30" & simulated_dataset_control$Q8 != "20-30") 
 
 small_restaurant_c<- cbind(small_restaurant_c,
                          tibble(
