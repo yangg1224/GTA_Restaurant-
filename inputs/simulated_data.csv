@@ -1640,7 +1640,7 @@ Treated,L6G,York,Fast Food,No,11,Yes,Yes,10-20,19.76,No,Decrease,Increase,40981
 Treated,L7C,Peel,Casual Dining,Franchise,6,Yes,No,10-20,14.5,No,Increase,Increase,50477
 Treated,M2R,Toronto,Fast Casual,Franchise,15,Yes,No,1-10,20.64,No,No change,Increase,54338
 Treated,M0B,Toronto,Fast Casual,No,12,Yes,Yes,10-20,15.79,No,Increase,Decrease,49935
-Treated,L4X,Peel,Casual Dining,No,8,No,Yes,1-10,18.84,No,Increase,Increase,38423
+Treated,L4X,Peel,Casual Dining,No,8,No,No,1-10,18.84,No,Increase,Increase,38423
 Treated,L7L,Halton,Fast Casual,Franchise,11,Yes,No,1-10,18.52,No,No change,Increase,55002
 Treated,M5H,Toronto,Casual Dining,Franchise,18,No,Yes,10-20,17.94,No,Increase,Increase,60426
 Treated,L7A,Peel,Casual Dining,Franchise,21,Yes,No,1-10,17.49,No,No change,No change,44964
@@ -1662,7 +1662,7 @@ Treated,L0H,York,Family Style,No,11,Yes,Yes,10-20,21.7,No,Increase,Increase,5922
 Treated,L7E,York,Family Style,No,9,Yes,No,1-10,17.59,No,No change,Increase,40666
 Treated,M2T,Toronto,Fast Casual,No,10,Yes,No,1-10,19.63,No,Increase,Increase,37334
 Treated,L1S,Durham,Casual Dining,Franchise,3,Yes,No,10-20,19.96,No,Increase,Decrease,55521
-Treated,M8F,Toronto,Casual Dining,Franchise,8,Yes,Yes,10-20,18.21,No,Increase,Increase,59838
+Treated,M8F,Toronto,Casual Dining,Franchise,8,No,No,10-20,18.21,No,Increase,Increase,59838
 Treated,L6M,Halton,Fast Casual,Franchise,8,Yes,No,1-10,13.91,No,No change,Increase,44157
 Treated,M0C,Toronto,Family Style,Franchise,3,Yes,No,10-20,16.86,No,Increase,Decrease,48750
 Treated,L0C,Durham,Casual Dining,No,7,Yes,No,1-10,23.74,No,Increase,Increase,47539
@@ -1697,14 +1697,14 @@ Treated,L9P,Durham,Casual Dining,Franchise,19,Yes,No,10-20,18.91,No,Decrease,No 
 Treated,L4C,York,Family Style,No,3,Yes,No,1-10,18.23,No,Increase,Increase,51834
 Treated,L7K,Peel,Fast Food,No,14,Yes,No,10-20,21.01,Yes,No change,Increase,57505
 Treated,M9V,Toronto,Casual Dining,No,12,Yes,No,10-20,22.23,No,No change,Increase,43465
-Treated,M3T,Toronto,Family Style,No,9,Yes,Yes,1-10,16.8,No,No change,Increase,43529
+Treated,M3T,Toronto,Family Style,No,9,No,No,1-10,16.8,No,No change,Increase,43529
 Treated,L3Y,York,Casual Dining,No,21,Yes,No,1-10,18.14,No,No change,Increase,51473
 Treated,L6G,York,Casual Dining,No,11,Yes,No,1-10,13.93,Yes,No change,No change,58859
 Treated,L7K,Peel,Family Style,No,5,Yes,No,10-20,17.02,No,Increase,Increase,56362
 Treated,L0H,York,Fast Casual,Franchise,1,Yes,No,10-20,17.99,No,No change,No change,37440
 Treated,M5N,Toronto,Fast Casual,No,1,Yes,No,10-20,22.79,No,Increase,Increase,38021
 Treated,L7C,Peel,Premium Casual,Franchise,13,Yes,Yes,1-10,18.1,No,Increase,Increase,37715
-Treated,L5R,Peel,Premium Casual,No,18,No,Yes,1-10,15.67,No,Increase,Increase,44059
+Treated,L5R,Peel,Premium Casual,No,18,No,No,1-10,15.67,No,Increase,Increase,44059
 Treated,M4T,Toronto,Fast Casual,No,14,Yes,No,10-20,18.85,No,Increase,No change,53299
 Treated,L7N,Halton,Fast Food,No,8,Yes,Yes,1-10,19.29,No,Increase,Increase,38674
 Treated,L7C,Peel,Fast Casual,No,1,Yes,No,1-10,18.12,No,No change,No change,49787
@@ -1715,8 +1715,8 @@ Treated,L0E,Durham,Family Style,Franchise,2,Yes,Yes,1-10,17.73,No,Increase,Incre
 Treated,L5V,Peel,Casual Dining,No,0,Yes,Yes,10-20,14.55,Yes,No change,Increase,61430
 Treated,L9E,Halton,Fast Casual,No,2,Yes,No,1-10,14.68,No,Decrease,Decrease,29445
 Treated,L9N,York,Fast Food,No,8,Yes,No,10-20,18.96,No,No change,Increase,41787
-Treated,L0E,Durham,Casual Dining,No,4,No,Yes,1-10,18.93,No,Increase,No change,43772
-Treated,L7K,Peel,Fast Casual,Franchise,3,Yes,Yes,10-20,16.14,No,Increase,Increase,37288
+Treated,L0E,Durham,Casual Dining,No,4,No,No,1-10,18.93,No,Increase,No change,43772
+Treated,L7K,Peel,Fast Casual,Franchise,3,No,No,10-20,16.14,No,Increase,Increase,37288
 Treated,M1D,Toronto,Casual Dining,No,8,Yes,Yes,10-20,17.76,No,Increase,Increase,42840
 Treated,M4Q,Toronto,Casual Dining,No,15,Yes,No,10-20,20.24,No,No change,Increase,32699
 Treated,L5V,Peel,Casual Dining,No,9,Yes,No,10-20,17.73,No,No change,No change,36172
@@ -1724,7 +1724,7 @@ Treated,L4Y,Peel,Family Style,Franchise,1,Yes,No,10-20,20.11,No,Increase,Increas
 Treated,L7E,York,Fast Casual,No,2,Yes,Yes,10-20,21.7,No,No change,Increase,44422
 Treated,L0P,Halton,Fast Casual,No,9,Yes,No,10-20,19.48,No,No change,Increase,51896
 Treated,L6R,Peel,Premium Casual,No,8,Yes,Yes,1-10,16.56,No,Increase,Increase,41977
-Treated,L6R,Peel,Casual Dining,No,14,Yes,No,10-20,18.4,Yes,Increase,Increase,50459
+Treated,L6R,Peel,Casual Dining,No,14,No,No,10-20,18.4,Yes,Increase,Increase,50459
 Treated,L0B,Durham,Casual Dining,No,4,Yes,No,10-20,17.48,No,Increase,Increase,43903
 Treated,L4Z,Peel,Fast Casual,No,6,Yes,No,10-20,19.76,No,No change,Increase,39797
 Treated,L3X,York,Fine Dining,No,15,Yes,No,10-20,15.66,No,No change,Increase,50210
@@ -1739,7 +1739,7 @@ Treated,L9L,Durham,Family Style,No,7,Yes,Yes,1-10,22.79,No,Increase,Increase,529
 Treated,M0G,Toronto,Fast Food,No,12,Yes,No,1-10,16.36,Yes,No change,Increase,31149
 Treated,L9E,Halton,Premium Casual,Franchise,7,No,Yes,1-10,13.51,No,Increase,No change,57674
 Treated,L9T,Halton,Family Style,No,4,Yes,Yes,10-20,20.05,No,Increase,Increase,41606
-Treated,L3Z,York,Premium Casual,No,13,Yes,Yes,10-20,20.13,No,Increase,Increase,47653
+Treated,L3Z,York,Premium Casual,No,13,No,No,10-20,20.13,No,Increase,Increase,47653
 Treated,L7C,Peel,Fast Food,No,16,Yes,No,1-10,18.73,No,Increase,Increase,35461
 Treated,L5T,Peel,Fast Casual,No,23,Yes,No,10-20,17.59,No,Decrease,Increase,49759
 Treated,L4W,Peel,Family Style,No,2,Yes,Yes,10-20,18.37,No,No change,Increase,51957
@@ -1748,7 +1748,7 @@ Treated,L0B,Durham,Family Style,Franchise,5,Yes,Yes,10-20,19.18,No,No change,Inc
 Treated,L3P,York,Premium Casual,Franchise,23,Yes,Yes,1-10,20.02,No,Increase,Increase,49761
 Treated,M7O,Toronto,Family Style,No,5,Yes,No,1-10,19.94,No,No change,Increase,52611
 Treated,L5L,Peel,Casual Dining,No,6,Yes,Yes,10-20,21.1,No,Increase,Increase,35854
-Treated,M0K,Toronto,Fast Casual,No,8,Yes,Yes,10-20,21.34,No,No change,Increase,47757
+Treated,M0K,Toronto,Fast Casual,No,8,No,No,10-20,21.34,No,No change,Increase,47757
 Treated,M1I,Toronto,Family Style,No,8,No,Yes,10-20,19.44,Yes,No change,Increase,53497
 Treated,M0C,Toronto,Family Style,No,15,Yes,Yes,1-10,19.71,No,Increase,Increase,48479
 Treated,M7F,Toronto,Fast Casual,Franchise,18,Yes,No,10-20,19.03,No,Increase,Increase,31849
@@ -1764,7 +1764,7 @@ Treated,M8D,Toronto,Family Style,Franchise,10,Yes,No,10-20,21.43,No,Increase,No 
 Treated,M2H,Toronto,Fast Food,No,13,Yes,No,10-20,20.88,No,Increase,Increase,34194
 Treated,L4Z,Peel,Family Style,No,16,Yes,No,10-20,15.69,Yes,No change,Increase,55388
 Treated,L5R,Peel,Casual Dining,No,10,No,Yes,1-10,19.61,No,Increase,Increase,33288
-Treated,L6T,Peel,Fast Food,Franchise,9,Yes,Yes,10-20,18.1,No,Increase,Increase,27053
+Treated,L6T,Peel,Fast Food,Franchise,9,No,No,10-20,18.1,No,Increase,Increase,27053
 Treated,M5T,Toronto,Casual Dining,No,19,No,Yes,10-20,22.07,No,Increase,No change,42419
 Treated,L9P,Durham,Fast Food,Franchise,21,Yes,Yes,10-20,17.11,No,No change,Increase,43454
 Treated,L5A,Peel,Family Style,No,7,Yes,No,1-10,14.98,No,No change,Increase,54370
@@ -1775,7 +1775,7 @@ Treated,L6B,York,Fine Dining,No,7,Yes,No,1-10,19.7,No,Increase,Increase,49180
 Treated,L6K,Halton,Fast Casual,Franchise,0,Yes,Yes,1-10,14.71,No,No change,Increase,27810
 Treated,M9U,Toronto,Fast Casual,Franchise,14,Yes,Yes,1-10,18.68,No,Increase,Increase,42849
 Treated,L6H,Halton,Fast Casual,No,4,Yes,No,10-20,19.24,No,No change,Increase,42033
-Treated,L0P,Halton,Family Style,Franchise,20,No,Yes,10-20,16.37,No,Increase,No change,47380
+Treated,L0P,Halton,Family Style,Franchise,20,No,No,10-20,16.37,No,Increase,No change,47380
 Treated,L9E,Halton,Casual Dining,No,19,Yes,Yes,1-10,15.34,No,Increase,No change,40064
 Treated,M8E,Toronto,Family Style,Franchise,10,Yes,No,1-10,17.25,No,Increase,Increase,57577
 Treated,L0J,York,Premium Casual,No,15,Yes,No,1-10,15.98,No,Increase,Increase,41551
@@ -1807,7 +1807,7 @@ Treated,L6M,Halton,Premium Casual,No,5,Yes,No,1-10,22.12,No,Increase,Increase,51
 Treated,L7C,Peel,Casual Dining,No,16,Yes,Yes,10-20,20.76,No,Increase,Increase,35043
 Treated,L6S,Peel,Casual Dining,No,6,Yes,Yes,1-10,20.4,No,Increase,Increase,45758
 Treated,L0E,Durham,Casual Dining,No,5,Yes,No,1-10,16.87,No,Increase,Increase,58381
-Treated,L9P,Durham,Fine Dining,Franchise,3,Yes,No,10-20,20.87,No,Increase,Increase,51950
+Treated,L9P,Durham,Fine Dining,Franchise,3,No,No,10-20,20.87,No,Increase,Increase,51950
 Treated,M7G,Toronto,Fast Food,No,11,Yes,Yes,10-20,21.32,No,Increase,Increase,29797
 Treated,M5V,Toronto,Casual Dining,Franchise,7,Yes,Yes,1-10,17.64,No,No change,Increase,33333
 Treated,M4X,Toronto,Casual Dining,No,10,Yes,No,1-10,19.15,No,Increase,Decrease,42090
@@ -1832,8 +1832,8 @@ Treated,L7R,Halton,Casual Dining,No,9,No,Yes,1-10,16.3,No,Increase,Increase,2111
 Treated,M7I,Toronto,Casual Dining,No,3,Yes,Yes,1-10,20.87,No,Increase,Increase,29390
 Treated,M7I,Toronto,Fast Casual,Franchise,12,Yes,Yes,1-10,17.52,No,No change,Increase,28597
 Treated,L9N,York,Premium Casual,No,21,No,Yes,10-20,13.79,No,Increase,Increase,39064
-Treated,M5D,Toronto,Fine Dining,No,7,No,Yes,1-10,22.84,Yes,Increase,Increase,45817
-Treated,L4P,York,Family Style,No,12,Yes,No,10-20,16.36,No,No change,No change,44737
+Treated,M5D,Toronto,Fine Dining,No,7,No,No,1-10,22.84,Yes,Increase,Increase,45817
+Treated,L4P,York,Family Style,No,12,No,No,10-20,16.36,No,No change,No change,44737
 Treated,M0J,Toronto,Fast Casual,No,5,Yes,No,1-10,20.25,No,No change,Increase,55425
 Treated,M6S,Toronto,Fast Food,No,3,Yes,Yes,10-20,15.09,No,Increase,No change,49852
 Treated,L9L,Durham,Casual Dining,No,9,Yes,Yes,10-20,21.3,No,Increase,Increase,42658
@@ -1851,9 +1851,9 @@ Treated,L6V,Peel,Family Style,Franchise,14,No,Yes,10-20,17.89,No,No change,Incre
 Treated,M2O,Toronto,Premium Casual,Franchise,3,Yes,No,10-20,17.6,No,No change,No change,29569
 Treated,L9N,York,Fast Food,No,10,Yes,Yes,10-20,19.92,No,Increase,Increase,66022
 Treated,L5J,Peel,Fast Casual,No,2,Yes,No,1-10,17.92,No,Increase,Increase,42899
-Treated,L6X,Peel,Casual Dining,No,15,No,Yes,1-10,17.76,No,Increase,Increase,56701
+Treated,L6X,Peel,Casual Dining,No,15,No,No,1-10,17.76,No,Increase,Increase,56701
 Treated,L0G,York,Premium Casual,No,7,Yes,Yes,10-20,14.58,No,No change,Increase,52114
-Treated,L0P,Halton,Family Style,No,0,Yes,Yes,10-20,20.22,No,Increase,Increase,47965
+Treated,L0P,Halton,Family Style,No,0,No,No,10-20,20.22,No,Increase,Increase,47965
 Treated,M1V,Toronto,Family Style,No,7,Yes,No,10-20,19.78,No,No change,Increase,44179
 Treated,L4Y,Peel,Premium Casual,No,3,Yes,No,1-10,18.52,No,No change,Increase,36767
 Treated,M3S,Toronto,Casual Dining,Franchise,21,Yes,No,10-20,16.5,No,No change,Increase,40383
@@ -1870,7 +1870,7 @@ Treated,L5E,Peel,Casual Dining,No,20,Yes,Yes,1-10,19.89,No,No change,Increase,51
 Treated,L7K,Peel,Casual Dining,No,15,No,Yes,1-10,21.43,No,Increase,Increase,52958
 Treated,M7T,Toronto,Fine Dining,No,12,Yes,No,10-20,15.81,No,Increase,Increase,45837
 Treated,M5M,Toronto,Premium Casual,Franchise,7,No,Yes,10-20,18.33,No,Increase,Increase,52320
-Treated,L7R,Halton,Fast Casual,Franchise,9,Yes,Yes,1-10,17.39,Yes,No change,Increase,23343
+Treated,L7R,Halton,Fast Casual,Franchise,9,No,No,1-10,17.39,Yes,No change,Increase,23343
 Treated,L3X,York,Premium Casual,No,5,Yes,No,1-10,11.93,No,Increase,Increase,39806
 Treated,M6Z,Toronto,Premium Casual,No,7,Yes,No,10-20,16.64,No,Increase,No change,55007
 Treated,L9P,Durham,Casual Dining,No,11,Yes,Yes,10-20,18.13,No,No change,Increase,44340
@@ -1886,19 +1886,19 @@ Treated,L4Y,Peel,Fine Dining,Franchise,10,Yes,No,10-20,16.64,No,Increase,Increas
 Treated,L6H,Halton,Fine Dining,No,1,Yes,No,1-10,18.41,No,Increase,Increase,36333
 Treated,M5Z,Toronto,Family Style,No,2,Yes,Yes,1-10,17.73,No,Increase,Increase,38728
 Treated,M6A,Toronto,Casual Dining,No,18,Yes,Yes,10-20,19.22,No,No change,Increase,57675
-Treated,L6P,Peel,Fast Food,Franchise,2,No,Yes,10-20,12.57,No,No change,Increase,42102
+Treated,L6P,Peel,Fast Food,Franchise,2,No,No,10-20,12.57,No,No change,Increase,42102
 Treated,M8K,Toronto,Fast Casual,No,18,Yes,No,10-20,20.25,No,No change,Increase,43472
 Treated,L0B,Durham,Fine Dining,No,9,Yes,No,1-10,18.05,No,Increase,Increase,45537
 Treated,L9N,York,Fast Food,Franchise,7,Yes,No,1-10,21.78,No,No change,Increase,64400
 Treated,L5J,Peel,Family Style,Franchise,3,Yes,Yes,1-10,15.65,No,Increase,Increase,42095
 Treated,L4B,York,Casual Dining,Franchise,9,Yes,Yes,1-10,17.22,No,Increase,Increase,55430
 Treated,L9N,York,Fast Casual,No,3,Yes,Yes,1-10,25.98,No,Increase,Increase,46794
-Treated,L9L,Durham,Family Style,Franchise,11,Yes,Yes,10-20,24.02,No,Increase,Increase,37819
+Treated,L9L,Durham,Family Style,Franchise,11,No,No,10-20,24.02,No,Increase,Increase,37819
 Treated,L0P,Halton,Premium Casual,No,8,Yes,Yes,1-10,18.91,No,Increase,Increase,17287
 Treated,L7S,Halton,Fast Casual,No,1,Yes,Yes,1-10,15.44,No,Increase,No change,58158
 Treated,M6S,Toronto,Casual Dining,No,13,Yes,Yes,1-10,17.26,No,Increase,Increase,46751
 Treated,L7E,York,Casual Dining,Franchise,8,Yes,No,10-20,21.05,Yes,Increase,Increase,54757
-Treated,L4X,Peel,Fast Casual,No,14,Yes,Yes,10-20,13.38,No,No change,Increase,48143
+Treated,L4X,Peel,Fast Casual,No,14,No,No,10-20,13.38,No,No change,Increase,48143
 Treated,M6T,Toronto,Fast Food,No,12,Yes,Yes,10-20,22.26,No,Increase,Increase,39218
 Treated,L7K,Peel,Fast Casual,Franchise,10,Yes,Yes,10-20,15.1,No,No change,Increase,51083
 Treated,L1V,Durham,Fine Dining,No,11,Yes,No,10-20,12.95,No,No change,Increase,47093
@@ -1909,7 +1909,7 @@ Treated,L0E,Durham,Fine Dining,Franchise,8,Yes,No,10-20,15.08,No,Increase,Increa
 Treated,M2G,Toronto,Fast Food,No,16,Yes,No,10-20,15.39,No,Increase,Increase,41217
 Treated,L7L,Halton,Fast Casual,Franchise,6,Yes,No,10-20,14.55,No,No change,Increase,51858
 Treated,L6R,Peel,Fast Casual,No,12,Yes,No,1-10,14.91,No,Increase,Increase,50248
-Treated,L0P,Halton,Casual Dining,Franchise,18,No,Yes,1-10,20.09,No,Increase,Increase,15747
+Treated,L0P,Halton,Casual Dining,Franchise,18,No,No,1-10,20.09,No,Increase,Increase,15747
 Treated,M7C,Toronto,Fast Casual,No,6,Yes,No,10-20,17.72,No,Increase,Increase,47756
 Treated,L4T,Peel,Casual Dining,Franchise,14,Yes,No,10-20,22.64,No,No change,Increase,43949
 Treated,L6H,Halton,Family Style,Franchise,5,Yes,No,1-10,14.87,No,Increase,Increase,51066
@@ -1921,7 +1921,7 @@ Treated,L9N,York,Fast Casual,No,7,Yes,No,1-10,17.9,No,Increase,Increase,41387
 Treated,L3P,York,Premium Casual,Franchise,5,Yes,Yes,1-10,16.2,No,No change,Increase,45052
 Treated,L6Y,Peel,Premium Casual,No,16,Yes,No,10-20,17.76,No,No change,Increase,44718
 Treated,L7E,York,Family Style,No,3,No,Yes,10-20,21.89,Yes,Increase,Increase,25483
-Treated,M4D,Toronto,Casual Dining,No,23,No,Yes,10-20,19.36,No,No change,Increase,31760
+Treated,M4D,Toronto,Casual Dining,No,23,No,No,10-20,19.36,No,No change,Increase,31760
 Treated,L0B,Durham,Fast Food,No,19,Yes,No,10-20,21.04,No,Increase,Increase,51777
 Treated,L5G,Peel,Casual Dining,No,7,Yes,Yes,10-20,16.64,No,Increase,Increase,30164
 Treated,L4Z,Peel,Fine Dining,No,16,No,Yes,10-20,20.38,No,No change,Increase,43141
@@ -1931,9 +1931,9 @@ Treated,L0E,Durham,Family Style,Franchise,16,Yes,Yes,10-20,21.16,Yes,Increase,No
 Treated,L7C,Peel,Fast Casual,No,18,Yes,No,1-10,21.27,No,Increase,Increase,32963
 Treated,L0E,Durham,Premium Casual,Franchise,5,Yes,No,10-20,17.11,No,No change,Increase,52670
 Treated,M5I,Toronto,Family Style,Franchise,4,Yes,No,1-10,17.97,No,No change,Increase,42259
-Treated,L7B,York,Premium Casual,No,5,No,Yes,1-10,16.91,No,No change,Increase,51371
-Treated,M7H,Toronto,Premium Casual,Franchise,6,Yes,Yes,1-10,20.11,No,Increase,Increase,45027
-Treated,L9L,Durham,Fine Dining,No,4,Yes,Yes,1-10,20.09,No,No change,Increase,52207
+Treated,L7B,York,Premium Casual,No,5,No,No,1-10,16.91,No,No change,Increase,51371
+Treated,M7H,Toronto,Premium Casual,Franchise,6,No,No,1-10,20.11,No,Increase,Increase,45027
+Treated,L9L,Durham,Fine Dining,No,4,No,No,1-10,20.09,No,No change,Increase,52207
 Treated,M5L,Toronto,Fast Food,Franchise,12,Yes,Yes,10-20,23.32,No,No change,Increase,28132
 Treated,M2O,Toronto,Family Style,Franchise,9,Yes,No,10-20,17.88,No,Increase,Increase,59171
 Treated,L0E,York,Fast Casual,Franchise,17,Yes,No,10-20,19.02,No,Increase,Increase,35547
@@ -1960,7 +1960,7 @@ Treated,L4G,York,Premium Casual,No,6,Yes,No,10-20,17.36,No,Increase,Increase,445
 Treated,L9E,Halton,Premium Casual,Franchise,17,Yes,Yes,1-10,24.22,No,No change,Increase,43197
 Treated,M4I,Toronto,Family Style,No,4,Yes,No,10-20,14.95,No,No change,No change,53154
 Treated,M2R,Toronto,Casual Dining,No,11,Yes,Yes,1-10,20.43,No,No change,Increase,47060
-Treated,L0H,York,Fast Casual,Franchise,5,Yes,No,10-20,11.95,No,Increase,Increase,64051
+Treated,L0H,York,Fast Casual,Franchise,5,No,No,10-20,11.95,No,Increase,Increase,64051
 Treated,M4A,Toronto,Fast Casual,No,13,Yes,Yes,1-10,21,No,No change,Increase,32066
 Treated,L6B,York,Casual Dining,Franchise,23,Yes,Yes,10-20,24.21,No,No change,No change,50873
 Treated,M4N,Toronto,Fast Casual,No,13,Yes,No,10-20,14.34,No,No change,Increase,42096
@@ -1971,8 +1971,8 @@ Treated,L3S,York,Fast Food,No,10,Yes,Yes,1-10,23.55,No,No change,No change,42799
 Treated,L9P,Durham,Casual Dining,No,7,No,Yes,10-20,23.15,No,Increase,Increase,41419
 Treated,L0C,Durham,Fast Casual,Franchise,13,Yes,Yes,10-20,18.37,No,Increase,Increase,44730
 Treated,L6X,Peel,Premium Casual,Franchise,11,Yes,Yes,1-10,17.83,No,No change,Increase,40471
-Treated,L9L,Durham,Premium Casual,Franchise,7,No,Yes,1-10,20.8,No,Increase,Increase,37615
-Treated,L6X,Peel,Casual Dining,No,14,No,Yes,10-20,19.09,No,Increase,Increase,52532
+Treated,L9L,Durham,Premium Casual,Franchise,7,No,No,1-10,20.8,No,Increase,Increase,37615
+Treated,L6X,Peel,Casual Dining,No,14,No,No,10-20,19.09,No,Increase,Increase,52532
 Treated,M3K,Toronto,Fast Food,No,10,Yes,Yes,1-10,16.92,No,Increase,Increase,45889
 Treated,L0H,York,Casual Dining,No,11,Yes,Yes,1-10,20.74,No,Increase,Increase,54885
 Treated,L3Y,York,Fast Food,No,9,Yes,No,1-10,18.45,Yes,Increase,Increase,49215
@@ -1992,7 +1992,7 @@ Treated,L0B,Durham,Casual Dining,No,29,Yes,No,10-20,19.38,No,No change,Increase,
 Treated,M9H,Toronto,Family Style,No,3,Yes,No,10-20,18.47,No,Increase,Increase,56954
 Treated,M9L,Toronto,Fast Casual,Franchise,4,Yes,Yes,10-20,19.41,No,No change,Increase,44948
 Treated,L6S,Peel,Fast Casual,No,15,Yes,No,1-10,19.14,Yes,Increase,Increase,56878
-Treated,M7O,Toronto,Fast Food,No,8,No,Yes,1-10,18.25,No,Increase,No change,40359
+Treated,M7O,Toronto,Fast Food,No,8,No,No,1-10,18.25,No,Increase,No change,40359
 Treated,M2U,Toronto,Fast Casual,Franchise,16,Yes,No,10-20,17.25,Yes,Increase,Increase,42762
 Treated,M6T,Toronto,Fine Dining,No,10,Yes,Yes,1-10,19.92,No,Increase,Increase,39847
 Treated,L3Z,York,Fast Casual,No,2,Yes,No,1-10,17.29,No,No change,Increase,54542
@@ -2000,9 +2000,9 @@ Treated,L0B,Durham,Premium Casual,No,7,Yes,Yes,1-10,15.19,No,No change,Increase,
 Treated,M6Q,Toronto,Casual Dining,No,11,Yes,No,1-10,18.15,No,No change,Increase,44515
 Treated,L6Y,Peel,Premium Casual,Franchise,10,No,Yes,10-20,20.4,No,No change,Increase,33659
 Treated,L0E,Durham,Family Style,No,9,Yes,No,10-20,21.06,No,Increase,Increase,36649
-Treated,L6Z,Peel,Premium Casual,No,1,Yes,No,10-20,16.16,Yes,No change,Increase,65264
+Treated,L6Z,Peel,Premium Casual,No,1,No,No,10-20,16.16,Yes,No change,Increase,65264
 Treated,L9N,York,Casual Dining,No,9,Yes,No,1-10,19.42,No,No change,Decrease,40997
-Treated,M4U,Toronto,Family Style,No,3,Yes,No,1-10,18.29,No,Increase,No change,53773
+Treated,M4U,Toronto,Family Style,No,3,No,No,1-10,18.29,No,Increase,No change,53773
 Treated,L4Y,Peel,Family Style,Franchise,14,Yes,No,10-20,18.36,No,Increase,Increase,43893
 Treated,M8O,Toronto,Fast Food,No,15,Yes,Yes,1-10,18.84,No,No change,Increase,55140
 Treated,M6F,Toronto,Fast Food,Franchise,14,Yes,No,1-10,20.16,No,Increase,Increase,39981
@@ -2014,7 +2014,7 @@ Treated,L4X,Peel,Fast Food,No,6,Yes,No,1-10,18.97,No,No change,Increase,49093
 Treated,L0B,Durham,Fast Casual,No,2,Yes,No,10-20,17.63,No,Increase,Increase,49413
 Treated,M5F,Toronto,Fast Casual,Franchise,7,Yes,No,10-20,23.63,No,No change,Increase,44125
 Treated,L9N,York,Casual Dining,No,10,Yes,No,10-20,16.32,No,No change,No change,42034
-Treated,L5J,Peel,Fine Dining,Franchise,13,No,Yes,1-10,16.24,No,Decrease,Increase,37607
+Treated,L5J,Peel,Fine Dining,Franchise,13,No,No,1-10,16.24,No,Decrease,Increase,37607
 Treated,L4Z,Peel,Family Style,No,16,Yes,No,10-20,15.73,No,Increase,Increase,33186
 Treated,L0P,Halton,Fast Food,No,2,Yes,No,10-20,19.12,Yes,No change,Increase,54237
 Treated,L6E,York,Family Style,No,6,Yes,Yes,10-20,19.68,No,Increase,Increase,45250
@@ -2027,14 +2027,14 @@ Treated,L4P,York,Family Style,Franchise,2,Yes,Yes,10-20,20.3,No,Increase,Increas
 Treated,L6Y,Peel,Fast Food,No,5,Yes,No,10-20,22.65,No,Increase,Increase,40654
 Treated,L0P,Halton,Family Style,No,19,Yes,Yes,1-10,19.32,No,Increase,Increase,51593
 Treated,L7B,York,Casual Dining,No,11,Yes,No,10-20,20.85,No,Increase,Increase,42563
-Treated,L0J,York,Casual Dining,Franchise,14,Yes,No,1-10,18.75,No,No change,Decrease,58286
+Treated,L0J,York,Casual Dining,Franchise,14,No,No,1-10,18.75,No,No change,Decrease,58286
 Treated,M3I,Toronto,Family Style,Franchise,9,Yes,No,1-10,19.68,No,No change,Increase,60650
 Treated,L4A,York,Family Style,No,9,No,Yes,10-20,17.01,No,No change,Increase,51644
 Treated,L4X,Peel,Fast Food,No,5,Yes,No,10-20,18.33,No,No change,Increase,44282
 Treated,M6L,Toronto,Fast Food,No,2,Yes,No,10-20,14.16,No,Increase,Increase,44181
 Treated,L5E,Peel,Casual Dining,No,22,No,Yes,10-20,17.06,No,No change,Increase,51581
 Treated,L4T,Peel,Casual Dining,Franchise,6,Yes,Yes,10-20,18.45,No,Increase,Increase,34255
-Treated,L9L,Durham,Premium Casual,No,5,No,Yes,10-20,15.46,No,Increase,Increase,46430
+Treated,L9L,Durham,Premium Casual,No,5,No,No,10-20,15.46,No,Increase,Increase,46430
 Treated,M7T,Toronto,Casual Dining,No,5,Yes,No,10-20,16.19,No,Increase,Increase,47229
 Treated,L7E,York,Casual Dining,No,16,Yes,No,1-10,16.14,No,No change,No change,46816
 Treated,M9T,Toronto,Family Style,Franchise,15,Yes,Yes,1-10,17.79,No,No change,Increase,53199
@@ -2055,7 +2055,7 @@ Treated,L7B,York,Premium Casual,Franchise,6,Yes,Yes,10-20,18.08,No,Increase,Incr
 Treated,L0B,Durham,Family Style,Franchise,2,Yes,No,10-20,17.96,Yes,Increase,Increase,59366
 Treated,L7C,Peel,Premium Casual,No,7,Yes,No,1-10,19.79,No,Increase,Increase,52093
 Treated,M0J,Toronto,Casual Dining,Franchise,7,Yes,No,10-20,20.61,No,No change,No change,38760
-Treated,M5V,Toronto,Family Style,No,8,Yes,Yes,10-20,17.21,No,No change,Decrease,43375
+Treated,M5V,Toronto,Family Style,No,8,No,No,10-20,17.21,No,No change,Decrease,43375
 Treated,L7A,Peel,Casual Dining,No,2,Yes,Yes,10-20,20.14,No,Increase,Increase,48573
 Treated,M4D,Toronto,Family Style,No,0,Yes,No,10-20,17.26,No,No change,No change,51618
 Treated,M9Q,Toronto,Fast Casual,No,4,Yes,Yes,1-10,18.34,No,No change,No change,38693
@@ -2082,7 +2082,7 @@ Treated,L7K,Peel,Casual Dining,No,9,Yes,Yes,1-10,17.98,No,Increase,Increase,4852
 Treated,L5J,Peel,Fast Casual,No,13,Yes,Yes,10-20,18.38,No,Increase,Increase,44799
 Treated,M5Y,Toronto,Casual Dining,No,8,Yes,Yes,1-10,17,No,No change,Increase,59593
 Treated,M0O,Toronto,Family Style,No,2,Yes,Yes,10-20,18.82,No,No change,Increase,49406
-Treated,L0G,York,Fine Dining,No,19,Yes,Yes,10-20,15.8,No,Increase,Increase,57922
+Treated,L0G,York,Fine Dining,No,19,No,No,10-20,15.8,No,Increase,Increase,57922
 Treated,M8W,Toronto,Fast Casual,No,17,Yes,Yes,1-10,19.88,No,No change,Increase,52568
 Treated,M7W,Toronto,Casual Dining,Franchise,7,Yes,Yes,10-20,16.56,No,No change,Increase,37743
 Treated,L0P,Halton,Family Style,No,14,Yes,No,10-20,18.6,No,Increase,Increase,40606
@@ -2114,7 +2114,7 @@ Treated,M2Q,Toronto,Fast Casual,Franchise,8,Yes,No,10-20,17.95,No,No change,No c
 Treated,M0R,Toronto,Family Style,No,1,Yes,No,1-10,21.03,Yes,Increase,Increase,44314
 Treated,L0H,York,Casual Dining,Franchise,4,Yes,No,10-20,16.79,No,No change,Increase,35689
 Treated,L7K,Peel,Casual Dining,No,13,Yes,Yes,10-20,14.36,No,No change,Increase,43848
-Treated,L0E,York,Fast Casual,No,2,Yes,No,10-20,19.02,No,Increase,Increase,53973
+Treated,L0E,York,Fast Casual,No,2,No,No,10-20,19.02,No,Increase,Increase,53973
 Treated,L5J,Peel,Fine Dining,No,8,Yes,Yes,1-10,21.94,Yes,Increase,Increase,42632
 Treated,L4C,York,Casual Dining,Franchise,3,Yes,Yes,10-20,16.39,No,Increase,No change,48181
 Treated,M3W,Toronto,Fast Casual,No,3,Yes,Yes,1-10,20.53,No,No change,Increase,56873
@@ -2144,14 +2144,14 @@ Treated,L9N,York,Family Style,Franchise,16,Yes,No,10-20,20.78,No,No change,Incre
 Treated,M1I,Toronto,Fine Dining,Franchise,6,Yes,No,1-10,18.88,No,Increase,Decrease,42193
 Treated,M1A,Toronto,Casual Dining,No,3,Yes,No,1-10,14.95,No,Increase,Increase,36261
 Treated,L9P,Durham,Family Style,No,11,Yes,No,1-10,20.71,No,Increase,Increase,39370
-Treated,M3Q,Toronto,Casual Dining,No,16,Yes,Yes,10-20,14.81,No,No change,Increase,52861
+Treated,M3Q,Toronto,Casual Dining,No,16,No,No,10-20,14.81,No,No change,Increase,52861
 Treated,M8V,Toronto,Premium Casual,No,5,No,Yes,10-20,15.8,No,No change,Increase,51453
 Treated,L5L,Peel,Fine Dining,No,19,Yes,Yes,10-20,18.38,No,Increase,Increase,32012
 Treated,L6Y,Peel,Fine Dining,Franchise,14,Yes,Yes,1-10,13.12,No,Increase,Increase,45317
 Treated,L0H,York,Fast Casual,Franchise,6,Yes,No,1-10,18.81,No,Decrease,Increase,41051
 Treated,M2W,Toronto,Fast Food,No,7,Yes,No,10-20,19.82,No,Increase,No change,56075
 Treated,L7C,Peel,Premium Casual,Franchise,2,Yes,Yes,1-10,15.53,No,Increase,Increase,49358
-Treated,L9L,Durham,Fast Food,No,20,Yes,Yes,10-20,15.69,No,No change,Increase,42349
+Treated,L9L,Durham,Fast Food,No,20,No,No,10-20,15.69,No,No change,Increase,42349
 Treated,L7A,Peel,Premium Casual,Franchise,8,Yes,No,10-20,19.28,No,No change,Increase,38910
 Treated,L7C,Peel,Fine Dining,No,9,Yes,No,1-10,22.42,No,Increase,Increase,53607
 Treated,M5P,Toronto,Casual Dining,Franchise,18,Yes,Yes,1-10,19.21,No,Increase,Increase,53112
@@ -2172,12 +2172,12 @@ Treated,M3Y,Toronto,Fast Food,No,10,Yes,No,1-10,19.45,No,No change,Increase,5116
 Treated,L7C,Peel,Fine Dining,No,5,Yes,No,1-10,18.46,No,Increase,Increase,42488
 Treated,M9Z,Toronto,Fast Food,Franchise,17,Yes,Yes,1-10,16.21,No,Increase,Increase,50159
 Treated,L9P,Durham,Casual Dining,Franchise,7,Yes,No,1-10,19.81,No,Increase,Increase,39196
-Treated,L6X,Peel,Casual Dining,No,2,Yes,No,10-20,24.76,Yes,No change,Increase,43985
+Treated,L6X,Peel,Casual Dining,No,2,No,No,10-20,24.76,Yes,No change,Increase,43985
 Treated,L4Y,Peel,Family Style,No,5,Yes,Yes,10-20,15.91,Yes,Increase,Increase,48717
 Treated,M3J,Toronto,Family Style,No,2,Yes,Yes,1-10,20.8,No,Increase,Increase,40984
-Treated,L5G,Peel,Casual Dining,No,7,No,Yes,10-20,20.91,No,No change,Increase,49439
+Treated,L5G,Peel,Casual Dining,No,7,No,No,10-20,20.91,No,No change,Increase,49439
 Treated,L6M,Halton,Casual Dining,No,11,Yes,No,1-10,20.75,No,No change,Increase,39551
-Treated,M8F,Toronto,Casual Dining,Franchise,11,No,Yes,1-10,21.16,No,No change,Increase,54500
+Treated,M8F,Toronto,Casual Dining,Franchise,11,No,No,1-10,21.16,No,No change,Increase,54500
 Treated,L7A,Peel,Casual Dining,No,17,Yes,No,10-20,14.31,No,No change,Increase,46548
 Treated,L3S,York,Family Style,Franchise,8,Yes,Yes,10-20,18.53,No,No change,Increase,50494
 Treated,L6T,Peel,Family Style,No,7,Yes,No,10-20,20.5,No,Increase,No change,32532
@@ -2193,7 +2193,7 @@ Treated,L7K,Peel,Family Style,No,1,Yes,Yes,10-20,18.34,No,No change,No change,52
 Treated,L9N,York,Fast Food,Franchise,8,Yes,No,10-20,14.69,No,No change,Increase,48910
 Treated,L4E,York,Fast Casual,No,2,Yes,Yes,10-20,17.33,No,Increase,Increase,47926
 Treated,L7A,Peel,Casual Dining,No,10,Yes,No,1-10,22.15,No,No change,Increase,36685
-Treated,L6L,Halton,Casual Dining,No,9,Yes,No,10-20,17.66,No,No change,Increase,49531
+Treated,L6L,Halton,Casual Dining,No,9,No,No,10-20,17.66,No,No change,Increase,49531
 Treated,M1C,Toronto,Fast Casual,Franchise,13,Yes,Yes,10-20,20.21,No,No change,Increase,48197
 Treated,L0C,Durham,Fast Casual,No,1,Yes,Yes,10-20,17.15,No,Increase,Increase,44919
 Treated,L5S,Peel,Fast Food,No,13,Yes,No,1-10,18.81,No,Increase,No change,57945
@@ -2214,7 +2214,7 @@ Treated,L6S,Peel,Family Style,No,23,Yes,No,10-20,18.58,No,No change,Increase,444
 Treated,L7S,Halton,Premium Casual,No,19,Yes,No,1-10,19.87,No,Increase,Increase,49375
 Treated,L6K,Halton,Casual Dining,Franchise,9,Yes,No,1-10,19.51,No,Increase,Increase,26119
 Treated,L7A,Peel,Fine Dining,No,25,Yes,Yes,1-10,16.47,No,No change,Increase,56298
-Treated,L0P,Halton,Fast Casual,No,1,No,Yes,1-10,18.97,No,No change,Increase,41787
+Treated,L0P,Halton,Fast Casual,No,1,No,No,1-10,18.97,No,No change,Increase,41787
 Treated,M1F,Toronto,Fast Casual,Franchise,7,Yes,No,10-20,20.88,No,Increase,Increase,52095
 Treated,M0H,Toronto,Casual Dining,No,15,Yes,No,1-10,18.65,No,Increase,Increase,38405
 Treated,L0E,York,Premium Casual,No,7,Yes,Yes,1-10,16.51,No,Increase,Increase,51898
@@ -2236,15 +2236,15 @@ Treated,M1H,Toronto,Casual Dining,No,15,Yes,No,10-20,14.85,No,No change,Increase
 Treated,L6Z,Peel,Family Style,No,1,No,Yes,10-20,19.88,No,No change,Increase,28670
 Treated,M4H,Toronto,Casual Dining,No,14,Yes,Yes,10-20,19.46,No,Increase,Increase,52020
 Treated,L9T,Halton,Fast Casual,No,10,Yes,No,10-20,17.62,No,Increase,Increase,47532
-Treated,M1U,Toronto,Casual Dining,No,17,Yes,Yes,10-20,17.82,No,No change,No change,48917
+Treated,M1U,Toronto,Casual Dining,No,17,No,No,10-20,17.82,No,No change,No change,48917
 Treated,L1S,Durham,Fine Dining,No,11,Yes,No,1-10,20.53,No,No change,Increase,49983
 Treated,M5I,Toronto,Premium Casual,No,6,Yes,No,1-10,19.95,No,No change,No change,35696
-Treated,L5C,Peel,Fast Casual,No,13,No,Yes,10-20,20.52,No,Increase,No change,43968
+Treated,L5C,Peel,Fast Casual,No,13,No,No,10-20,20.52,No,Increase,No change,43968
 Treated,M3M,Toronto,Premium Casual,No,13,Yes,Yes,1-10,17.61,No,No change,Increase,49664
 Treated,L7A,Peel,Family Style,No,10,Yes,Yes,10-20,13.72,No,No change,Increase,49599
 Treated,L9N,York,Casual Dining,Franchise,8,Yes,No,10-20,20.17,No,No change,Increase,32412
 Treated,L7K,Peel,Casual Dining,No,2,Yes,No,10-20,16.09,No,No change,Increase,42661
-Treated,L4X,Peel,Fast Casual,Franchise,6,No,Yes,1-10,17.86,No,No change,Increase,49600
+Treated,L4X,Peel,Fast Casual,Franchise,6,No,No,1-10,17.86,No,No change,Increase,49600
 Treated,M9K,Toronto,Casual Dining,No,16,Yes,No,1-10,18.43,No,Increase,Increase,35804
 Treated,L1J,Durham,Casual Dining,No,11,Yes,No,1-10,21.26,No,No change,Increase,46109
 Treated,L5E,Peel,Fast Casual,No,12,Yes,No,10-20,21.62,No,Increase,Increase,43754
@@ -2267,7 +2267,7 @@ Treated,L0B,Durham,Fast Food,No,12,Yes,No,1-10,20.02,No,Increase,Increase,39043
 Treated,L3X,York,Family Style,No,1,Yes,Yes,10-20,16.81,No,Increase,Increase,39661
 Treated,M8M,Toronto,Casual Dining,No,10,Yes,No,1-10,15.69,No,Increase,Increase,57993
 Treated,L9L,Durham,Casual Dining,Franchise,11,Yes,Yes,1-10,20.55,No,Increase,Increase,58495
-Treated,M1P,Toronto,Family Style,No,4,Yes,Yes,1-10,20,No,Increase,No change,43925
+Treated,M1P,Toronto,Family Style,No,4,No,No,1-10,20,No,Increase,No change,43925
 Treated,L5L,Peel,Family Style,No,6,Yes,No,10-20,18.71,No,No change,No change,41532
 Treated,M4R,Toronto,Fast Food,No,13,Yes,No,1-10,19.19,No,Increase,Increase,56030
 Treated,L9L,Durham,Fine Dining,No,14,Yes,No,1-10,17.5,No,No change,No change,39505
@@ -2354,7 +2354,7 @@ Treated,M7M,Toronto,Family Style,No,5,Yes,No,10-20,14.12,No,Increase,Increase,51
 Treated,L0P,Halton,Fast Casual,No,11,Yes,No,1-10,19.65,Yes,No change,Increase,54651
 Treated,L6W,Peel,Fast Food,Franchise,28,Yes,No,10-20,19.01,No,Increase,Increase,61038
 Treated,L6P,Peel,Fine Dining,No,2,Yes,Yes,1-10,20.06,No,No change,Increase,59611
-Treated,M5P,Toronto,Fast Casual,No,6,Yes,No,1-10,21.29,No,No change,Increase,51335
+Treated,M5P,Toronto,Fast Casual,No,6,No,No,1-10,21.29,No,No change,Increase,51335
 Treated,L7R,Halton,Fast Food,No,6,Yes,Yes,1-10,22.82,No,Increase,Increase,37129
 Treated,L4Y,Peel,Fast Food,No,21,Yes,No,10-20,21.05,No,Increase,Increase,44983
 Treated,L4W,Peel,Family Style,Franchise,6,No,Yes,1-10,24.42,No,No change,Increase,50661
@@ -2382,18 +2382,18 @@ Treated,L4B,York,Fast Food,Franchise,17,Yes,No,1-10,18.34,No,Increase,Increase,3
 Treated,L4T,Peel,Premium Casual,No,21,Yes,No,10-20,18.52,No,Increase,Increase,39355
 Treated,L9N,York,Premium Casual,No,10,Yes,No,10-20,19.07,No,No change,Increase,51463
 Treated,L7K,Peel,Family Style,No,2,Yes,No,1-10,19.63,No,No change,Increase,47400
-Treated,L7E,York,Casual Dining,No,5,Yes,No,10-20,18.64,No,No change,No change,45625
+Treated,L7E,York,Casual Dining,No,5,No,No,10-20,18.64,No,No change,No change,45625
 Treated,L5H,Peel,Casual Dining,Franchise,8,Yes,Yes,10-20,16.1,No,No change,No change,33532
 Treated,L7A,Peel,Fast Casual,No,1,Yes,No,10-20,17.17,No,No change,Increase,46244
-Treated,M7C,Toronto,Casual Dining,No,17,No,Yes,1-10,16.2,No,Increase,Increase,45762
+Treated,M7C,Toronto,Casual Dining,No,17,No,No,1-10,16.2,No,Increase,Increase,45762
 Treated,L3R,York,Fast Casual,No,13,Yes,Yes,10-20,19.37,No,Increase,Increase,47092
-Treated,L7T,Halton,Fast Casual,Franchise,13,No,Yes,1-10,15.17,No,Increase,Increase,41819
+Treated,L7T,Halton,Fast Casual,Franchise,13,No,No,1-10,15.17,No,Increase,Increase,41819
 Treated,L5K,Peel,Family Style,No,1,Yes,No,10-20,22.27,No,No change,Increase,52098
 Treated,M3P,Toronto,Premium Casual,No,13,Yes,No,1-10,20.41,Yes,Increase,Increase,42999
 Treated,L4S,York,Family Style,Franchise,13,Yes,Yes,1-10,21.1,No,Decrease,Increase,46741
 Treated,L9L,Durham,Casual Dining,Franchise,11,Yes,No,1-10,18.27,No,No change,Increase,37950
 Treated,L4Z,Peel,Fine Dining,Franchise,7,Yes,No,10-20,21.44,No,No change,Increase,39253
-Treated,L6Y,Peel,Fast Food,Franchise,7,Yes,Yes,10-20,19.92,No,No change,Increase,32433
+Treated,L6Y,Peel,Fast Food,Franchise,7,No,No,10-20,19.92,No,No change,Increase,32433
 Treated,L7S,Halton,Casual Dining,Franchise,1,Yes,Yes,10-20,18.6,No,No change,Increase,50074
 Treated,L6K,Halton,Casual Dining,Franchise,13,Yes,No,10-20,18.39,No,No change,Increase,56140
 Treated,M4U,Toronto,Fast Casual,No,9,Yes,No,1-10,12.91,No,Increase,Increase,34542
@@ -2413,7 +2413,7 @@ Treated,M7L,Toronto,Casual Dining,No,14,Yes,No,1-10,16.42,No,Increase,Increase,4
 Treated,L0P,Halton,Fast Casual,No,13,Yes,Yes,10-20,20.81,No,No change,Increase,33156
 Treated,L0B,Durham,Fine Dining,Franchise,21,Yes,Yes,1-10,19.2,No,No change,Increase,47339
 Treated,M1T,Toronto,Fast Food,No,1,Yes,Yes,10-20,19.81,No,Increase,Increase,50685
-Treated,L6V,Peel,Fine Dining,Franchise,23,No,Yes,1-10,18.05,No,Increase,Increase,53482
+Treated,L6V,Peel,Fine Dining,Franchise,23,No,No,1-10,18.05,No,Increase,Increase,53482
 Treated,L5J,Peel,Family Style,Franchise,10,Yes,No,10-20,17.88,Yes,No change,Increase,42609
 Treated,L3Z,York,Casual Dining,Franchise,5,Yes,Yes,1-10,16.69,No,Increase,Increase,59739
 Treated,L7A,Peel,Fine Dining,No,25,Yes,No,10-20,14.92,No,Increase,Increase,46192
@@ -2435,7 +2435,7 @@ Treated,L3R,York,Fast Casual,No,13,Yes,Yes,10-20,21.02,No,Increase,Increase,4001
 Treated,L5T,Peel,Premium Casual,Franchise,2,Yes,No,10-20,19.91,No,No change,Increase,39721
 Treated,L4W,Peel,Premium Casual,No,9,Yes,No,10-20,19.13,No,Increase,No change,57650
 Treated,L6M,Halton,Family Style,Franchise,3,Yes,No,10-20,17.24,Yes,No change,No change,40040
-Treated,L9N,York,Casual Dining,Franchise,5,Yes,No,10-20,22.04,No,No change,Increase,47221
+Treated,L9N,York,Casual Dining,Franchise,5,No,No,10-20,22.04,No,No change,Increase,47221
 Treated,L5W,Peel,Fast Casual,No,13,Yes,Yes,10-20,18.21,No,Increase,Increase,40052
 Treated,L6P,Peel,Fast Food,No,9,Yes,No,10-20,20.11,No,No change,Increase,47751
 Treated,L4E,York,Casual Dining,No,8,Yes,No,10-20,18.13,Yes,Increase,Increase,51186
@@ -2449,13 +2449,13 @@ Treated,L6W,Peel,Casual Dining,No,16,Yes,Yes,10-20,17.92,No,No change,Increase,4
 Treated,M8J,Toronto,Casual Dining,Franchise,3,Yes,Yes,1-10,21.47,No,Increase,Increase,39134
 Treated,L6H,Halton,Fine Dining,No,20,Yes,Yes,10-20,19.41,No,Increase,Increase,48858
 Treated,L7B,York,Fast Food,Franchise,14,Yes,No,1-10,16.44,Yes,Increase,Increase,30842
-Treated,L9L,Durham,Casual Dining,No,3,No,Yes,10-20,19.9,No,Increase,Increase,42070
-Treated,L1T,Durham,Casual Dining,Franchise,15,No,Yes,10-20,20.17,No,No change,Increase,24490
+Treated,L9L,Durham,Casual Dining,No,3,No,No,10-20,19.9,No,Increase,Increase,42070
+Treated,L1T,Durham,Casual Dining,Franchise,15,No,No,10-20,20.17,No,No change,Increase,24490
 Treated,L9T,Halton,Casual Dining,No,14,Yes,No,1-10,22.16,No,No change,Increase,42499
 Treated,M2N,Toronto,Fast Casual,No,6,Yes,Yes,10-20,19.74,No,No change,Increase,54375
 Treated,L5R,Peel,Family Style,No,7,Yes,No,1-10,17.78,No,Increase,No change,41708
 Treated,L9N,York,Premium Casual,No,6,Yes,No,10-20,17.57,No,Increase,No change,47654
-Treated,M3Q,Toronto,Fast Casual,Franchise,13,Yes,Yes,10-20,14.46,No,Increase,Increase,66190
+Treated,M3Q,Toronto,Fast Casual,Franchise,13,No,No,10-20,14.46,No,Increase,Increase,66190
 Treated,L4Y,Peel,Casual Dining,No,10,Yes,Yes,10-20,17.32,No,Increase,Increase,44701
 Treated,L4Z,Peel,Family Style,Franchise,7,Yes,Yes,10-20,17.01,No,No change,Increase,46704
 Treated,M5S,Toronto,Family Style,No,13,Yes,Yes,1-10,19.6,No,No change,Increase,51269
@@ -2470,8 +2470,8 @@ Treated,L5V,Peel,Casual Dining,No,1,Yes,No,10-20,18.33,Yes,Increase,Increase,304
 Treated,L0E,Durham,Fast Casual,Franchise,14,Yes,No,10-20,22.55,No,No change,Decrease,47954
 Treated,L6S,Peel,Family Style,No,14,Yes,Yes,1-10,16.17,No,No change,Increase,49435
 Treated,L6V,Peel,Casual Dining,No,10,Yes,Yes,10-20,14.68,No,Increase,Increase,35239
-Treated,L3P,York,Family Style,No,9,Yes,No,1-10,15.54,No,No change,Increase,37761
-Treated,L9T,Halton,Family Style,No,8,No,Yes,10-20,20.46,No,No change,Increase,47752
+Treated,L3P,York,Family Style,No,9,No,No,1-10,15.54,No,No change,Increase,37761
+Treated,L9T,Halton,Family Style,No,8,No,No,10-20,20.46,No,No change,Increase,47752
 Treated,L0G,York,Fast Food,No,11,Yes,Yes,1-10,18.04,No,No change,Increase,31552
 Treated,L9N,York,Fine Dining,Franchise,1,Yes,Yes,1-10,21.77,No,No change,Increase,41550
 Treated,L9P,Durham,Fast Food,Franchise,5,Yes,No,1-10,15.86,No,No change,Increase,45734
@@ -2494,7 +2494,7 @@ Treated,L5V,Peel,Casual Dining,Franchise,5,Yes,No,10-20,15.89,No,Increase,Increa
 Treated,L1J,Durham,Fast Casual,No,5,Yes,No,10-20,15.7,No,Increase,Increase,42844
 Treated,L0P,Halton,Family Style,Franchise,3,No,Yes,1-10,16.66,No,Increase,Increase,46865
 Treated,L9N,York,Fast Casual,No,3,Yes,Yes,10-20,20.3,No,Increase,Increase,43593
-Treated,L9L,Durham,Fast Casual,No,2,Yes,No,10-20,16.72,No,No change,Increase,37912
+Treated,L9L,Durham,Fast Casual,No,2,No,No,10-20,16.72,No,No change,Increase,37912
 Treated,L6J,Halton,Family Style,No,14,Yes,No,1-10,16.8,No,Increase,Increase,53008
 Treated,M4S,Toronto,Fast Casual,No,6,Yes,No,10-20,19.23,No,Increase,No change,39564
 Treated,M2I,Toronto,Fast Casual,Franchise,6,Yes,Yes,10-20,18.96,No,No change,Increase,61040
@@ -2559,14 +2559,14 @@ Treated,L7E,York,Fine Dining,Franchise,9,Yes,No,1-10,18.78,No,Increase,Increase,
 Treated,L7P,Halton,Casual Dining,No,4,Yes,Yes,10-20,24.14,No,No change,Increase,37304
 Treated,L9N,York,Family Style,No,6,Yes,No,1-10,17.75,Yes,No change,Increase,50253
 Treated,M6T,Toronto,Fast Food,Franchise,11,Yes,No,10-20,13.55,No,No change,Increase,27845
-Treated,L6S,Peel,Fast Food,No,14,Yes,No,1-10,17.72,No,Increase,Increase,54837
+Treated,L6S,Peel,Fast Food,No,14,No,No,1-10,17.72,No,Increase,Increase,54837
 Treated,M5C,Toronto,Fast Food,No,0,Yes,No,1-10,23.95,No,No change,Increase,49173
 Treated,L6C,York,Fast Casual,No,4,Yes,No,10-20,17.77,No,Increase,Increase,47816
-Treated,L9N,York,Fast Casual,No,11,No,Yes,10-20,19.39,No,No change,Increase,50445
+Treated,L9N,York,Fast Casual,No,11,No,No,10-20,19.39,No,No change,Increase,50445
 Treated,L7K,Peel,Premium Casual,No,10,Yes,No,1-10,20.53,No,Increase,Increase,46497
 Treated,L9P,Durham,Fast Casual,Franchise,11,Yes,No,10-20,17.98,No,Increase,Increase,50878
 Treated,M5Y,Toronto,Fast Food,Franchise,6,Yes,Yes,10-20,19.14,No,Increase,Increase,52576
-Treated,L0P,Halton,Family Style,No,8,No,Yes,10-20,17.44,No,Increase,Increase,40278
+Treated,L0P,Halton,Family Style,No,8,No,No,10-20,17.44,No,Increase,Increase,40278
 Treated,M4B,Toronto,Casual Dining,No,9,Yes,Yes,10-20,18.27,No,No change,Increase,37006
 Treated,L9L,Durham,Casual Dining,No,12,Yes,Yes,10-20,19.26,No,Increase,Increase,54366
 Treated,L7A,Peel,Fast Food,Franchise,11,Yes,No,10-20,14.23,No,No change,Increase,60228
@@ -2587,7 +2587,7 @@ Treated,L7E,York,Fast Casual,No,16,Yes,Yes,10-20,19.28,No,No change,Increase,555
 Treated,L7K,Peel,Casual Dining,Franchise,3,Yes,Yes,10-20,19.59,No,No change,Increase,52915
 Treated,L4H,York,Fast Food,No,4,Yes,No,10-20,12.26,No,No change,Increase,67318
 Treated,L4T,Peel,Family Style,Franchise,4,No,Yes,10-20,22.93,No,No change,Increase,33029
-Treated,M2P,Toronto,Premium Casual,Franchise,8,Yes,No,10-20,14.92,No,No change,Increase,52501
+Treated,M2P,Toronto,Premium Casual,Franchise,8,No,No,10-20,14.92,No,No change,Increase,52501
 Treated,L9N,York,Premium Casual,No,14,Yes,No,1-10,17.5,No,Increase,Increase,41935
 Treated,L0E,Durham,Fast Food,No,10,No,Yes,1-10,16.48,No,Increase,Increase,59090
 Treated,L6E,York,Family Style,Franchise,9,Yes,No,10-20,19.01,No,Increase,Increase,41218
@@ -2599,12 +2599,12 @@ Treated,L4H,York,Fast Food,No,13,Yes,Yes,10-20,17.77,Yes,Increase,Increase,46247
 Treated,L7A,Peel,Fast Casual,Franchise,17,Yes,No,1-10,16.17,No,No change,Increase,39119
 Treated,L9N,York,Casual Dining,Franchise,10,Yes,No,10-20,14.27,No,No change,Increase,37797
 Treated,L0H,York,Casual Dining,Franchise,5,Yes,Yes,10-20,19.03,No,Increase,Increase,54573
-Treated,L7E,York,Premium Casual,No,20,Yes,Yes,1-10,19.3,No,No change,Increase,54542
+Treated,L7E,York,Premium Casual,No,20,No,No,1-10,19.3,No,No change,Increase,54542
 Treated,L4E,York,Premium Casual,No,2,Yes,No,10-20,18.76,No,No change,No change,46811
 Treated,M2K,Toronto,Family Style,Franchise,6,Yes,No,10-20,16.6,No,No change,Increase,46039
 Treated,L7K,Peel,Family Style,Franchise,12,Yes,Yes,1-10,20.07,No,No change,Increase,67638
 Treated,L4W,Peel,Family Style,No,18,Yes,No,10-20,18.06,No,Increase,Increase,61197
-Treated,M9K,Toronto,Fast Food,No,0,Yes,Yes,10-20,20.07,No,No change,Increase,35862
+Treated,M9K,Toronto,Fast Food,No,0,No,No,10-20,20.07,No,No change,Increase,35862
 Treated,L0P,Halton,Premium Casual,Franchise,0,No,Yes,10-20,13.12,No,No change,Increase,50921
 Treated,M7U,Toronto,Fast Food,No,16,Yes,No,1-10,17.78,No,No change,Increase,61964
 Treated,M6O,Toronto,Fast Casual,No,8,Yes,No,1-10,18.21,No,Increase,Increase,57035
@@ -2627,20 +2627,20 @@ Treated,L4A,York,Premium Casual,No,10,Yes,No,10-20,16.82,No,No change,Increase,5
 Treated,M0G,Toronto,Fast Casual,No,4,Yes,Yes,10-20,23.93,No,No change,Increase,44893
 Treated,L5B,Peel,Fast Casual,No,5,Yes,Yes,10-20,21.23,Yes,Increase,Increase,39122
 Treated,L6E,York,Premium Casual,No,21,Yes,Yes,10-20,18.92,No,No change,Increase,43219
-Treated,M0T,Toronto,Fast Food,No,20,Yes,No,10-20,18.66,No,Increase,Increase,56299
+Treated,M0T,Toronto,Fast Food,No,20,No,No,10-20,18.66,No,Increase,Increase,56299
 Treated,M0X,Toronto,Family Style,No,8,Yes,No,1-10,14.7,No,No change,Increase,57118
-Treated,L6H,Halton,Premium Casual,No,18,No,Yes,10-20,17.33,No,No change,Increase,46225
+Treated,L6H,Halton,Premium Casual,No,18,No,No,10-20,17.33,No,No change,Increase,46225
 Treated,M4W,Toronto,Family Style,Franchise,2,Yes,No,1-10,18.52,Yes,Increase,Increase,56500
 Treated,L6J,Halton,Family Style,Franchise,25,Yes,No,10-20,23.68,No,Increase,No change,47340
 Treated,L4V,Peel,Fast Food,No,3,Yes,Yes,10-20,17.95,Yes,Increase,Increase,49557
-Treated,L4C,York,Fast Food,Franchise,0,Yes,Yes,1-10,23.11,No,No change,No change,61869
+Treated,L4C,York,Fast Food,Franchise,0,No,No,1-10,23.11,No,No change,No change,61869
 Treated,L0E,Durham,Family Style,Franchise,11,Yes,No,1-10,12.75,No,Increase,Increase,33353
 Treated,M8T,Toronto,Premium Casual,No,5,Yes,No,1-10,23.95,No,Increase,Increase,46312
 Treated,L0N,York,Fast Casual,No,3,Yes,No,10-20,17.97,Yes,No change,Increase,55256
 Treated,M8Q,Toronto,Family Style,No,12,Yes,No,10-20,17.75,No,No change,Increase,58490
 Treated,M5X,Toronto,Premium Casual,No,22,Yes,No,10-20,19.65,No,Increase,Increase,56836
 Treated,M9V,Toronto,Casual Dining,Franchise,23,Yes,No,1-10,19.88,No,No change,Increase,40070
-Treated,L0P,Halton,Casual Dining,No,3,No,Yes,10-20,13.36,No,Increase,No change,62965
+Treated,L0P,Halton,Casual Dining,No,3,No,No,10-20,13.36,No,Increase,No change,62965
 Treated,L7C,Peel,Family Style,Franchise,13,Yes,Yes,1-10,14.4,No,Increase,Increase,38463
 Treated,L1X,Durham,Fast Casual,No,13,Yes,No,1-10,21.39,No,Increase,Increase,50213
 Treated,L9N,York,Family Style,No,17,Yes,No,10-20,17.01,No,No change,Increase,58897
@@ -2648,7 +2648,7 @@ Treated,L0P,Halton,Casual Dining,Franchise,15,Yes,No,10-20,17.52,No,No change,In
 Treated,L5M,Peel,Family Style,Franchise,3,Yes,No,10-20,17.46,Yes,Increase,Increase,32744
 Treated,M6J,Toronto,Family Style,No,1,Yes,No,10-20,20.67,No,Increase,Increase,34159
 Treated,L9P,Durham,Fast Casual,Franchise,7,No,Yes,10-20,18.21,No,Increase,Increase,50819
-Treated,M2W,Toronto,Family Style,No,4,Yes,Yes,10-20,19.39,No,No change,Increase,49091
+Treated,M2W,Toronto,Family Style,No,4,No,No,10-20,19.39,No,No change,Increase,49091
 Treated,L4P,York,Family Style,No,14,Yes,No,10-20,19.72,No,Increase,No change,40156
 Treated,L9N,York,Casual Dining,No,12,Yes,Yes,1-10,18.47,No,No change,No change,55193
 Treated,L0C,Durham,Casual Dining,No,1,No,Yes,10-20,15.85,No,No change,Increase,51870
@@ -2659,7 +2659,7 @@ Treated,M0H,Toronto,Casual Dining,Franchise,14,Yes,Yes,10-20,20.7,No,No change,I
 Treated,M9V,Toronto,Casual Dining,Franchise,7,Yes,Yes,10-20,20.35,No,No change,Increase,40757
 Treated,L6X,Peel,Fast Casual,No,20,Yes,Yes,1-10,24.27,No,No change,Increase,40242
 Treated,L5C,Peel,Casual Dining,No,25,No,Yes,1-10,14.96,No,Increase,Increase,34624
-Treated,L5L,Peel,Fast Food,Franchise,14,Yes,No,10-20,16.98,No,Increase,Increase,48691
+Treated,L5L,Peel,Fast Food,Franchise,14,No,No,10-20,16.98,No,Increase,Increase,48691
 Treated,M6J,Toronto,Fast Casual,No,11,Yes,Yes,10-20,17.55,No,Increase,No change,47562
 Treated,L4Y,Peel,Casual Dining,No,14,Yes,Yes,10-20,19.95,No,Increase,Increase,47145
 Treated,M8H,Toronto,Fine Dining,No,6,Yes,No,10-20,12.65,No,Increase,Increase,40558
@@ -2667,7 +2667,7 @@ Treated,L6Y,Peel,Family Style,No,14,No,Yes,1-10,16.36,No,No change,Increase,5206
 Treated,L4T,Peel,Casual Dining,No,10,Yes,No,10-20,14.84,No,Increase,Increase,45828
 Treated,L4Y,Peel,Family Style,No,2,Yes,No,1-10,17.49,No,No change,Increase,35893
 Treated,L6K,Halton,Casual Dining,No,18,Yes,Yes,1-10,19.23,No,Increase,Increase,54191
-Treated,L9E,Halton,Casual Dining,No,7,Yes,No,10-20,17.1,No,Increase,Increase,53120
+Treated,L9E,Halton,Casual Dining,No,7,No,No,10-20,17.1,No,Increase,Increase,53120
 Treated,L1R,Durham,Fine Dining,Franchise,21,Yes,No,1-10,17.32,No,No change,Decrease,42940
 Treated,L1L,Durham,Fine Dining,No,16,Yes,Yes,10-20,18.13,Yes,No change,Increase,43435
 Treated,M7D,Toronto,Family Style,No,8,Yes,No,10-20,16.46,No,Increase,Increase,44359
@@ -2698,7 +2698,7 @@ Treated,L0C,Durham,Casual Dining,No,16,Yes,No,10-20,21.17,No,Increase,Increase,3
 Treated,L7A,Peel,Fine Dining,Franchise,6,Yes,Yes,1-10,16,No,Increase,No change,52879
 Treated,L7C,Peel,Family Style,No,15,Yes,Yes,10-20,16.54,No,No change,Increase,48098
 Treated,L4X,Peel,Casual Dining,Franchise,7,Yes,No,10-20,17.15,Yes,Increase,Increase,49237
-Treated,L0C,Durham,Fast Casual,No,5,No,Yes,10-20,17.28,No,Increase,Increase,28070
+Treated,L0C,Durham,Fast Casual,No,5,No,No,10-20,17.28,No,Increase,Increase,28070
 Treated,M3P,Toronto,Casual Dining,No,7,Yes,Yes,10-20,17.88,No,Increase,Increase,52571
 Treated,L6B,York,Casual Dining,No,9,Yes,Yes,1-10,16.46,No,No change,Increase,43192
 Treated,L1W,Durham,Casual Dining,No,2,Yes,No,10-20,19.37,No,No change,Increase,48261
@@ -2710,7 +2710,7 @@ Treated,M1W,Toronto,Fast Casual,No,17,Yes,No,10-20,19.83,No,No change,No change,
 Treated,L7A,Peel,Premium Casual,Franchise,15,Yes,Yes,1-10,20.24,No,Increase,Increase,40380
 Treated,M6M,Toronto,Family Style,No,3,Yes,No,10-20,17.72,No,No change,No change,27615
 Treated,M2V,Toronto,Fast Food,No,10,Yes,Yes,1-10,20.34,No,No change,Increase,66623
-Treated,M0Y,Toronto,Family Style,No,12,Yes,Yes,10-20,21.07,No,No change,Increase,37966
+Treated,M0Y,Toronto,Family Style,No,12,No,No,10-20,21.07,No,No change,Increase,37966
 Treated,M6Z,Toronto,Fast Casual,No,13,Yes,No,1-10,17.37,No,Increase,Increase,39329
 Treated,M4S,Toronto,Casual Dining,No,2,Yes,Yes,10-20,13.88,No,No change,Increase,55261
 Treated,M4K,Toronto,Family Style,Franchise,15,Yes,No,1-10,18.99,No,No change,No change,35425
@@ -2738,7 +2738,7 @@ Treated,M5G,Toronto,Family Style,Franchise,9,Yes,No,1-10,18.42,No,No change,Incr
 Treated,M4Q,Toronto,Fast Food,No,6,Yes,No,10-20,20.5,No,Increase,Increase,40647
 Treated,L7B,York,Family Style,No,14,Yes,Yes,1-10,16.69,No,No change,Increase,36564
 Treated,M5C,Toronto,Casual Dining,No,7,Yes,No,1-10,17.67,No,No change,Increase,38281
-Treated,L0E,York,Casual Dining,Franchise,2,Yes,Yes,10-20,18.29,No,No change,Increase,42084
+Treated,L0E,York,Casual Dining,Franchise,2,No,No,10-20,18.29,No,No change,Increase,42084
 Treated,L6R,Peel,Fast Food,No,3,Yes,No,10-20,15.24,Yes,Increase,Increase,47535
 Treated,L4T,Peel,Family Style,No,8,Yes,No,10-20,15.03,No,Increase,No change,48301
 Treated,M3K,Toronto,Fine Dining,No,4,Yes,No,1-10,15.85,Yes,No change,Increase,41468
@@ -2746,24 +2746,24 @@ Treated,L6V,Peel,Fast Casual,No,9,Yes,No,10-20,14.46,Yes,No change,No change,631
 Treated,L5P,Peel,Fast Food,No,17,Yes,Yes,1-10,18.28,No,Increase,Increase,44488
 Treated,M0N,Toronto,Family Style,Franchise,11,Yes,No,1-10,25.13,No,Increase,Increase,35632
 Treated,L0P,Halton,Fast Casual,No,13,Yes,Yes,10-20,12.19,No,No change,No change,52837
-Treated,L7K,Peel,Casual Dining,No,9,Yes,No,10-20,22.5,No,No change,Increase,42602
+Treated,L7K,Peel,Casual Dining,No,9,No,No,10-20,22.5,No,No change,Increase,42602
 Treated,M7P,Toronto,Casual Dining,No,8,Yes,Yes,10-20,21.66,Yes,No change,Increase,48122
 Treated,L5C,Peel,Premium Casual,No,3,Yes,No,1-10,19.63,No,No change,Increase,55946
-Treated,M1O,Toronto,Casual Dining,No,10,Yes,Yes,10-20,16.81,No,Increase,Increase,37849
+Treated,M1O,Toronto,Casual Dining,No,10,No,No,10-20,16.81,No,Increase,Increase,37849
 Treated,L9L,Durham,Fine Dining,Franchise,11,Yes,No,10-20,16.37,Yes,Increase,Increase,43227
 Treated,L3X,York,Fast Casual,No,13,Yes,Yes,1-10,17.82,No,No change,Increase,50427
 Treated,L0P,Halton,Casual Dining,No,12,Yes,Yes,10-20,18.76,No,Increase,Increase,56480
 Treated,L6M,Halton,Family Style,Franchise,10,Yes,No,1-10,17.29,No,Increase,Increase,68524
 Treated,L4Z,Peel,Casual Dining,Franchise,2,Yes,No,10-20,12.25,No,Increase,Increase,44961
 Treated,L7C,Peel,Fast Food,No,11,Yes,No,1-10,21.64,Yes,No change,Increase,50074
-Treated,L6B,York,Premium Casual,Franchise,3,Yes,Yes,10-20,18.96,No,Increase,Increase,37820
+Treated,L6B,York,Premium Casual,Franchise,3,No,No,10-20,18.96,No,Increase,Increase,37820
 Treated,L4W,Peel,Fast Casual,No,14,Yes,No,10-20,16.43,No,No change,No change,49299
 Treated,L5G,Peel,Casual Dining,No,19,Yes,No,10-20,19.54,No,Increase,Increase,40889
 Treated,L0G,York,Fast Food,No,9,Yes,Yes,10-20,18,No,Increase,Increase,48746
 Treated,L9N,York,Premium Casual,No,4,Yes,No,10-20,19.31,No,Increase,Increase,41462
 Treated,L0G,York,Family Style,No,7,Yes,Yes,10-20,18.2,No,No change,Increase,38006
 Treated,L9E,Halton,Casual Dining,Franchise,8,Yes,No,10-20,16.37,No,No change,Increase,49338
-Treated,M5M,Toronto,Family Style,No,13,Yes,Yes,10-20,17.55,Yes,No change,Increase,40612
+Treated,M5M,Toronto,Family Style,No,13,No,No,10-20,17.55,Yes,No change,Increase,40612
 Treated,L7N,Halton,Family Style,No,12,Yes,Yes,1-10,21.53,No,Increase,Increase,44010
 Treated,M7N,Toronto,Premium Casual,Franchise,8,No,Yes,10-20,15.01,No,Increase,No change,54778
 Treated,M9J,Toronto,Family Style,No,6,Yes,Yes,10-20,16.04,No,No change,No change,48936
@@ -2772,11 +2772,11 @@ Treated,L9T,Halton,Casual Dining,No,11,Yes,Yes,1-10,18.4,No,No change,Increase,4
 Treated,L3S,York,Casual Dining,No,8,Yes,Yes,10-20,16.47,Yes,No change,Increase,51716
 Treated,M3A,Toronto,Family Style,Franchise,12,Yes,Yes,1-10,19.81,No,Increase,Increase,33146
 Treated,L5L,Peel,Fast Food,Franchise,13,Yes,Yes,1-10,20.87,No,No change,Increase,49036
-Treated,M2Z,Toronto,Casual Dining,Franchise,5,Yes,No,1-10,23.97,No,No change,Increase,40648
+Treated,M2Z,Toronto,Casual Dining,Franchise,5,No,No,1-10,23.97,No,No change,Increase,40648
 Treated,M5L,Toronto,Fine Dining,No,11,Yes,No,1-10,17.66,No,No change,Increase,48863
 Treated,L4V,Peel,Premium Casual,No,13,Yes,Yes,1-10,17.28,No,Increase,Increase,42050
 Treated,L0P,Halton,Casual Dining,No,16,Yes,No,1-10,18.57,No,Increase,Increase,49361
-Treated,L9P,Durham,Family Style,Franchise,17,No,Yes,1-10,19.34,No,No change,Increase,46092
+Treated,L9P,Durham,Family Style,Franchise,17,No,No,1-10,19.34,No,No change,Increase,46092
 Treated,M1Q,Toronto,Family Style,Franchise,4,Yes,No,1-10,20.6,No,Increase,Increase,55785
 Treated,L4W,Peel,Fast Food,No,4,Yes,No,1-10,13.02,No,No change,Increase,50011
 Treated,L1N,Durham,Fast Food,Franchise,8,Yes,No,10-20,19.81,No,Increase,No change,39345
@@ -2794,7 +2794,7 @@ Treated,M2B,Toronto,Family Style,No,15,Yes,Yes,1-10,23.92,No,Increase,Increase,4
 Treated,M3G,Toronto,Fast Food,Franchise,2,Yes,No,10-20,22.03,No,No change,Increase,47396
 Treated,L5G,Peel,Casual Dining,No,4,No,Yes,10-20,20.54,No,Increase,Increase,36362
 Treated,L7C,Peel,Fast Casual,Franchise,16,Yes,No,1-10,20.81,No,Increase,Increase,49109
-Treated,L1L,Durham,Premium Casual,No,17,Yes,Yes,10-20,17.97,No,Increase,Increase,62671
+Treated,L1L,Durham,Premium Casual,No,17,No,No,10-20,17.97,No,Increase,Increase,62671
 Treated,L9T,Halton,Premium Casual,Franchise,11,Yes,Yes,1-10,19.88,No,No change,Increase,37674
 Treated,L4Z,Peel,Casual Dining,No,7,Yes,No,1-10,25.08,No,No change,Increase,50330
 Treated,L6W,Peel,Family Style,No,9,Yes,Yes,1-10,17.98,No,No change,Decrease,52506
@@ -2818,7 +2818,7 @@ Treated,L3Y,York,Fast Casual,No,5,Yes,Yes,1-10,24.34,No,Increase,Increase,57682
 Treated,L1R,Durham,Fast Food,No,10,Yes,Yes,1-10,15.5,No,Increase,Decrease,48918
 Treated,L7A,Peel,Fast Food,No,8,Yes,Yes,1-10,17.18,Yes,Increase,Increase,43701
 Treated,L6E,York,Family Style,No,6,Yes,No,1-10,18.51,No,No change,Increase,46223
-Treated,L4W,Peel,Premium Casual,No,17,Yes,No,10-20,17.42,No,Increase,Increase,48790
+Treated,L4W,Peel,Premium Casual,No,17,No,No,10-20,17.42,No,Increase,Increase,48790
 Treated,L6E,York,Casual Dining,No,5,Yes,Yes,1-10,19.51,No,No change,No change,55732
 Treated,L6C,York,Fast Casual,No,11,Yes,Yes,1-10,19.97,No,No change,Increase,60829
 Treated,L4T,Peel,Casual Dining,No,22,Yes,Yes,1-10,16.45,No,Increase,Increase,54932
@@ -2830,18 +2830,18 @@ Treated,L4B,York,Premium Casual,No,15,Yes,Yes,1-10,19.91,No,No change,Increase,4
 Treated,L9T,Halton,Family Style,No,9,Yes,No,10-20,19.91,No,Increase,Increase,43334
 Treated,L5V,Peel,Fast Food,No,18,Yes,Yes,1-10,22.85,No,No change,Increase,60601
 Treated,M7N,Toronto,Fast Food,No,9,Yes,Yes,1-10,15.88,No,Increase,Decrease,53530
-Treated,L9L,Durham,Fine Dining,No,14,Yes,No,10-20,20.88,No,Increase,No change,23960
-Treated,L1V,Durham,Premium Casual,No,0,Yes,No,10-20,19.64,No,Increase,Increase,46638
+Treated,L9L,Durham,Fine Dining,No,14,No,No,10-20,20.88,No,Increase,No change,23960
+Treated,L1V,Durham,Premium Casual,No,0,No,No,10-20,19.64,No,Increase,Increase,46638
 Treated,M5Z,Toronto,Fast Food,No,9,Yes,No,10-20,16.24,No,Increase,Increase,54890
 Treated,L4L,York,Family Style,No,9,Yes,Yes,1-10,12.57,No,No change,Increase,50777
 Treated,L3X,York,Fast Casual,Franchise,17,Yes,Yes,10-20,20.03,Yes,No change,Increase,50662
 Treated,M7H,Toronto,Premium Casual,No,5,Yes,No,10-20,20.12,Yes,Increase,Increase,48477
 Treated,L4S,York,Casual Dining,No,15,Yes,Yes,10-20,19.44,No,No change,No change,36715
-Treated,L5T,Peel,Fine Dining,No,1,Yes,No,10-20,16.44,No,Increase,No change,38549
+Treated,L5T,Peel,Fine Dining,No,1,No,No,10-20,16.44,No,Increase,No change,38549
 Treated,L9N,York,Premium Casual,No,12,Yes,No,1-10,17.83,No,Increase,Increase,43538
 Treated,M6S,Toronto,Fast Casual,Franchise,8,Yes,No,10-20,20.13,No,No change,Increase,26643
 Treated,L1Y,Durham,Family Style,No,7,Yes,No,1-10,22.93,No,No change,Increase,50912
-Treated,L6J,Halton,Casual Dining,Franchise,18,Yes,Yes,10-20,19.36,No,Increase,Increase,47979
+Treated,L6J,Halton,Casual Dining,Franchise,18,No,No,10-20,19.36,No,Increase,Increase,47979
 Treated,L6Y,Peel,Premium Casual,Franchise,13,Yes,No,1-10,18.25,Yes,Increase,Increase,41594
 Treated,L1H,Durham,Fast Food,Franchise,2,Yes,No,1-10,15.7,No,Increase,Increase,37739
 Treated,L0P,Halton,Fast Casual,No,14,Yes,No,10-20,23.36,No,Increase,Increase,50126
@@ -2850,7 +2850,7 @@ Treated,M1O,Toronto,Casual Dining,No,1,Yes,No,1-10,17.87,No,Increase,Increase,59
 Treated,L4X,Peel,Fast Food,No,10,Yes,Yes,1-10,21.99,No,Increase,Increase,39844
 Treated,L6P,Peel,Family Style,No,24,Yes,No,1-10,17.95,Yes,Increase,Increase,33195
 Treated,M5E,Toronto,Fast Food,Franchise,13,Yes,No,10-20,19.58,No,Increase,Increase,48489
-Treated,L0B,Durham,Casual Dining,Franchise,12,Yes,No,1-10,18.28,No,Decrease,Decrease,39851
+Treated,L0B,Durham,Casual Dining,Franchise,12,No,No,1-10,18.28,No,Decrease,Decrease,39851
 Treated,M5P,Toronto,Family Style,No,12,Yes,No,10-20,20.31,No,No change,Increase,42388
 Treated,M1N,Toronto,Fast Casual,No,7,No,Yes,10-20,16.93,No,Increase,Increase,54471
 Treated,L5A,Peel,Premium Casual,Franchise,2,Yes,Yes,10-20,18.53,Yes,Increase,Decrease,46760
@@ -2878,11 +2878,11 @@ Treated,M3P,Toronto,Family Style,No,6,Yes,Yes,1-10,14.74,Yes,No change,No change
 Treated,L7K,Peel,Fast Food,No,4,Yes,Yes,1-10,20.81,No,No change,No change,61757
 Treated,M0F,Toronto,Premium Casual,Franchise,12,Yes,Yes,10-20,15.91,No,No change,Increase,51993
 Treated,L6P,Peel,Family Style,No,17,Yes,No,10-20,17.07,No,No change,Increase,42052
-Treated,L6T,Peel,Premium Casual,No,21,No,Yes,10-20,18.06,No,No change,Increase,40043
-Treated,L0P,Halton,Family Style,No,0,Yes,Yes,1-10,14.8,No,Increase,Increase,39085
+Treated,L6T,Peel,Premium Casual,No,21,No,No,10-20,18.06,No,No change,Increase,40043
+Treated,L0P,Halton,Family Style,No,0,No,No,1-10,14.8,No,Increase,Increase,39085
 Treated,L7P,Halton,Family Style,Franchise,5,Yes,No,10-20,17.83,No,Increase,Increase,32581
 Treated,L7A,Peel,Fine Dining,Franchise,0,Yes,Yes,1-10,22.8,Yes,Increase,Increase,35142
-Treated,L7E,York,Casual Dining,No,4,Yes,No,10-20,18.42,No,No change,Increase,50125
+Treated,L7E,York,Casual Dining,No,4,No,No,10-20,18.42,No,No change,Increase,50125
 Treated,L7E,York,Casual Dining,Franchise,13,Yes,Yes,10-20,17.02,No,No change,Increase,41635
 Treated,L0N,York,Family Style,No,10,Yes,No,10-20,14.13,Yes,No change,Increase,40128
 Treated,L9P,Durham,Casual Dining,No,20,Yes,No,1-10,23.41,No,Increase,Increase,35068
@@ -2897,7 +2897,7 @@ Treated,L1G,Durham,Fast Food,No,6,Yes,No,10-20,16.86,No,No change,Increase,37469
 Treated,M2G,Toronto,Casual Dining,Franchise,12,Yes,Yes,1-10,13.69,No,No change,Increase,49560
 Treated,L5C,Peel,Family Style,Franchise,12,Yes,No,10-20,13.28,No,Increase,Increase,44893
 Treated,M1H,Toronto,Fast Food,No,10,Yes,Yes,1-10,18.18,No,No change,No change,45104
-Treated,L4V,Peel,Casual Dining,No,6,No,Yes,10-20,16.5,No,No change,Increase,51292
+Treated,L4V,Peel,Casual Dining,No,6,No,No,10-20,16.5,No,No change,Increase,51292
 Treated,L3R,York,Fine Dining,No,14,Yes,No,10-20,15.97,No,No change,No change,48046
 Treated,L0P,Halton,Casual Dining,No,7,Yes,No,10-20,18.8,No,No change,Increase,49856
 Treated,L7E,York,Premium Casual,Franchise,5,Yes,No,10-20,20.84,No,No change,Increase,43344
@@ -2916,9 +2916,9 @@ Treated,L4Z,Peel,Casual Dining,No,13,Yes,No,10-20,21.85,No,Increase,Increase,421
 Treated,L3Z,York,Family Style,No,1,Yes,Yes,10-20,17.29,No,No change,Increase,34805
 Treated,L6H,Halton,Fast Casual,No,5,Yes,No,10-20,14.64,Yes,Increase,Increase,50522
 Treated,M2E,Toronto,Family Style,No,6,Yes,No,10-20,13.69,No,No change,Increase,62044
-Treated,L5N,Peel,Premium Casual,Franchise,25,Yes,No,10-20,17.87,No,Increase,No change,40524
+Treated,L5N,Peel,Premium Casual,Franchise,25,No,No,10-20,17.87,No,Increase,No change,40524
 Treated,L5V,Peel,Fast Food,No,10,Yes,No,1-10,14.49,No,Increase,Increase,42743
-Treated,L7R,Halton,Fine Dining,No,7,Yes,No,1-10,20.8,No,No change,Increase,41941
+Treated,L7R,Halton,Fine Dining,No,7,No,No,1-10,20.8,No,No change,Increase,41941
 Treated,L3R,York,Family Style,No,7,Yes,No,10-20,15.1,No,Increase,Increase,37842
 Treated,L7C,Peel,Family Style,Franchise,15,Yes,Yes,10-20,20.67,No,No change,Increase,45349
 Treated,L4Y,Peel,Fast Casual,Franchise,5,Yes,No,10-20,17.98,No,No change,Increase,50559
@@ -2931,13 +2931,13 @@ Treated,L7C,Peel,Casual Dining,No,11,Yes,Yes,10-20,20.3,No,No change,Increase,50
 Treated,L0B,Durham,Family Style,Franchise,8,Yes,Yes,10-20,19.42,No,No change,Increase,47496
 Treated,M8X,Toronto,Fine Dining,No,5,Yes,Yes,1-10,21.73,Yes,No change,Increase,46015
 Treated,M5K,Toronto,Fast Food,No,9,Yes,Yes,1-10,23.17,No,Increase,No change,56764
-Treated,L4X,Peel,Premium Casual,No,4,Yes,Yes,1-10,15.03,No,No change,Increase,46941
+Treated,L4X,Peel,Premium Casual,No,4,No,No,1-10,15.03,No,No change,Increase,46941
 Treated,M5M,Toronto,Fine Dining,No,10,Yes,Yes,1-10,11.22,No,Increase,Increase,47647
 Treated,L6C,York,Premium Casual,No,8,Yes,No,1-10,20.78,No,No change,Increase,36483
 Treated,L6M,Halton,Casual Dining,No,12,Yes,No,10-20,21.2,No,Increase,Increase,37466
 Treated,L7E,York,Fast Casual,No,6,Yes,No,10-20,15.49,No,No change,Increase,57849
 Treated,M9C,Toronto,Fine Dining,No,5,Yes,No,1-10,18.56,No,No change,Increase,56968
-Treated,L7E,York,Family Style,No,5,Yes,Yes,10-20,14.81,No,No change,No change,47203
+Treated,L7E,York,Family Style,No,5,No,No,10-20,14.81,No,No change,No change,47203
 Treated,L9N,York,Premium Casual,No,15,Yes,No,1-10,16.68,No,Increase,Increase,38866
 Treated,L7K,Peel,Premium Casual,Franchise,9,Yes,Yes,1-10,17.91,No,Increase,Increase,52345
 Treated,L5J,Peel,Casual Dining,No,10,Yes,No,1-10,15.23,No,No change,Increase,47814
@@ -2946,7 +2946,7 @@ Treated,M6U,Toronto,Family Style,No,2,Yes,Yes,10-20,17.06,No,No change,Increase,
 Treated,L4A,York,Premium Casual,No,12,Yes,No,1-10,19.39,No,No change,Increase,60442
 Treated,L0E,York,Family Style,No,5,Yes,No,1-10,16.47,No,No change,Decrease,52222
 Treated,M9A,Toronto,Casual Dining,No,11,Yes,Yes,10-20,17.62,No,No change,Increase,50434
-Treated,M4F,Toronto,Family Style,Franchise,1,Yes,No,1-10,19.98,No,Decrease,Increase,44872
+Treated,M4F,Toronto,Family Style,Franchise,1,No,No,1-10,19.98,No,Decrease,Increase,44872
 Treated,L4E,York,Fine Dining,No,20,Yes,Yes,1-10,17.25,No,No change,Increase,52281
 Treated,L3S,York,Family Style,Franchise,6,Yes,No,1-10,17.06,No,No change,No change,48071
 Treated,M5B,Toronto,Family Style,Franchise,4,Yes,Yes,1-10,20.86,No,Increase,Increase,54059
@@ -2955,15 +2955,15 @@ Treated,L9N,York,Premium Casual,Franchise,1,Yes,No,1-10,20.74,No,No change,Incre
 Treated,L0P,Halton,Casual Dining,No,9,Yes,No,10-20,21.54,No,Increase,Increase,40905
 Treated,L3X,York,Casual Dining,No,3,Yes,Yes,1-10,18.63,No,No change,Increase,49738
 Treated,L7K,Peel,Fast Casual,Franchise,9,Yes,No,10-20,20.84,Yes,Increase,Increase,39225
-Treated,M6B,Toronto,Casual Dining,Franchise,5,Yes,No,10-20,18.27,No,Increase,No change,42143
-Treated,L7E,York,Premium Casual,Franchise,13,Yes,No,1-10,16.24,No,No change,Increase,46967
+Treated,M6B,Toronto,Casual Dining,Franchise,5,No,No,10-20,18.27,No,Increase,No change,42143
+Treated,L7E,York,Premium Casual,Franchise,13,No,No,1-10,16.24,No,No change,Increase,46967
 Treated,L7B,York,Fast Casual,No,6,Yes,No,10-20,20.45,No,Increase,Increase,48052
 Treated,L9T,Halton,Fast Casual,No,5,Yes,Yes,10-20,15.97,No,No change,Increase,39702
 Treated,L4H,York,Family Style,No,4,Yes,Yes,10-20,19.62,No,Increase,Increase,43261
 Treated,L1B,Durham,Fast Casual,No,1,Yes,No,1-10,21.34,No,Increase,Increase,49183
 Treated,L0N,York,Fine Dining,No,6,Yes,No,10-20,17.81,No,No change,Increase,45520
 Treated,L7C,Peel,Family Style,No,13,Yes,Yes,10-20,18.54,No,No change,Increase,44564
-Treated,M5F,Toronto,Fast Casual,Franchise,2,No,Yes,10-20,15.1,No,No change,Increase,50692
+Treated,M5F,Toronto,Fast Casual,Franchise,2,No,No,10-20,15.1,No,No change,Increase,50692
 Treated,M9X,Toronto,Fine Dining,No,5,Yes,Yes,1-10,13.71,No,Increase,Increase,49064
 Treated,L0N,York,Fast Food,No,12,No,Yes,10-20,20.73,No,No change,Increase,38950
 Treated,L4P,York,Premium Casual,No,6,Yes,No,1-10,16.49,No,Increase,Increase,38328
@@ -2974,7 +2974,7 @@ Treated,M4B,Toronto,Fast Casual,Franchise,14,Yes,No,1-10,19.78,No,No change,Incr
 Treated,L9E,Halton,Family Style,No,5,Yes,No,10-20,16.34,No,Increase,Increase,54462
 Treated,L0P,Halton,Casual Dining,No,3,Yes,No,10-20,18.23,No,No change,Increase,44719
 Treated,L3P,York,Fine Dining,No,7,Yes,Yes,10-20,18.59,No,No change,Increase,50450
-Treated,L4X,Peel,Premium Casual,No,9,Yes,Yes,10-20,14.1,No,Increase,No change,47055
+Treated,L4X,Peel,Premium Casual,No,9,No,No,10-20,14.1,No,Increase,No change,47055
 Treated,L4Z,Peel,Premium Casual,No,1,Yes,Yes,10-20,15.93,No,No change,Increase,40615
 Treated,L9N,York,Family Style,Franchise,15,Yes,No,1-10,20.8,No,Increase,Increase,37743
 Treated,M8K,Toronto,Family Style,No,11,Yes,No,1-10,18.55,No,No change,Increase,41471
@@ -2991,7 +2991,7 @@ Treated,L4T,Peel,Casual Dining,No,12,Yes,Yes,20-30,16.46,No,Increase,Increase,10
 Treated,M0H,Toronto,Fast Casual,No,15,Yes,No,20-30,16.97,No,Increase,Increase,114697
 Treated,L9N,York,Fast Casual,No,2,Yes,No,20-30,18.17,No,No change,Increase,178335
 Treated,M7A,Toronto,Fast Casual,No,13,Yes,No,20-30,19.28,No,No change,Increase,128740
-Treated,L3Y,York,Casual Dining,No,10,Yes,No,20-30,15.54,No,No change,Increase,136285
+Treated,L3Y,York,Casual Dining,No,10,No,No,20-30,15.54,No,No change,Increase,136285
 Treated,M6S,Toronto,Casual Dining,Franchise,7,No,Yes,20-30,16.95,No,No change,Increase,143436
 Treated,L9T,Halton,Fine Dining,No,24,Yes,Yes,20-30,20.68,No,No change,Increase,162708
 Treated,L6E,York,Family Style,Franchise,18,Yes,Yes,20-30,18.97,No,No change,Increase,95967
@@ -3018,7 +3018,7 @@ Treated,L6S,Peel,Fast Casual,No,1,Yes,Yes,>30,17.71,No,Increase,Increase,204311
 Treated,L6G,York,Casual Dining,No,12,Yes,No,>30,15.57,No,Increase,Increase,123268
 Treated,L9N,York,Fast Casual,No,2,Yes,No,20-30,14.02,No,No change,Increase,104664
 Treated,M4J,Toronto,Fast Food,Franchise,12,Yes,Yes,20-30,18.28,No,Increase,Increase,199031
-Treated,M8T,Toronto,Fine Dining,No,14,Yes,No,>30,20.26,No,Increase,Increase,128307
+Treated,M8T,Toronto,Fine Dining,No,14,No,No,>30,20.26,No,Increase,Increase,128307
 Treated,L7A,Peel,Family Style,No,7,Yes,No,20-30,16.76,No,No change,Increase,168856
 Treated,L3Z,York,Premium Casual,No,11,Yes,No,20-30,20.84,No,Increase,No change,143981
 Treated,L0H,York,Family Style,No,13,Yes,No,20-30,18.55,No,Decrease,Increase,165367
@@ -3032,7 +3032,7 @@ Treated,L7A,Peel,Family Style,No,29,Yes,No,20-30,16.21,No,Increase,Increase,1341
 Treated,L0C,Durham,Premium Casual,Franchise,15,Yes,Yes,20-30,18.36,No,Increase,Increase,180937
 Treated,L6S,Peel,Fast Casual,No,9,No,Yes,20-30,21.74,No,Increase,Increase,201441
 Treated,L0P,Halton,Family Style,No,9,Yes,No,20-30,16.99,Yes,Increase,Increase,138771
-Treated,L6Z,Peel,Fast Food,No,10,Yes,Yes,>30,16.21,No,No change,Increase,149519
+Treated,L6Z,Peel,Fast Food,No,10,No,No,>30,16.21,No,No change,Increase,149519
 Treated,L9E,Halton,Casual Dining,No,6,Yes,Yes,20-30,15.98,No,Increase,Increase,119467
 Treated,L0E,Durham,Fast Food,No,6,Yes,Yes,20-30,15.21,No,No change,Increase,152984
 Treated,L0P,Halton,Casual Dining,No,11,Yes,No,20-30,19.54,No,No change,Increase,88371
@@ -3077,7 +3077,7 @@ Treated,M3G,Toronto,Fast Casual,No,15,Yes,Yes,>30,21.72,No,Increase,Increase,180
 Treated,L1N,Durham,Fast Food,No,21,No,Yes,>30,24.16,No,Increase,Increase,146412
 Treated,M0B,Toronto,Fast Casual,No,23,Yes,Yes,>30,14.19,No,Increase,Increase,203009
 Treated,L0E,York,Premium Casual,No,6,Yes,Yes,20-30,18.97,No,No change,Increase,101753
-Treated,L7K,Peel,Fast Food,Franchise,4,Yes,Yes,20-30,21.32,No,No change,Increase,143139
+Treated,L7K,Peel,Fast Food,Franchise,4,No,No,20-30,21.32,No,No change,Increase,143139
 Treated,L1W,Durham,Fast Casual,Franchise,13,Yes,Yes,20-30,13.74,No,Increase,Increase,84368
 Treated,L7K,Peel,Casual Dining,No,7,Yes,No,20-30,16.35,No,Increase,No change,124776
 Treated,M7M,Toronto,Casual Dining,No,1,Yes,No,>30,18.88,No,No change,Increase,138268
@@ -3124,7 +3124,7 @@ Treated,L6K,Halton,Family Style,No,20,Yes,No,20-30,15,No,Increase,Increase,15925
 Treated,L4W,Peel,Casual Dining,No,15,Yes,Yes,20-30,15.45,No,Increase,Increase,150413
 Treated,L9N,York,Family Style,No,4,Yes,No,>30,19.4,No,No change,Increase,187777
 Treated,L7E,York,Fine Dining,No,6,Yes,No,>30,20.03,No,Increase,Increase,116811
-Treated,M2M,Toronto,Premium Casual,Franchise,8,Yes,No,20-30,20.82,No,No change,Increase,96429
+Treated,M2M,Toronto,Premium Casual,Franchise,8,No,No,20-30,20.82,No,No change,Increase,96429
 Treated,L6G,York,Fine Dining,Franchise,0,Yes,Yes,20-30,17.53,No,No change,Increase,117913
 Treated,M5C,Toronto,Casual Dining,No,4,Yes,No,>30,21.55,Yes,Increase,Increase,147082
 Treated,L3P,York,Premium Casual,No,5,Yes,Yes,>30,18.93,No,No change,Increase,128675
@@ -3165,7 +3165,7 @@ Treated,M3N,Toronto,Family Style,No,4,Yes,Yes,20-30,18.77,No,Increase,Increase,1
 Treated,L7B,York,Family Style,No,9,Yes,Yes,>30,15.08,Yes,Increase,Increase,96742
 Treated,L9P,Durham,Family Style,No,10,Yes,No,20-30,19.38,No,No change,Increase,138583
 Treated,L9L,Durham,Fast Casual,No,12,Yes,Yes,20-30,15.55,Yes,Increase,Increase,127047
-Treated,L7E,York,Family Style,No,8,Yes,Yes,20-30,16.97,No,No change,Increase,235268
+Treated,L7E,York,Family Style,No,8,No,No,20-30,16.97,No,No change,Increase,235268
 Treated,L6R,Peel,Casual Dining,Franchise,15,Yes,No,20-30,20.37,No,No change,Increase,82259
 Treated,L9L,Durham,Fast Food,No,4,No,Yes,20-30,15.41,No,No change,Increase,90865
 Treated,L6P,Peel,Fast Food,Franchise,2,Yes,Yes,20-30,18.08,Yes,No change,Increase,123721
@@ -3222,7 +3222,7 @@ Treated,L9N,York,Fast Casual,No,12,Yes,No,20-30,19.49,Yes,Increase,Increase,1596
 Treated,L7C,Peel,Casual Dining,No,7,Yes,No,20-30,22.52,No,Increase,Increase,170535
 Treated,M6B,Toronto,Family Style,No,7,Yes,No,20-30,19.85,No,Increase,Increase,171700
 Treated,M8E,Toronto,Casual Dining,No,12,Yes,No,20-30,13.78,No,Increase,Increase,132451
-Treated,L7B,York,Fast Casual,No,14,No,Yes,20-30,14.65,No,Increase,Increase,147612
+Treated,L7B,York,Fast Casual,No,14,No,No,20-30,14.65,No,Increase,Increase,147612
 Treated,L7P,Halton,Fine Dining,No,16,Yes,Yes,20-30,18.89,No,No change,Increase,106723
 Treated,L4T,Peel,Fast Casual,No,8,Yes,Yes,20-30,17.57,No,No change,Increase,131195
 Treated,L0H,York,Family Style,No,21,Yes,No,20-30,14,No,Increase,Increase,142238
@@ -3235,7 +3235,7 @@ Treated,L9N,York,Casual Dining,No,4,Yes,No,20-30,17.27,No,Increase,Increase,1038
 Treated,M0K,Toronto,Fast Casual,Franchise,3,Yes,Yes,20-30,17.25,No,No change,Increase,151576
 Treated,M7U,Toronto,Fine Dining,No,2,Yes,Yes,20-30,24.09,No,No change,Increase,214400
 Treated,L5L,Peel,Fast Casual,No,27,Yes,No,20-30,21.64,No,No change,Increase,141187
-Treated,L7A,Peel,Premium Casual,No,10,No,Yes,>30,14.26,No,Increase,Increase,147753
+Treated,L7A,Peel,Premium Casual,No,10,No,No,>30,14.26,No,Increase,Increase,147753
 Treated,L7B,York,Casual Dining,No,15,Yes,No,>30,18.16,No,Increase,Increase,185538
 Treated,L6K,Halton,Fast Food,No,0,Yes,Yes,>30,21.33,No,Increase,Increase,129244
 Treated,L7C,Peel,Fast Casual,No,9,Yes,No,20-30,18.33,Yes,Increase,Increase,124096
@@ -3258,18 +3258,18 @@ Treated,L9N,York,Casual Dining,Franchise,21,Yes,Yes,>30,15.47,No,Increase,Increa
 Treated,L1R,Durham,Fine Dining,No,5,Yes,No,>30,19.11,Yes,Increase,Increase,161891
 Treated,M5S,Toronto,Family Style,Franchise,3,Yes,No,20-30,17.36,No,Increase,Increase,118438
 Treated,L7A,Peel,Fast Casual,No,11,Yes,No,>30,15.71,No,No change,Increase,137322
-Treated,L7N,Halton,Premium Casual,Franchise,26,Yes,No,20-30,18.31,No,No change,Increase,125030
+Treated,L7N,Halton,Premium Casual,Franchise,26,No,No,20-30,18.31,No,No change,Increase,125030
 Treated,L9E,Halton,Fast Food,Franchise,22,Yes,Yes,>30,15.83,No,Increase,Increase,201965
 Treated,M6Y,Toronto,Premium Casual,No,12,Yes,No,>30,21.41,No,Increase,Increase,159899
 Treated,L9N,York,Fast Casual,Franchise,7,Yes,No,20-30,15.76,No,No change,Increase,191277
 Treated,L3P,York,Fast Food,Franchise,3,Yes,No,20-30,15.86,No,Increase,Increase,178815
 Treated,L9P,Durham,Fine Dining,No,7,Yes,Yes,>30,19.05,No,No change,Increase,134587
-Treated,M2S,Toronto,Fast Casual,Franchise,16,Yes,No,20-30,22.98,No,No change,Increase,145104
+Treated,M2S,Toronto,Fast Casual,Franchise,16,No,No,20-30,22.98,No,No change,Increase,145104
 Treated,L1V,Durham,Premium Casual,No,12,Yes,No,20-30,19.01,No,Increase,Increase,101905
 Treated,L1P,Durham,Casual Dining,No,13,Yes,No,20-30,24.52,No,Increase,Increase,155889
 Treated,M2K,Toronto,Family Style,Franchise,5,Yes,No,20-30,12.26,No,Increase,Increase,176433
 Treated,M3I,Toronto,Casual Dining,No,2,Yes,No,20-30,21.71,No,No change,Increase,140717
 Treated,L1T,Durham,Fine Dining,No,14,Yes,No,20-30,18.82,No,Increase,Increase,131827
 Treated,M7B,Toronto,Fast Casual,No,2,Yes,No,20-30,19.88,Yes,Increase,Increase,169056
-Treated,L5M,Peel,Casual Dining,No,10,No,Yes,>30,20.79,No,Increase,Increase,163627
+Treated,L5M,Peel,Casual Dining,No,10,No,No,>30,20.79,No,Increase,Increase,163627
 Treated,L6S,Peel,Fine Dining,No,14,Yes,No,20-30,13.91,Yes,Increase,Increase,152765

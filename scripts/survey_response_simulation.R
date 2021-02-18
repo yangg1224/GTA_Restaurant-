@@ -283,10 +283,15 @@ simulated_dataset <-
   rbind(simulated_dataset_control, simulated_dataset_treated)
 
 # Loop through all of the rows and generate an FSA code based on the row's region
+# Also fix simulated data fro Q6 and Q7 - control group must have either takeout or delivery
+# or else they would be closed and not be a part of this survey
 for (i in 1:nrow(simulated_dataset)){
-  rand = sample(x=c(1,2,3), prob=c(0.33, 0.33, 0.33))
   simulated_dataset$Q1[i] = fsa_generate(simulated_dataset$Q2[i])
-  if (simulated_dataset$Q6[i] == "No" && simulated_dataset$Q7[i] == "No") {
+  
+  # Pick a random number between 1 and 3 inclusive
+  # Assigns Q6, Q7, or both as "Yes" depending on the rand number
+  rand = sample(x=c(1,2,3), prob=c(0.33, 0.33, 0.33))
+  if (simulated_dataset$Q6[i] == "No" && simulated_dataset$Q7[i] == "No" && simulated_dataset$type[i] == "Control") {
     if (rand == 1) {
       simulated_dataset$Q6[i] = "Yes"
     } else if (rand == 2){
