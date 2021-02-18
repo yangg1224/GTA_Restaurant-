@@ -10,6 +10,8 @@
 
 #### Workspace setup ####
 library(tidyverse)
+#install.packages("PerformanceAnalytics")
+library("PerformanceAnalytics")
 
 
 # Function that takes a region and generates a random FSA code within that region
@@ -280,8 +282,7 @@ simulated_dataset_control<- rbind(small_restaurant_c,big_restaurant_c)
 simulated_dataset <-
   rbind(simulated_dataset_control, simulated_dataset_treated)
 
-# Is there a more efficient way to do this?
-# I essentially loop through all of the rows and generate an FSA code based on the row's region
+# Loop through all of the rows and generate an FSA code based on the row's region
 for (i in 1:nrow(simulated_dataset)){
   simulated_dataset$Q1[i] = fsa_generate(simulated_dataset$Q2[i])
 }
@@ -301,6 +302,8 @@ revenue_c <- simulated_dataset_control$Q13
 revenue_t <- simulated_dataset_treated$Q13
 t.test(revenue_c, revenue_t)
 
+#### Correlation Matrix ####
+chart.Correlation(simulated_dataset[c(6, 10, 14)], histogram=TRUE)
 
 #### Make some graphs very quickly
 
@@ -312,8 +315,6 @@ simulated_dataset %>%
   theme_minimal() +
   facet_wrap(vars(type))
 
-
-
 simulated_dataset %>% 
   ggplot(aes(x = Q3)) +
   geom_bar(stat="count") +
@@ -321,7 +322,6 @@ simulated_dataset %>%
   labs(x = "Restaurant type",
        y = "Number of restaurants") +
   scale_fill_brewer(palette = "Set1")
-
 
 simulated_dataset %>% 
   ggplot(aes(x = Q5)) +
@@ -332,7 +332,7 @@ simulated_dataset %>%
   scale_color_brewer(palette = "Set1")
 
 simulated_dataset %>% 
-  ggplot(aes(x = Q1, y = type, color=Q1)) +
+  ggplot(aes(x = Q2, y = type, color=Q2)) +
   geom_jitter(show.legend = FALSE) +
   labs(title = "Experimental Conditions across Regions", x = "Region", y = "Experimental Condition") +
   theme_minimal()
