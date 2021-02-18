@@ -284,7 +284,18 @@ simulated_dataset <-
 
 # Loop through all of the rows and generate an FSA code based on the row's region
 for (i in 1:nrow(simulated_dataset)){
+  rand = sample(x=c(1,2,3), prob=c(0.33, 0.33, 0.33))
   simulated_dataset$Q1[i] = fsa_generate(simulated_dataset$Q2[i])
+  if (simulated_dataset$Q6[i] == "No" && simulated_dataset$Q7[i] == "No") {
+    if (rand == 1) {
+      simulated_dataset$Q6[i] = "Yes"
+    } else if (rand == 2){
+      simulated_dataset$Q7[i] = "Yes"
+    } else {
+      simulated_dataset$Q6[i] = "Yes"
+      simulated_dataset$Q7[i] = "Yes"
+    }
+  }
 }
 
 # Order Q1 before Q2 (not actually necessary)
