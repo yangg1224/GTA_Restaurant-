@@ -313,6 +313,10 @@ write_csv(simulated_dataset, 'inputs/simulated_data.csv')
 
 
 #### Exploratory Data Analysis ####
+
+
+
+
 #### Statistical Inference ####
 revenue_c <- simulated_dataset_control$Q13
 revenue_t <- simulated_dataset_treated$Q13
