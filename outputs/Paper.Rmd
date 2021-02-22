@@ -14,6 +14,9 @@ thanks: 'Code and data are available at: https://github.com/yangg1224/groupproje
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
+#install.packages("PerformanceAnalytics")
+library("PerformanceAnalytics")
+
 ```
 
 # Introduction
