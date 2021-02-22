@@ -1,8 +1,8 @@
 #### Preamble ####
 # Purpose: This script simulates the responses to a survey about restaurants in Toronto.
-# Author: Yingying Zhou, Xinyi Xu
+# Author: Yingying Zhou, Xinyi Xu, Yang Wu 
 # Data: 14 February 2021
-# Contact: yingying.zhou@utoronto.ca; xiny.xu@mail.utoronto.ca; 
+# Contact: yingying.zhou@utoronto.ca; xiny.xu@mail.utoronto.ca; yangg.wu@mail.urotonto.ca
 # License: MIT
 # Pre-requisites: 
 # - None
@@ -103,6 +103,7 @@ fsa_generate <- function(region) {
 # Q11: How has your FIXED costs to run the restaurant changed within this month?
 # Q12: How has your FLEX/VARIABLE costs to run the restaurant changed within this month?
 # Q13: How much revenue did your restaurant make in the past month? ($CAD)
+
 
 # Do this one for treated and once for control and then bring them together
 

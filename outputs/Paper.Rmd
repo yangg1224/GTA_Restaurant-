@@ -33,14 +33,67 @@ library("PerformanceAnalytics")
 
 ## Descriptive Analysis
 
-```{r}
+```{r read_data, include=FALSE}
 
+setwd("~/Downloads/Git/groupproject-") 
 
+# read raw dataset from scripts, need to run survey_response _simulation first.
+simulated_data<- read_csv("inputs/simulated_data.csv") 
 
+# We add a new column To distinguish the restaurant size by employees number. 
+# if employees number >20 then we define it is big, otherwise it is small.
+for (i in 1:nrow(simulated_data)){
+  if ((simulated_data$Q8[i] == ">30") || (simulated_data$Q8[i] == "20-30")){
+  simulated_data$size[i] = "Big"  
+  }else {
+    simulated_data$size[i] = "Small"
+  }
+}
 
+treated_data<-
+  filter(simulated_data, simulated_data$type == "Treated" ) # load treated data 
 
+control_data<-
+  filter(simulated_data, simulated_data$type == "Control" ) # load control data
 ```
 
+### Revenue distributions group by restaurant size
+```{r revenue_distribution, echo=FALSE}
+
+
+library(ggplot2)
+# Treated group
+rd1<-
+  ggplot(treated_data, aes(x = treated_data$Q13)) +
+  geom_histogram(aes(color = size, fill= size),
+                position = "identity", bins = 40, alpha=0.5) +
+  scale_color_manual(values = c("#00AFBB", "#E7B800")) +
+  scale_fill_manual(values = c("#00AFBB", "#E7B800"))+
+  labs(title="Revenue Distributions in Treated Group", x="Renvenue", y="Count")+
+  geom_density(alpha=.2, fill="#FF6666")+
+  theme_linedraw()
+# Control group
+rd2<-
+  ggplot(control_data, aes(x = control_data$Q13)) +
+  geom_histogram(aes(color = size, fill= size),
+                position = "identity", bins = 40, alpha=0.5) +
+  scale_color_manual(values = c("#00AFBB", "#E7B800")) +
+  scale_fill_manual(values = c("#00AFBB", "#E7B800"))+
+  labs(title="Revenue Distributions in Control Group", x="Renvenue", y="Count")+
+  geom_density(alpha=.2, fill="#FF6666")+
+  theme_linedraw()
+# combine two diagram in one graph
+#install.packages("ggpubr")
+library(ggpubr)
+ggarrange(
+  rd1, rd2, 
+  ncol = 1, nrow = 2,
+  heights = c(1, 1),
+  align = "hv",
+  common.legend = TRUE, legend = "bottom"
+  )
+
+```
 # Discussion
 
 ## Overview 
