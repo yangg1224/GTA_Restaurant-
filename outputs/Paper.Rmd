@@ -54,5 +54,87 @@ library(tidyverse)
 ```
 
 \newpage
+# Appendix
+
+## Appendix A
+```{r AppendixA, message=FALSE, echo = FALSE}
+### Number in GTA ### 
+number_of_Toronto = 7500
+number_of_Durham = 3260
+number_of_York = 5553
+number_of_Peel = 6235
+number_of_Halton = 2803
+number_of_GTA = sum(number_of_Toronto,number_of_Durham,number_of_York,number_of_Peel,number_of_Halton)
+
+### Proportion ###
+proportion_Toronto = (number_of_Toronto/number_of_GTA*100) 
+proportion_Durham = (number_of_Durham/number_of_GTA*100)
+proportion_York = (number_of_York/number_of_GTA*100)
+proportion_Peel = (number_of_Peel/number_of_GTA*100)
+proportion_Halton = (number_of_Halton/number_of_GTA*100)
+Proportion_GTA = (number_of_GTA /number_of_GTA*100)
+
+### Number of Sample ###
+number_of_sample = 1637
+
+sample_Toronto =proportion_Toronto*number_of_sample
+sample_Durham =proportion_Durham *number_of_sample
+sample_York =proportion_York*number_of_sample
+sample_Peel =proportion_Peel*number_of_sample
+sample_Halton =proportion_Halton *number_of_sample
+
+### Dataframe ###
+sample_size <- data.frame(
+  Region = c ("Toronto", "Durham" , "York" , "Peel" , "Halton","Total"),
+  Number_of_Region = c (number_of_Toronto,number_of_Durham,number_of_York,number_of_Peel,number_of_Halton,number_of_GTA),
+  Proportion_of_Region= c (proportion_Toronto,proportion_Durham,proportion_York,proportion_Peel,proportion_Halton,Proportion_GTA)%>% round(digits = 2),
+  Sample_of_Region = c (sample_Toronto,sample_Durham,sample_York ,sample_Peel,sample_Halton,number_of_sample) %>% round(digits = 0)
+  )
+  
+### Table ###
+library(kableExtra)
+sample_size %>% 
+  knitr::kable(caption = "Detailed information for stratification",
+               col.names = c("Region", "Number of Restuarants", "Proportion(%)", "Sample Selected"))%>%
+  kable_styling()
+```
+
+## Appendix B
+```{r AppendixB, message=FALSE, echo = FALSE}
+### basic information ###
+number_of_survey = 3454
+number_of_consent = 11325
+
+print_cost_per_page = 0.05 
+envelope_cost = 0.15
+one_way_stamp = 0.55
+
+### Calculation ###
+
+total_print_cost = print_cost_per_page* (number_of_consent+number_of_survey)
+total_envelope_cost = (number_of_consent+number_of_survey)*envelope_cost*2
+total_stamp_cost =(number_of_consent+number_of_survey)*one_way_stamp*2
+
+total_cost = total_print_cost+total_envelope_cost+total_stamp_cost
+
+### dataframe ###
+estimated_cost <- data.frame(
+  Components = c ("Printing Cost", "Envelope Cost", "Stamp Cost"),
+  Cost_per_unit= c (print_cost_per_page,envelope_cost,one_way_stamp),
+  Total_cost_of_each_component  = c (total_print_cost, total_envelope_cost, total_stamp_cost)
+)
+
+### Table  ###
+library(kableExtra)
+estimated_cost %>% 
+  knitr::kable(caption = "Estimated Cost",
+               col.names = c("Components", "Cost per unit", "Total cost for each component"))%>%
+  kable_styling()
+
+```
+
+
+
+\newpage
 
 # References
