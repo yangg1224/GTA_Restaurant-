@@ -94,6 +94,162 @@ ggarrange(
   )
 
 ```
+
+### restaurant type by regions
+
+```{r restaurant_type, echo=FALSE}
+
+library(viridis)
+
+
+# Treated group
+rt1<-
+  ggplot(treated_data, aes(fill= Q3, x= Q2)) +
+  geom_bar(position="stack", stat="count")+
+    ggtitle("Treated Group: Restaurant Types in different regions") +
+    xlab("Regions")+
+    ylab("Count of Numbers")+
+    theme_grey()
+
+    
+rt1<- rt1 + guides(fill=guide_legend(title="Types")) # change the Legend title 
+
+# Control group
+rt2<-
+  ggplot(control_data, aes(fill= Q3, x= Q2)) +
+  geom_bar(position="stack", stat="count")+
+    ggtitle("Control Group: Restaurant Types in different regions") +
+    xlab("Regions")+
+    ylab("Count of Numbers")+
+    theme_grey()
+    
+rt2<- rt2 + guides(fill=guide_legend(title="Types")) # change the Legend title 
+# combine two diagram in one graph
+ggarrange(
+  rt1, rt2, 
+  ncol = 2, nrow = 1,
+  vjust = 1,
+  widths = c(2, 2),
+  align = "hv",
+  common.legend = TRUE, legend = "bottom"
+  )
+
+```
+
+
+### Flex and fiexed cost changes 
+
+```{r felx_fix, echo=FALSE, fig.width=10, fig.height=4}
+
+
+
+# Treated group
+
+# Fixed costs 
+fixc1<-
+  ggplot(treated_data, aes(fill= Q11, x=Q11)) +
+  geom_bar(stat="count", width = 0.5)+
+    ggtitle("Fixed costs changes") +
+    coord_flip()+
+    xlab("Changes")+
+    ylab("Number of restaurants")+
+    theme_minimal()
+
+fixc1<- fixc1 + guides(fill=guide_legend(title="Changes")) # change the Legend title 
+
+# flex cost
+flexc1<-
+    ggplot(treated_data, aes(fill= Q12, x=Q12)) +
+    geom_bar(stat="count", width = 0.5)+
+    ggtitle("Treated Group: Flexible costs changes") +
+    coord_flip()+
+    xlab("Changes")+
+    ylab("Number of restaurants")+
+    theme_minimal()
+
+
+flexc1<- flexc1 + guides(fill=guide_legend(title="Changes")) # change the Legend title 
+
+# Control group
+fixc2<-
+  ggplot(control_data, aes(fill= Q11, x=Q11)) +
+  geom_bar(stat="count", width = 0.5)+
+    ggtitle("Fixed costs changes") +
+    coord_flip()+
+    xlab("Changes")+
+    ylab("Number of restaurants")+
+    theme_minimal()
+
+fixc2<- fixc2 + guides(fill=guide_legend(title="Changes")) # change the Legend title 
+
+# flex cost
+flexc2<-
+    ggplot(control_data, aes(fill= Q12, x=Q12)) +
+    geom_bar(stat="count", width = 0.5)+
+    ggtitle("Control Group: Flexible costs changes") +
+    coord_flip()+
+    xlab("Changes")+
+    ylab("Number of restaurants")+
+    theme_minimal()
+
+
+flexc2<- flexc2 + guides(fill=guide_legend(title="Changes")) # change the Legend title 
+
+
+
+# combine two diagram in one graph
+ggarrange(
+  flexc1,fixc1,flexc2, fixc2,
+  ncol = 2, nrow = 2,
+  vjust = 1,
+  widths = c(2, 2),
+  align = "hv",
+  common.legend = TRUE, legend = "bottom"
+  )
+
+```
+
+### Distribution average employee salary
+```{r salary_distribution, echo=FALSE, fig.width=10, fig.height=4}
+library(ggthemes)
+# Treated group
+s1<-
+  ggplot(treated_data, aes(x = Q2, y= Q9)) +
+  geom_boxplot(outlier.colour="red", 
+               outlier.shape=5,
+               outlier.size=4) +
+  labs(title="Salary Distributions in Treated Group", x="Regions", y="Hourly rate")+
+  geom_dotplot(binaxis='y', stackdir='center', dotsize=0.01)+ # add dots
+  theme_economist()
+
+# Control group
+s2<-
+  ggplot(control_data, aes(x = Q2, y= Q9)) +
+  geom_boxplot(outlier.colour="red", 
+               outlier.shape=5,
+               outlier.size=4) +
+  labs(title="Salary Distributions in Control Group", x="Regions", y="Hourly rate")+
+  geom_dotplot(binaxis='y', stackdir='center', dotsize=0.01)+ #add dots
+  theme_economist()
+
+
+# combine two diagram in one graph
+
+library(ggpubr)
+ggarrange(
+  s1, s2, 
+  ncol = 2, nrow = 1,
+  hjust = -0.5,
+  align = "hv"
+  )
+
+```
+
+### correlation matrix
+```{r correlation, echo=FALSE, fig.width=10, fig.height=4}
+
+```
+
 # Discussion
 
 ## Overview 
