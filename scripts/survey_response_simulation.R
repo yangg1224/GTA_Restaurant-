@@ -1,8 +1,8 @@
 #### Preamble ####
 # Purpose: This script simulates the responses to a survey about restaurants in Toronto.
-# Author: Yingying Zhou, Xinyi Xu
+# Author: Yingying Zhou, Xinyi Xu, Yang Wu 
 # Data: 14 February 2021
-# Contact: yingying.zhou@utoronto.ca; xiny.xu@mail.utoronto.ca; 
+# Contact: yingying.zhou@utoronto.ca; xiny.xu@mail.utoronto.ca; yangg.wu@mail.urotonto.ca
 # License: MIT
 # Pre-requisites: 
 # - None
@@ -10,6 +10,8 @@
 
 #### Workspace setup ####
 library(tidyverse)
+#install.packages("PerformanceAnalytics")
+library("PerformanceAnalytics")
 
 
 # Function that takes a region and generates a random FSA code within that region
@@ -101,6 +103,7 @@ fsa_generate <- function(region) {
 # Q11: How has your FIXED costs to run the restaurant changed within this month?
 # Q12: How has your FLEX/VARIABLE costs to run the restaurant changed within this month?
 # Q13: How much revenue did your restaurant make in the past month? ($CAD)
+
 
 # Do this one for treated and once for control and then bring them together
 
@@ -280,10 +283,25 @@ simulated_dataset_control<- rbind(small_restaurant_c,big_restaurant_c)
 simulated_dataset <-
   rbind(simulated_dataset_control, simulated_dataset_treated)
 
-# Is there a more efficient way to do this?
-# I essentially loop through all of the rows and generate an FSA code based on the row's region
+# Loop through all of the rows and generate an FSA code based on the row's region
+# Also fix simulated data fro Q6 and Q7 - control group must have either takeout or delivery
+# or else they would be closed and not be a part of this survey
 for (i in 1:nrow(simulated_dataset)){
   simulated_dataset$Q1[i] = fsa_generate(simulated_dataset$Q2[i])
+  
+  # Pick a random number between 1 and 3 inclusive
+  # Assigns Q6, Q7, or both as "Yes" depending on the rand number
+  rand = sample(x=c(1,2,3), prob=c(0.33, 0.33, 0.33))
+  if (simulated_dataset$Q6[i] == "No" && simulated_dataset$Q7[i] == "No" && simulated_dataset$type[i] == "Control") {
+    if (rand == 1) {
+      simulated_dataset$Q6[i] = "Yes"
+    } else if (rand == 2){
+      simulated_dataset$Q7[i] = "Yes"
+    } else {
+      simulated_dataset$Q6[i] = "Yes"
+      simulated_dataset$Q7[i] = "Yes"
+    }
+  }
 }
 
 # Order Q1 before Q2 (not actually necessary)
@@ -296,11 +314,17 @@ write_csv(simulated_dataset, 'inputs/simulated_data.csv')
 
 
 #### Exploratory Data Analysis ####
+
+
+
+
 #### Statistical Inference ####
 revenue_c <- simulated_dataset_control$Q13
 revenue_t <- simulated_dataset_treated$Q13
 t.test(revenue_c, revenue_t)
 
+#### Correlation Matrix ####
+chart.Correlation(simulated_dataset[c(6, 10, 14)], histogram=TRUE)
 
 #### Make some graphs very quickly
 
@@ -312,8 +336,6 @@ simulated_dataset %>%
   theme_minimal() +
   facet_wrap(vars(type))
 
-
-
 simulated_dataset %>% 
   ggplot(aes(x = Q3)) +
   geom_bar(stat="count") +
@@ -321,7 +343,6 @@ simulated_dataset %>%
   labs(x = "Restaurant type",
        y = "Number of restaurants") +
   scale_fill_brewer(palette = "Set1")
-
 
 simulated_dataset %>% 
   ggplot(aes(x = Q5)) +
@@ -332,7 +353,7 @@ simulated_dataset %>%
   scale_color_brewer(palette = "Set1")
 
 simulated_dataset %>% 
-  ggplot(aes(x = Q1, y = type, color=Q1)) +
+  ggplot(aes(x = Q2, y = type, color=Q2)) +
   geom_jitter(show.legend = FALSE) +
   labs(title = "Experimental Conditions across Regions", x = "Region", y = "Experimental Condition") +
   theme_minimal()
