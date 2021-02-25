@@ -32,7 +32,6 @@ library("PerformanceAnalytics")
 ## Data Gathering Method 
 
 ## Descriptive Analysis
-
 ```{r read_data, include=FALSE}
 
 setwd("~/Downloads/Git/groupproject-") 
@@ -56,6 +55,29 @@ treated_data<-
 control_data<-
   filter(simulated_data, simulated_data$type == "Control" ) # load control data
 ```
+
+```{r size,echo=FALSE}
+# Get the number of rows
+size<- nrow(simulated_data)
+```
+
+After discussing data gathering method, we sampled data in R. We totally have **`r size`** observations, and 14 of following features according to the questionnaires.
+
+* `type` : Unique row identifier for Open Data database
+* `Q1` : Unique row identifier for Open Data database
+* `Q2` : Unique row identifier for Open Data database
+* `Q3` : Unique row identifier for Open Data database
+* `Q4` : Unique row identifier for Open Data database
+* `Q5` : Unique row identifier for Open Data database
+* `Q6` : Unique row identifier for Open Data database
+* `Q7` : Unique row identifier for Open Data database
+* `Q8` : Unique row identifier for Open Data database
+* `Q9` : Unique row identifier for Open Data database
+* `Q10` : Unique row identifier for Open Data database
+* `Q11` : Unique row identifier for Open Data database
+* `Q12` : Unique row identifier for Open Data database
+* `Q13` : Unique row identifier for Open Data database
+* `Q14` : Unique row identifier for Open Data database
 
 ### Revenue distributions group by restaurant size
 ```{r revenue_distribution, echo=FALSE}
