@@ -65,21 +65,29 @@ size<- nrow(simulated_data)
 
 After discussing data gathering method, we sampled data in R [@citeR]. We totally have **`r size`** observations, and 14 of following features according to the questionnaires.
 
-* `type` : Unique row identifier for Open Data database
-* `Q1` : Unique row identifier for Open Data database
-* `Q2` : Unique row identifier for Open Data database
-* `Q3` : Unique row identifier for Open Data database
-* `Q4` : Unique row identifier for Open Data database
-* `Q5` : Unique row identifier for Open Data database
-* `Q6` : Unique row identifier for Open Data database
-* `Q7` : Unique row identifier for Open Data database
-* `Q8` : Unique row identifier for Open Data database
-* `Q9` : Unique row identifier for Open Data database
-* `Q10` : Unique row identifier for Open Data database
-* `Q11` : Unique row identifier for Open Data database
-* `Q12` : Unique row identifier for Open Data database
-* `Q13` : Unique row identifier for Open Data database
-* `Q14` : Unique row identifier for Open Data database
+* `type` : Categorical identifier [“Treated” or “Control”] for each observation 
+* `Q1` : First three digitals of the postcode 
+* `Q2` : Categorical identifier for distinguishing the type of restaurants 
+* `Q3` : Region name in GTA
+* `Q4` : Describe whether the restaurant is a franchise (“Franchise” or “No”)
+* `Q5` : The length of the operation years for each restaurant 
+* `Q6` : Describe whether the restaurant offer takeout service (“Yes” or “No”)
+* `Q7` : Describe whether the restaurant offer delivery service (“Yes” or “No”)
+* `Q8` : Number of employees in the restaurant (category type)
+* `Q9` : Average employee hourly rate (CAD) 
+* `Q10` : Describe whether the restaurant has been a site of a potential COVID case (“Yes” or “No”)
+* `Q11` : Describe the restaurant’s fixed costs change situation 
+* `Q12` :  Describe the restaurant’s flexible costs change situation 
+* `Q13` : The restaurant’s past month revenue (CAD)
+
+The first six rows of raw data is shown in the table1 below. (Table \@ref(tab:rowdata))
+```{r rowdata, echo=FALSE}
+#plot row data set in table
+  head(simulated_data)%>%
+  select(-size)%>%
+  kableExtra::kbl(caption = "First 6 rows Raw data ") %>%
+  kableExtra::kable_styling(latex_options = "scale_down") # use scale_down option to make the font
+```
 
 ### Revenue distributions group by restaurant size
 ```{r revenue_distribution, echo=FALSE}
