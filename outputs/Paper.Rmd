@@ -83,10 +83,11 @@ After discussing data gathering method, we sampled data in R [@citeR]. We totall
 The first six rows of raw data is shown in the table1 below. (Table \@ref(tab:rowdata))
 ```{r rowdata, echo=FALSE}
 #plot row data set in table
-  head(simulated_data)%>%
+  head(simulated_data,10)%>%
   select(-size)%>%
   kableExtra::kbl(caption = "First 6 rows Raw data ") %>%
-  kableExtra::kable_styling(latex_options = "scale_down") # use scale_down option to make the font
+  kableExtra::kable_styling(latex_options = "scale_down")%>% # use scale_down option to make the font
+  kable_styling()
 ```
 
 ### Revenue distributions group by restaurant size
