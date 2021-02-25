@@ -80,20 +80,40 @@ After discussing data gathering method, we sampled data in R [@citeR]. We totall
 * `Q12` :  Describe the restaurant’s flexible costs change situation 
 * `Q13` : The restaurant’s past month revenue (CAD)
 
-The first six rows of raw data is shown in the table1 below. (Table \@ref(tab:rowdata))
+The first six rows of raw data is shown in the Table1. (Table \@ref(tab:rowdata))
 ```{r rowdata, echo=FALSE}
 #plot row data set in table
-  head(simulated_data,10)%>%
+  head(simulated_data)%>%
   select(-size)%>%
   kableExtra::kbl(caption = "First 6 rows Raw data ") %>%
   kableExtra::kable_styling(latex_options = "scale_down")%>% # use scale_down option to make the font
   kable_styling()
 ```
+### T-Test
+```{r ttest,echo=FALSE}
+#install.packages("broom")
+library(broom)
+revenue_c <- control_data$Q13
+revenue_t <- treated_data$Q13
+t<-t.test(revenue_t, revenue_c)
+m<-tidy(t, digits=1)
+m%>%
+  select(-c(estimate,statistic,parameter))%>%
+  rename(
+    mean_of_Treated=estimate1,
+    mean_of_Control=estimate2
+  )%>%
+  kableExtra::kbl(caption = "T Test on the Restaurant's revenue") %>%
+  kableExtra::kable_styling(latex_options = "scale_down")%>% # use scale_down option to make the font
+  kable_styling()
+  
+```
+The T Test is used to compare the sample mean of our Treated group and Control group. The goal is to determine whether the intervention has an effective effect on the treated group. Our hypothesis is the intervention will have positive impact towards the restaurant's revenue. [@kim2015t] The T test results is represented in the Table2(Table \@ref(tab:ttest)). The package **Broom**[@broom1] is used to clean the t test results and convert it into the dataframe. The p value we get is < 2.2e-16, as the p value would indicate a significant result, meaning that the actual p value is even smaller than 2.2e-16 (a typical threshold is 0.05, anything smaller counts as statistically significant).[@kim2015t] So we can 
+interpret hypothesis not rejected which means the intervention has a significant effect on treated group.
+
 
 ### Revenue distributions group by restaurant size
 ```{r revenue_distribution, echo=FALSE}
-
-
 library(ggplot2)
 library(ggthemes)
 # Treated group
@@ -126,7 +146,6 @@ ggarrange(
   align = "hv",
   common.legend = TRUE, legend = "bottom"
   )
-
 ```
 
 ### restaurant type by regions
