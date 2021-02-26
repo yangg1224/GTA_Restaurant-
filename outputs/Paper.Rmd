@@ -35,7 +35,7 @@ library(ggpubr)
 
 ## Descriptive Analysis
 ```{r read_data, include=FALSE}
-setwd("~/Downloads/Git/groupproject-") 
+setwd("~/Downloads/Git/groupproject-")
 
 # read raw dataset from scripts, need to run survey_response _simulation first.
 simulated_data<- read_csv("inputs/simulated_data.csv") 
@@ -170,8 +170,9 @@ sd1<-
   ggplot(simulated_data, aes(x = simulated_data$Q9, fill=type)) +
   geom_histogram(position = "dodge", bins = 30,binwidth = 0.5) +
   scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
-  labs(title="The Salary Distributions was higher for Teatment Group", x="Salary", y="Number of employee")+
+  labs(title="The salary distributions was higher for teatment group", x="Salary", y="Number of employee")+
   geom_density()
+sd1
 ```
 
 
