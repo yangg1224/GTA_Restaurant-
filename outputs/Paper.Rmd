@@ -100,8 +100,11 @@ We have also considered how the data will be stored for future use. All data wil
 
 ## Descriptive Analysis
 ```{r read_data, include=FALSE}
+
+setwd("~/Downloads/Git/groupproject-") 
+
 # read raw dataset from scripts, need to run survey_response _simulation first.
-simulated_data<- read_csv(here::here("inputs/simulated_data.csv"))
+simulated_data<- read_csv("inputs/simulated_data.csv") 
 
 # We add a new column To distinguish the restaurant size by employees number. 
 # if employees number >20 then we define it is big, otherwise it is small.
@@ -227,13 +230,15 @@ ggarrange(
 
 * In terms of employees salary, the average hourly rate before and after intervention is both around 17 CAD. In contrast with two boxplots, we can see there is a slight increase in the treated group. The reason behind might because the employee take more risks to go for work, accordingly they will receive higher salary.  (Figure \@ref(fig:salary))  
 
-```{r salary distribution, echo=FALSE}
+```{r salary distribution, fig.cap = "Salary Distribution", echo=FALSE,fig.width=12, fig.height=4}
 sd1<-
   ggplot(simulated_data, aes(x = simulated_data$Q9, fill=type)) +
   geom_histogram(position = "dodge", bins = 30,binwidth = 0.5) +
   scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
   labs(title="The salary distributions was higher for teatment group", x="Salary", y="Number of employee")+
   geom_density()
+
+sd1
 ```
 
 
