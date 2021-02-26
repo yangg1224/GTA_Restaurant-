@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.28)  25 FEB 2021 23:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.28)  25 FEB 2021 23:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -602,17 +602,17 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 (/Users/yang/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Paper_files/figure-latex/restaurant number-1.pdf, id=93, 578.16pt x 361.35pt>
-File: Paper_files/figure-latex/restaurant number-1.pdf Graphic file (type pdf)
-<use Paper_files/figure-latex/restaurant number-1.pdf>
-Package pdftex.def Info: Paper_files/figure-latex/restaurant number-1.pdf  used
- on input line 196.
+<Paper_files/figure-latex/restaurant1-1.pdf, id=95, 578.16pt x 361.35pt>
+File: Paper_files/figure-latex/restaurant1-1.pdf Graphic file (type pdf)
+<use Paper_files/figure-latex/restaurant1-1.pdf>
+Package pdftex.def Info: Paper_files/figure-latex/restaurant1-1.pdf  used on in
+put line 196.
 (pdftex.def)             Requested size: 469.75385pt x 293.59616pt.
-<Paper_files/figure-latex/restaurant_type-1.pdf, id=94, 867.24pt x 289.08pt>
-File: Paper_files/figure-latex/restaurant_type-1.pdf Graphic file (type pdf)
-<use Paper_files/figure-latex/restaurant_type-1.pdf>
-Package pdftex.def Info: Paper_files/figure-latex/restaurant_type-1.pdf  used o
-n input line 202.
+<Paper_files/figure-latex/restaurant2-1.pdf, id=96, 867.24pt x 289.08pt>
+File: Paper_files/figure-latex/restaurant2-1.pdf Graphic file (type pdf)
+<use Paper_files/figure-latex/restaurant2-1.pdf>
+Package pdftex.def Info: Paper_files/figure-latex/restaurant2-1.pdf  used on in
+put line 202.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
 [2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
 as been already used, duplicate ignored
@@ -629,27 +629,25 @@ l.210 \end{itemize}
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.210 \end{itemize}
-                    <./Paper_files/figure-latex/restaurant number-1.pdf> <./Pap
-er_files/figure-latex/restaurant_type-1.pdf>]
-<Paper_files/figure-latex/salary_distribution-1.pdf, id=124, 722.7pt x 289.08pt
->
-File: Paper_files/figure-latex/salary_distribution-1.pdf Graphic file (type pdf
-)
-<use Paper_files/figure-latex/salary_distribution-1.pdf>
-Package pdftex.def Info: Paper_files/figure-latex/salary_distribution-1.pdf  us
-ed on input line 214.
+                    <./Paper_files/figure-latex/restaurant1-1.pdf> <./Paper_fil
+es/figure-latex/restaurant2-1.pdf>]
+<Paper_files/figure-latex/salary-1.pdf, id=127, 722.7pt x 289.08pt>
+File: Paper_files/figure-latex/salary-1.pdf Graphic file (type pdf)
+<use Paper_files/figure-latex/salary-1.pdf>
+Package pdftex.def Info: Paper_files/figure-latex/salary-1.pdf  used on input l
+ine 214.
 (pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
 
 LaTeX Warning: Reference `fig:franchise' on page 4 undefined on input line 221.
 
 
-<Paper_files/figure-latex/franchise-1.pdf, id=125, 722.7pt x 289.08pt>
+<Paper_files/figure-latex/franchise-1.pdf, id=128, 722.7pt x 289.08pt>
 File: Paper_files/figure-latex/franchise-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/franchise-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/franchise-1.pdf  used on inpu
 t line 224.
 (pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
-<Paper_files/figure-latex/employee-1.pdf, id=127, 722.7pt x 289.08pt>
+<Paper_files/figure-latex/employee-1.pdf, id=130, 722.7pt x 289.08pt>
 File: Paper_files/figure-latex/employee-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/employee-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/employee-1.pdf  used on input
@@ -660,9 +658,9 @@ has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.238 
-       <./Paper_files/figure-latex/salary_distribution-1.pdf> <./Paper_files/fi
-gure-latex/franchise-1.pdf>]
-<Paper_files/figure-latex/revenue_distribution-1.pdf, id=147, 469.755pt x 325.2
+       <./Paper_files/figure-latex/salary-1.pdf> <./Paper_files/figure-latex/fr
+anchise-1.pdf>]
+<Paper_files/figure-latex/revenue_distribution-1.pdf, id=150, 469.755pt x 325.2
 15pt>
 File: Paper_files/figure-latex/revenue_distribution-1.pdf Graphic file (type pd
 f)
@@ -688,13 +686,13 @@ ored
 l.259 (
        Figure @ref(fig:revenue\_distribution)) <./Paper_files/figure-latex/empl
 oyee-1.pdf>]
-<Paper_files/figure-latex/felx_fix-1.pdf, id=161, 433.62pt x 289.08pt>
+<Paper_files/figure-latex/felx_fix-1.pdf, id=164, 433.62pt x 289.08pt>
 File: Paper_files/figure-latex/felx_fix-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/felx_fix-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/felx_fix-1.pdf  used on input
  line 266.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<Paper_files/figure-latex/correlation-1.pdf, id=162, 1445.4pt x 722.7pt>
+<Paper_files/figure-latex/correlation-1.pdf, id=165, 1445.4pt x 722.7pt>
 File: Paper_files/figure-latex/correlation-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/correlation-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/correlation-1.pdf  used on in
@@ -730,13 +728,13 @@ Package rerunfilecheck Info: File `Paper.out' has not changed.
 (rerunfilecheck)             Checksum: DD3FD175772695810932E637AD7599C0;1552.
  ) 
 Here is how much of TeX's memory you used:
- 12544 strings out of 481252
- 180064 string characters out of 5915076
- 493322 words of memory out of 5000000
- 29147 multiletter control sequences out of 15000+600000
+ 12547 strings out of 481252
+ 179970 string characters out of 5915076
+ 493460 words of memory out of 5000000
+ 29150 multiletter control sequences out of 15000+600000
  470517 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,10n,74p,791b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,74p,791b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/yang/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/
 yang/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</Users/yang/Libr
 ary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/yang/Library/Ti
@@ -749,10 +747,10 @@ c/lm/lmr6.pfb></Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr
 8.pfb></Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></
 Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/
 yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Paper.pdf (9 pages, 450411 bytes).
+Output written on Paper.pdf (9 pages, 450436 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
+ 290 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
  69 named destinations out of 1000 (max. 500000)
  153 words of extra memory for PDF output out of 10000 (max. 10000000)
 

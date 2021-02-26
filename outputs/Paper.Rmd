@@ -93,11 +93,11 @@ The first six rows of raw data is shown in the Table1. (Table \@ref(tab:rowdata)
 
 Taking a deep look at all the features from survey questionnaire, we learned some demographic features about the restaurants in GTA:
 
-* From figure1(Figure \@ref(fig:restaurant number)) and figure2(Figure \@ref(fig:restaurant_type)), we noticed that more restaurants are located in Toronto (around 500) and Peel (around 400). The number of restaurants in Hilton is similar to the number in Durham. Meanwhile, Casual dining takes the lead in the restaurant type in GTA, with around 26%. Then it comes to Family style restaurant, accounting for 20%. Fast food restaurant, fine dining restaurant and Premium casual restaurant almost equally make up 10%.
+* From figure1(Figure \@ref(fig:restaurant1)) and figure2(Figure \@ref(fig:restaurant2)), we noticed that more restaurants are located in Toronto (around 500) and Peel (around 400). The number of restaurants in Hilton is similar to the number in Durham. Meanwhile, Casual dining takes the lead in the restaurant type in GTA, with around 26%. Then it comes to Family style restaurant, accounting for 20%. Fast food restaurant, fine dining restaurant and Premium casual restaurant almost equally make up 10%.
 There is no big difference between treated group and control group in terms of restaurant number and type distributions.
 
 
-```{r restaurant number, fig.cap = "Restaurant numbers and types", echo=FALSE,fig.width=8, fig.height=5}
+```{r restaurant1, fig.cap = "Restaurant numbers and types", echo=FALSE,fig.width=8, fig.height=5}
 R1<-simulated_data%>%
   ggplot(aes(x = simulated_data$Q2,fill = type)) +
   geom_bar(stat = "count", position = "dodge") +
@@ -125,7 +125,7 @@ ggarrange(
 ```
 
 
-```{r restaurant_type, fig.cap = "Restaurant types", echo=FALSE,fig.width=12, fig.height=4}
+```{r restaurant2, fig.cap = "Restaurant types", echo=FALSE,fig.width=12, fig.height=4}
 
 library(viridisLite)
 
@@ -163,10 +163,10 @@ ggarrange(
 
 ```
 
-* In terms of employees salary, the average hourly rate before and after intervention is both around 17 CAD. In contrast with two boxplots, we can see there is a slight increase in the treated group. The reason behind might because the employee take more risks to go for work, accordingly they will receive higher salary.  (Figure \@ref(fig:salary_distribution))  
+* In terms of employees salary, the average hourly rate before and after intervention is both around 17 CAD. In contrast with two boxplots, we can see there is a slight increase in the treated group. The reason behind might because the employee take more risks to go for work, accordingly they will receive higher salary.  (Figure \@ref(fig:salary))  
 
 
-```{r salary_distribution, fig.cap = "Employee salary distribution",echo=FALSE, fig.width=10, fig.height=4}
+```{r salary, fig.cap = "Employee salary distribution",echo=FALSE, fig.width=10, fig.height=4}
 library(ggthemes)
 # Treated group
 s1<-
@@ -202,7 +202,7 @@ ggarrange(
 ```
 
 
-* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts (Figure \@ref(fig:franchise)), we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of Covid issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
+* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts (Figure \@ref(fig:franchise)), we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
 
 
 ```{r franchise, fig.cap = "Restaurant franchise distribution",echo=FALSE, fig.width=10, fig.height=4}
