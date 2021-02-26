@@ -203,11 +203,10 @@ ggarrange(
 
 
 * The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts, we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
-
 (Figure \@ref(fig:pie1))
 
 
-```{r pie1, fig.cap = "Restaurant franchise distribution",echo=FALSE, fig.width=10, fig.height=4}
+```{r pie1, fig.cap = "Restaurant franchise distribution", echo=FALSE, fig.width=10, fig.height=4}
 
 Pie1<-control_data%>%
   ggplot(aes(x = control_data$Q4 ,fill = Q4)) +
@@ -233,7 +232,7 @@ ggarrange(
   align = "hv"
   )
 ```
-* The polar chart illustrates the employee numbers distribution, as can be seen in figure 5. (Figure \@ref(fig:employee)) Because of COVID rule, no restaurant is allowed to open for large group dine in. So in the control group, there is 0 restaurant which has more than 30 employees. Most of restaurant has 10 to 20 employees. 
+* The polar chart illustrates the employee numbers distribution, as can be seen in figure below. (Figure \@ref(fig:employee)) Because of COVID rule, no restaurant is allowed to open for large group dine in. So in the control group, there is 0 restaurant which has more than 30 employees. Most of restaurant has 10 to 20 employees. 
 
 ```{r employee, fig.cap = "Empoyee numbers distribution",echo=FALSE, fig.width=10, fig.height=4}
 cxc <- 
@@ -274,34 +273,55 @@ m%>%
   
 ```
 
+### Correlation matrix
+Correlation matrix shows internal relationships between x variables and y variable. (Figure \@ref(fig:correlation)) Intensity is indicated by the color(from red to blue). No significant coeffiency   is barred with symbol "x". More detailed analysis will be conducted in finding part. 
+
+```{r correlation, fig.cap = "Correlation matrix",echo=FALSE, fig.width=10, fig.height=10}
+#install.packages("fastDummies")
+library(fastDummies)
+Dummy_data<-simulated_data[-c(1,2)] #Remove Type and postcode columns
+
+Dummy_data<- fastDummies::dummy_cols(Dummy_data) #  change categorical var to factors 
+
+# correlation matrix for restaurants in treated group
+Dummy_data<-Dummy_data[-c(1:3,5:7,9:11,13,44)] # remove big restaurant, cause it will always has -1 relationship with small restaurant
 
 
-### Invention effect on Revenue distributions 
+# Compute a correlation matrix
+corr <- round(cor(Dummy_data), 1) # round to 1 digit
 
-```{r revenue_distribution, fig.cap="Invention effect on Revenue distributions",echo=FALSE}
+# Compute a matrix of correlation p-values
+#install.packages("ggcorrplot")
+library(ggcorrplot)
+p.mat <- cor_pmat(Dummy_data)
 
-library(ggthemes)
-# Treated group
-rd1<-
-  ggplot(simulated_data, aes(x = simulated_data$Q13/1000, fill=type)) +
-  geom_histogram(position = "dodge", bins = 30,binwidth = 5) +
-  scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
-  labs(title="Revenue Distributions Move to the right", x="Renvenue (Thousands)", y="Count")+
-  geom_density()+
-  theme_calc()
-
-rd1
+# Visualize the lower triangle of the correlation matrix
+# Barring the no significant coefficient
+ggcorrplot(
+  corr, hc.order = TRUE, type = "lower",
+  p.mat=p.mat,
+  title = "Correlation Matrix"
+  )
 
 ```
-Two merged histograms charts were used to illustrate the restaurant's revenue distribution. 
-
-(Figure \@ref(fig:revenue_distribution)) 
 
 
 
 
 
-### Invention effect on Flex and fiexed cost 
+
+
+
+# Discussion
+
+## Overview 
+
+## Findings 
+
+### Finding ONE
+
+### Finding TWO
+Invention effect on Flex and fiexed cost 
 
 ```{r felx_fix, fig.cap = "Invention effect on Flex and fiexed cost",echo=FALSE, fig.width=6, fig.height=4}
 # Treated group
@@ -343,82 +363,24 @@ ggarrange(
   )
 
 ```
+### Finding THREE
+Invention effect on Revenue distributions 
 
+```{r revenue_distribution, fig.cap="Invention effect on Revenue distributions",echo=FALSE}
 
+library(ggthemes)
+# Treated group
+rd1<-
+  ggplot(simulated_data, aes(x = simulated_data$Q13/1000, fill=type)) +
+  geom_histogram(position = "dodge", bins = 30,binwidth = 5) +
+  scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
+  labs(title="Revenue Distributions Move to the right", x="Renvenue (Thousands)", y="Count")+
+  geom_density()+
+  theme_calc()
 
-### Correlation matrix
-```{r correlation, fig.cap = "Correlation matrix",echo=FALSE, fig.width=20, fig.height=10}
-#install.packages("fastDummies")
-library(fastDummies)
-Dummy_data<-treated_data[-c(1,2)] #Remove Type and postcode columns
-
-Dummy_data<- fastDummies::dummy_cols(Dummy_data) #  change categorical var to factors 
-
-# correlation matrix for restaurants in treated group
-Dummy_data<-Dummy_data[-c(1:3,5:7,9:11,13,44)] # remove big restaurant, cause it will always has -1 relationship with small restaurant
-
-
-# Compute a correlation matrix
-corr <- round(cor(Dummy_data), 1) # round to 1 digit
-
-# Compute a matrix of correlation p-values
-#install.packages("ggcorrplot")
-library(ggcorrplot)
-p.mat <- cor_pmat(Dummy_data)
-
-# Visualize the lower triangle of the correlation matrix
-# Barring the no significant coefficient
-corr.plot1 <- ggcorrplot(
-  corr, hc.order = TRUE, type = "lower",
-  p.mat=p.mat
-  )
-
-# correlation matrix for restaurants in control group
-Dummy_data<-control_data[-c(1,2)] #Remove Type and postcode columns
-
-Dummy_data<- fastDummies::dummy_cols(Dummy_data) #  change categorical var to factors 
-
-
-Dummy_data<-Dummy_data[-c(1:3,5:7,9:11,13,44)]
-
-
-# Compute a correlation matrix
-corr <- round(cor(Dummy_data), 1) # round to 1 digit
-
-# Compute a matrix of correlation p-values
-#install.packages("ggcorrplot")
-library(ggcorrplot)
-p.mat <- cor_pmat(Dummy_data)
-
-# Visualize the lower triangle of the correlation matrix
-# Barring the no significant coefficient
-corr.plot2 <- ggcorrplot(
-  corr, hc.order = TRUE, type = "lower",
-  p.mat=p.mat
-  )
-# combine two diagram in one graph
-
-ggarrange(
-  corr.plot1, corr.plot2, 
-  labels = c('Treated group', 'Control group'),
-  ncol = 2, nrow = 1,
-  align = "hv"
-  )
+rd1
 
 ```
-
-# Discussion
-
-## Overview 
-
-## Findings 
-
-### Finding ONE
-
-### Finding TWO
-
-### Finding THREE
-
 ## Limitation
 
 ## Future Directions 
