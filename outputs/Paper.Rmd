@@ -35,11 +35,11 @@ library(ggpubr)
 
 ## Descriptive Analysis
 ```{r read_data, include=FALSE}
-
 setwd("~/Downloads/Git/groupproject-") 
 
 # read raw dataset from scripts, need to run survey_response _simulation first.
 simulated_data<- read_csv("inputs/simulated_data.csv") 
+
 
 # We add a new column To distinguish the restaurant size by employees number. 
 # if employees number >20 then we define it is big, otherwise it is small.
@@ -165,6 +165,15 @@ ggarrange(
 
 * In terms of employees salary, the average hourly rate before and after intervention is both around 17 CAD. In contrast with two boxplots, we can see there is a slight increase in the treated group. The reason behind might because the employee take more risks to go for work, accordingly they will receive higher salary.  (Figure \@ref(fig:salary))  
 
+```{r salary distribution, echo=FALSE}
+sd1<-
+  ggplot(simulated_data, aes(x = simulated_data$Q9, fill=type)) +
+  geom_histogram(position = "dodge", bins = 30,binwidth = 0.5) +
+  scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
+  labs(title="The Salary Distributions was higher for Teatment Group", x="Salary", y="Number of employee")+
+  geom_density()
+```
+
 
 ```{r salary, fig.cap = "Employee salary distribution",echo=FALSE, fig.width=10, fig.height=4}
 library(ggthemes)
@@ -206,7 +215,7 @@ ggarrange(
 (Figure \@ref(fig:pie1))
 
 
-```{r pie1, fig.cap = "Restaurant franchise distribution", echo=FALSE, fig.width=10, fig.height=4}
+```{r pie1, fig.cap = "Restaurant franchise distribution", echo=FALSE, fig.width=7, fig.height=15}
 
 Pie1<-control_data%>%
   ggplot(aes(x = control_data$Q4 ,fill = Q4)) +
@@ -234,7 +243,7 @@ ggarrange(
 ```
 * The polar chart illustrates the employee numbers distribution, as can be seen in figure below. (Figure \@ref(fig:employee)) Because of COVID rule, no restaurant is allowed to open for large group dine in. So in the control group, there is 0 restaurant which has more than 30 employees. Most of restaurant has 10 to 20 employees. 
 
-```{r employee, fig.cap = "Empoyee numbers distribution",echo=FALSE, fig.width=10, fig.height=4}
+```{r employee, fig.cap = "Employee numbers distribution",echo=FALSE, fig.width=10, fig.height=4}
 cxc <- 
   simulated_data%>%
   ggplot(aes(x = simulated_data$Q8 ,fill = type)) +
@@ -306,14 +315,6 @@ ggcorrplot(
 ```
 
 
-```{r salary_distribution, echo=FALSE}
-ggplot(simulated_data, aes(x = simulated_data$Q9, fill=type)) +
-  geom_histogram(position = "dodge", bins = 30,binwidth = 0.5) +
-  scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
-  labs(title="The Salary Distributions was higher for Teatment Group", x="Salary", y="Number of employee")+
-  geom_density()
-
-```
 
 
 
