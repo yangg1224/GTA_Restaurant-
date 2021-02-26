@@ -310,7 +310,7 @@ ggcorrplot(
 ggplot(simulated_data, aes(x = simulated_data$Q9, fill=type)) +
   geom_histogram(position = "dodge", bins = 30,binwidth = 0.5) +
   scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
-  labs(title="Salary Distributions Shifts to Right", x="Salary", y="Number of employee")+
+  labs(title="The Salary Distributions was higher for Teatment Group", x="Salary", y="Number of employee")+
   geom_density()
 
 ```
