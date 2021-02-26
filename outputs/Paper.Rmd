@@ -66,7 +66,7 @@ size<- nrow(simulated_data)
 After discussing data gathering method, we sampled data in R [@citeR]. We totally have **`r size`** observations, and 14 of following features according to the questionnaires.
 
 * `type` : Categorical identifier [“Treated” or “Control”] for each observation 
-* `Q1` : First three digitals of the postcode 
+* `Q1` : First three digits of the postcode 
 * `Q2` : Categorical identifier for distinguishing the type of restaurants 
 * `Q3` : Region name in GTA
 * `Q4` : Describe whether the restaurant is a franchise (“Franchise” or “No”)
@@ -91,7 +91,13 @@ The first six rows of raw data is shown in the Table1. (Table \@ref(tab:rowdata)
 ```
 ### EDA
 
-```{r restaurant_number, echo=FALSE, fig.width=6, fig.height=5}
+Taking a deep look at all the features from survey questionnaire, we learned some demographic features about the restaurants in GTA:
+
+* From figure1(Figure \@ref(fig:restaurant number)) and figure2(Figure \@ref(fig:restaurant_type)), we noticed that more restaurants are located in Toronto (around 500) and Peel (around 400). The number of restaurants in Hilton is similar to the number in Durham. Meanwhile, Casual dining takes the lead in the restaurant type in GTA, with around 26%. Then it comes to Family style restaurant, accounting for 20%. Fast food restaurant, fine dining restaurant and Premium casual restaurant almost equally make up 10%.
+There is no big difference between treated group and control group in terms of restaurant number and type distributions.
+
+
+```{r restaurant number, fig.cap = "Restaurant numbers and types", echo=FALSE,fig.width=8, fig.height=5}
 R1<-simulated_data%>%
   ggplot(aes(x = simulated_data$Q2,fill = type)) +
   geom_bar(stat = "count", position = "dodge") +
@@ -115,10 +121,11 @@ ggarrange(
   align = "hv",
   common.legend = TRUE, legend = "bottom"
   )
+
 ```
 
 
-```{r restaurant_type, echo=FALSE,fig.width=12, fig.height=4}
+```{r restaurant_type, fig.cap = "Restaurant types", echo=FALSE,fig.width=12, fig.height=4}
 
 library(viridisLite)
 
@@ -156,7 +163,10 @@ ggarrange(
 
 ```
 
-```{r salary_distribution, echo=FALSE, fig.width=10, fig.height=4}
+* In terms of employees salary, the average hourly rate before and after intervention is both around 17 CAD. In contrast with two boxplots, we can see there is a slight increase in the treated group. The reason behind might because the employee take more risks to go for work, accordingly they will receive higher salary.  (Figure \@ref(fig:salary_distribution))  
+
+
+```{r salary_distribution, fig.cap = "Employee salary distribution",echo=FALSE, fig.width=10, fig.height=4}
 library(ggthemes)
 # Treated group
 s1<-
@@ -191,7 +201,11 @@ ggarrange(
 
 ```
 
-```{r franchise, echo=FALSE, fig.width=10, fig.height=4}
+
+* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts (Figure \@ref(fig:franchise)), we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of Covid issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
+
+
+```{r franchise, fig.cap = "Restaurant franchise distribution",echo=FALSE, fig.width=10, fig.height=4}
 
 Pie1<-control_data%>%
   ggplot(aes(x = control_data$Q4 ,fill = Q4)) +
@@ -217,8 +231,9 @@ ggarrange(
   align = "hv"
   )
 ```
+* The polar chart illustrates the employee numbers distribution, as can be seen in figure 5. (Figure \@ref(fig:employee)) Because of COVID rule, no restaurant is allowed to open for large group dine in. So in the control group, there is 0 restaurant which has more than 30 employees. Most of restaurant has 10 to 20 employees. 
 
-```{r employee#, echo=FALSE, fig.width=10, fig.height=4}
+```{r employee, fig.cap = "Empoyee numbers distribution",echo=FALSE, fig.width=10, fig.height=4}
 cxc <- 
   simulated_data%>%
   ggplot(aes(x = simulated_data$Q8 ,fill = type)) +
@@ -235,7 +250,10 @@ cxc
 
 
 ### T-Test
-```{r ttest,echo=FALSE}
+The T Test is used to compare the sample mean of our Treated group and Control group. The goal is to determine whether the intervention has an effective effect on the treated group. Our hypothesis is the intervention will have positive impact towards the restaurant's revenue. [@kim2015t] The T test results is represented in the Table2(Table \@ref(tab:ttest)). The package **Broom**[@broom1] is used to clean the t test results and convert it into the dataframe. The p value we get is < 2.2e-16, as the p value would indicate a significant result, meaning that the actual p value is even smaller than 2.2e-16 (a typical threshold is 0.05, anything smaller counts as statistically significant).[@kim2015t] So we can 
+interpret hypothesis not rejected which means the intervention has a significant effect on treated group.
+
+```{r ttest, echo=FALSE}
 #install.packages("broom")
 library(broom)
 revenue_c <- control_data$Q13
@@ -253,13 +271,12 @@ m%>%
   kable_styling()
   
 ```
-The T Test is used to compare the sample mean of our Treated group and Control group. The goal is to determine whether the intervention has an effective effect on the treated group. Our hypothesis is the intervention will have positive impact towards the restaurant's revenue. [@kim2015t] The T test results is represented in the Table2(Table \@ref(tab:ttest)). The package **Broom**[@broom1] is used to clean the t test results and convert it into the dataframe. The p value we get is < 2.2e-16, as the p value would indicate a significant result, meaning that the actual p value is even smaller than 2.2e-16 (a typical threshold is 0.05, anything smaller counts as statistically significant).[@kim2015t] So we can 
-interpret hypothesis not rejected which means the intervention has a significant effect on treated group.
+
 
 
 ### Invention effect on Revenue distributions 
 
-```{r revenue_distribution, fig.cap="Revenue distribution",echo=FALSE}
+```{r revenue_distribution, fig.cap="Invention effect on Revenue distributions",echo=FALSE}
 
 library(ggthemes)
 # Treated group
@@ -284,7 +301,7 @@ Two merged histograms charts were used to illustrate the restaurant's revenue di
 
 ### Invention effect on Flex and fiexed cost 
 
-```{r felx_fix, echo=FALSE, fig.width=6, fig.height=4}
+```{r felx_fix, fig.cap = "Invention effect on Flex and fiexed cost",echo=FALSE, fig.width=6, fig.height=4}
 # Treated group
 
 # Fixed costs 
@@ -327,8 +344,8 @@ ggarrange(
 
 
 
-### correlation matrix
-```{r correlation, echo=FALSE, fig.width=20, fig.height=10}
+### Correlation matrix
+```{r correlation, fig.cap = "Correlation matrix",echo=FALSE, fig.width=20, fig.height=10}
 #install.packages("fastDummies")
 library(fastDummies)
 Dummy_data<-treated_data[-c(1,2)] #Remove Type and postcode columns
