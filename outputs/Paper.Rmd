@@ -103,14 +103,14 @@ R1<-simulated_data%>%
   geom_bar(stat = "count", position = "dodge") +
   labs(title = "More restuarants are loacted in City of Toronto and Peel Region",x="Regions") +
   theme_minimal() +
-  scale_fill_manual(values = c("Red", "Blue"))
+  scale_fill_manual(values = c("#E85C34", "#2C92D5"))
 
 R2<-simulated_data%>%
   ggplot(aes(x = simulated_data$Q3 ,fill = type)) +
   geom_bar(stat = "count", position = "dodge") +
   labs(title = "More restuarants in GTA are casual dinning ",x="Regions") +
   theme_minimal() +
-  scale_fill_manual(values = c("Red", "Blue"))
+  scale_fill_manual(values = c("#E85C34", "#2C92D5"))
 
 # combine two diagram in one graph
 ggarrange(
@@ -202,10 +202,12 @@ ggarrange(
 ```
 
 
-* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts (Figure \@ref(fig:franchise)), we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
+* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts, we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
+
+(Figure \@ref(fig:pie1))
 
 
-```{r franchise, fig.cap = "Restaurant franchise distribution",echo=FALSE, fig.width=10, fig.height=4}
+```{r pie1, fig.cap = "Restaurant franchise distribution",echo=FALSE, fig.width=10, fig.height=4}
 
 Pie1<-control_data%>%
   ggplot(aes(x = control_data$Q4 ,fill = Q4)) +
@@ -213,7 +215,7 @@ Pie1<-control_data%>%
   coord_polar("y", start=0)+   #Create a pie chart based on the barplot
   labs(title = "Franchise restaurants slightly decrease in treated group ",x="Regions",y="Count in control group") +
   theme_minimal() +
-  scale_fill_manual(values = c("Red", "Blue"))
+  scale_fill_manual(values = c("#E85C34", "#2C92D5"))
 
 Pie2<-treated_data%>%
   ggplot(aes(x = treated_data$Q4 ,fill = Q4)) +
@@ -221,7 +223,7 @@ Pie2<-treated_data%>%
   coord_polar("y", start=0)+
   labs(title = "",x="Regions", y="Count in treated group") +
   theme_minimal() +
-  scale_fill_manual(values = c("Red", "Blue"))
+  scale_fill_manual(values = c("#E85C34", "#2C92D5"))
 
 #Merge twp graphs
 ggarrange(
@@ -239,7 +241,7 @@ cxc <-
   ggplot(aes(x = simulated_data$Q8 ,fill = type)) +
   geom_bar(width = 0.7,position = "dodge") + 
   coord_polar()+
-  scale_fill_manual(values = c("Red", "Blue"))+
+  scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
   labs(title = "Almost 0 restaurant has more than 30 employees in control group",x="", y="Count") +
   theme_minimal()
 
@@ -283,7 +285,7 @@ library(ggthemes)
 rd1<-
   ggplot(simulated_data, aes(x = simulated_data$Q13/1000, fill=type)) +
   geom_histogram(position = "dodge", bins = 30,binwidth = 5) +
-  scale_fill_manual(values = c("red", "blue"))+
+  scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
   labs(title="Revenue Distributions Move to the right", x="Renvenue (Thousands)", y="Count")+
   geom_density()+
   theme_calc()
@@ -308,7 +310,7 @@ Two merged histograms charts were used to illustrate the restaurant's revenue di
 fixc1<-
   ggplot(simulated_data, aes(fill= type, x=Q11)) +
   geom_bar(stat="count", width = 0.6,position = "dodge")+
-  scale_fill_manual(values = c("red", "blue"))+
+  scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
     ggtitle("Fixed costs increased in treated group and remain same in control group") +
     coord_flip()+
     xlab("Changes")+
@@ -320,7 +322,7 @@ fixc1<- fixc1 + guides(fill=guide_legend(title="Changes")) # change the Legend t
 flexc1<-
     ggplot(simulated_data, aes(fill= type, x=Q12)) +
     geom_bar(stat="count", width = 0.7, position = "dodge")+
-    scale_fill_manual(values = c("red", "blue"))+
+    scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
     ggtitle("Flexible costs increased in most of treated group restaurants") +
     coord_flip()+
     xlab("Changes")+

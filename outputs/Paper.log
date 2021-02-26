@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.28)  25 FEB 2021 23:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.28)  26 FEB 2021 00:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -638,38 +638,37 @@ Package pdftex.def Info: Paper_files/figure-latex/salary-1.pdf  used on input l
 ine 214.
 (pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
 
-LaTeX Warning: Reference `fig:franchise' on page 4 undefined on input line 221.
+LaTeX Warning: Reference `fig:pie1' on page 4 undefined on input line 224.
 
-
-<Paper_files/figure-latex/franchise-1.pdf, id=128, 722.7pt x 289.08pt>
-File: Paper_files/figure-latex/franchise-1.pdf Graphic file (type pdf)
-<use Paper_files/figure-latex/franchise-1.pdf>
-Package pdftex.def Info: Paper_files/figure-latex/franchise-1.pdf  used on inpu
-t line 224.
+<Paper_files/figure-latex/pie1-1.pdf, id=128, 722.7pt x 289.08pt>
+File: Paper_files/figure-latex/pie1-1.pdf Graphic file (type pdf)
+<use Paper_files/figure-latex/pie1-1.pdf>
+Package pdftex.def Info: Paper_files/figure-latex/pie1-1.pdf  used on input lin
+e 226.
 (pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
 <Paper_files/figure-latex/employee-1.pdf, id=130, 722.7pt x 289.08pt>
 File: Paper_files/figure-latex/employee-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/employee-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/employee-1.pdf  used on input
- line 229.
+ line 231.
 (pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
 [4pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.238 
-       <./Paper_files/figure-latex/salary-1.pdf> <./Paper_files/figure-latex/fr
-anchise-1.pdf>]
+l.240 
+       <./Paper_files/figure-latex/salary-1.pdf> <./Paper_files/figure-latex/pi
+e1-1.pdf>]
 <Paper_files/figure-latex/revenue_distribution-1.pdf, id=150, 469.755pt x 325.2
 15pt>
 File: Paper_files/figure-latex/revenue_distribution-1.pdf Graphic file (type pd
 f)
 <use Paper_files/figure-latex/revenue_distribution-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/revenue_distribution-1.pdf  u
-sed on input line 256.
+sed on input line 258.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 []
  []
 
@@ -677,49 +676,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--258
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.259 (
+l.261 (
        Figure @ref(fig:revenue\_distribution))pdfTeX warning (ext4): destinatio
 n with the same identifier (name{table.2}) has been already used, duplicate ign
 ored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.259 (
+l.261 (
        Figure @ref(fig:revenue\_distribution)) <./Paper_files/figure-latex/empl
 oyee-1.pdf>]
 <Paper_files/figure-latex/felx_fix-1.pdf, id=164, 433.62pt x 289.08pt>
 File: Paper_files/figure-latex/felx_fix-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/felx_fix-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/felx_fix-1.pdf  used on input
- line 266.
+ line 268.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
 <Paper_files/figure-latex/correlation-1.pdf, id=165, 1445.4pt x 722.7pt>
 File: Paper_files/figure-latex/correlation-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/correlation-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/correlation-1.pdf  used on in
-put line 275.
+put line 277.
 (pdftex.def)             Requested size: 469.74944pt x 234.87471pt.
 [6 <./Paper_files/figure-latex/revenue_distribution-1.pdf>] [7pdfTeX warning (e
 xt4): destination with the same identifier (name{figure.5}) has been already us
 ed, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.303 \newpage
+l.305 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.303 \newpage
+l.305 \newpage
                <./Paper_files/figure-latex/felx_fix-1.pdf> <./Paper_files/figur
 e-latex/correlation-1.pdf>] [8pdfTeX warning (ext4): destination with the same 
 identifier (name{table.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.354 \newpage
+l.356 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.354 \newpage
+l.356 \newpage
               ] [9] (./Paper.aux)
 
 LaTeX Warning: There were undefined references.
@@ -729,7 +728,7 @@ Package rerunfilecheck Info: File `Paper.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  12547 strings out of 481252
- 179970 string characters out of 5915076
+ 179935 string characters out of 5915076
  493460 words of memory out of 5000000
  29150 multiletter control sequences out of 15000+600000
  470517 words of font info for 80 fonts, out of 8000000 for 9000
@@ -747,7 +746,7 @@ c/lm/lmr6.pfb></Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr
 8.pfb></Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></
 Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/
 yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Paper.pdf (9 pages, 450436 bytes).
+Output written on Paper.pdf (9 pages, 450793 bytes).
 PDF statistics:
  290 PDF objects out of 1000 (max. 8388607)
  247 compressed objects within 3 object streams
