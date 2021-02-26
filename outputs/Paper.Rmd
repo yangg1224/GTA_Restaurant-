@@ -19,7 +19,7 @@ library(tidyverse)
 library("PerformanceAnalytics")
 library(ggplot2)
 library(kableExtra)
-
+library(ggpubr)
 ```
 
 # Introduction
@@ -89,71 +89,38 @@ The first six rows of raw data is shown in the Table1. (Table \@ref(tab:rowdata)
   kableExtra::kable_styling(latex_options = "scale_down")%>% # use scale_down option to make the font
   kable_styling()
 ```
-### T-Test
-```{r ttest,echo=FALSE}
-#install.packages("broom")
-library(broom)
-revenue_c <- control_data$Q13
-revenue_t <- treated_data$Q13
-t<-t.test(revenue_t, revenue_c)
-m<-tidy(t, digits=1)
-m%>%
-  select(-c(estimate,statistic,parameter))%>%
-  rename(
-    mean_of_Treated=estimate1,
-    mean_of_Control=estimate2
-  )%>%
-  kableExtra::kbl(caption = "T Test on the Restaurant's revenue") %>%
-  kableExtra::kable_styling(latex_options = "scale_down")%>% # use scale_down option to make the font
-  kable_styling()
-  
-```
-The T Test is used to compare the sample mean of our Treated group and Control group. The goal is to determine whether the intervention has an effective effect on the treated group. Our hypothesis is the intervention will have positive impact towards the restaurant's revenue. [@kim2015t] The T test results is represented in the Table2(Table \@ref(tab:ttest)). The package **Broom**[@broom1] is used to clean the t test results and convert it into the dataframe. The p value we get is < 2.2e-16, as the p value would indicate a significant result, meaning that the actual p value is even smaller than 2.2e-16 (a typical threshold is 0.05, anything smaller counts as statistically significant).[@kim2015t] So we can 
-interpret hypothesis not rejected which means the intervention has a significant effect on treated group.
+### EDA
 
+```{r restaurant_number, echo=FALSE, fig.width=6, fig.height=5}
+R1<-simulated_data%>%
+  ggplot(aes(x = simulated_data$Q2,fill = type)) +
+  geom_bar(stat = "count", position = "dodge") +
+  labs(title = "More restuarants are loacted in City of Toronto and Peel Region",x="Regions") +
+  theme_minimal() +
+  scale_fill_manual(values = c("Red", "Blue"))
 
-### Revenue distributions group by restaurant size
-```{r revenue_distribution, echo=FALSE}
-library(ggplot2)
-library(ggthemes)
-# Treated group
-rd1<-
-  ggplot(treated_data, aes(x = treated_data$Q13)) +
-  geom_histogram(aes(color = size, fill= size),
-                position = "identity", bins = 30, alpha=0.5) +
-  scale_color_manual(values = c("#00AFBB", "#E7B800")) +
-  scale_fill_manual(values = c("#00AFBB", "#E7B800"))+
-  labs(title="Revenue Distributions in Treated Group", x="Renvenue", y="Count")+
-  geom_density(alpha=.2, fill="#FF6666")+
-  theme_calc()
-# Control group
-rd2<-
-  ggplot(control_data, aes(x = control_data$Q13)) +
-  geom_histogram(aes(color = size, fill= size),
-                position = "identity", bins = 30, alpha=0.5) +
-  scale_color_manual(values = c("#00AFBB", "#E7B800")) +
-  scale_fill_manual(values = c("#00AFBB", "#E7B800"))+
-  labs(title="Revenue Distributions in Control Group", x="Renvenue", y="Count")+
-  geom_density(alpha=.2, fill="#FF6666")+
-  theme_calc()
+R2<-simulated_data%>%
+  ggplot(aes(x = simulated_data$Q3 ,fill = type)) +
+  geom_bar(stat = "count", position = "dodge") +
+  labs(title = "More restuarants in GTA are casual dinning ",x="Regions") +
+  theme_minimal() +
+  scale_fill_manual(values = c("Red", "Blue"))
+
 # combine two diagram in one graph
-#install.packages("ggpubr")
-library(ggpubr)
 ggarrange(
-  rd1, rd2, 
+  R1,R2,
   ncol = 1, nrow = 2,
-  heights = c(1, 1),
+  vjust = 1,
+  widths = c(2, 2),
   align = "hv",
   common.legend = TRUE, legend = "bottom"
   )
 ```
 
-### restaurant type by regions
 
 ```{r restaurant_type, echo=FALSE,fig.width=12, fig.height=4}
 
-library(viridis)
-
+library(viridisLite)
 
 # Treated group
 rt1<-
@@ -189,80 +156,6 @@ ggarrange(
 
 ```
 
-
-### Flex and fiexed cost changes 
-
-```{r felx_fix, echo=FALSE, fig.width=10, fig.height=4}
-
-
-
-# Treated group
-
-# Fixed costs 
-fixc1<-
-  ggplot(treated_data, aes(fill= Q11, x=Q11)) +
-  geom_bar(stat="count", width = 0.5)+
-    ggtitle("Fixed costs changes") +
-    coord_flip()+
-    xlab("Changes")+
-    ylab("Number of restaurants")+
-    theme_minimal()
-
-fixc1<- fixc1 + guides(fill=guide_legend(title="Changes")) # change the Legend title 
-
-# flex cost
-flexc1<-
-    ggplot(treated_data, aes(fill= Q12, x=Q12)) +
-    geom_bar(stat="count", width = 0.5)+
-    ggtitle("Treated Group: Flexible costs changes") +
-    coord_flip()+
-    xlab("Changes")+
-    ylab("Number of restaurants")+
-    theme_minimal()
-
-
-flexc1<- flexc1 + guides(fill=guide_legend(title="Changes")) # change the Legend title 
-
-# Control group
-fixc2<-
-  ggplot(control_data, aes(fill= Q11, x=Q11)) +
-  geom_bar(stat="count", width = 0.5)+
-    ggtitle("Fixed costs changes") +
-    coord_flip()+
-    xlab("Changes")+
-    ylab("Number of restaurants")+
-    theme_minimal()
-
-fixc2<- fixc2 + guides(fill=guide_legend(title="Changes")) # change the Legend title 
-
-# flex cost
-flexc2<-
-    ggplot(control_data, aes(fill= Q12, x=Q12)) +
-    geom_bar(stat="count", width = 0.5)+
-    ggtitle("Control Group: Flexible costs changes") +
-    coord_flip()+
-    xlab("Changes")+
-    ylab("Number of restaurants")+
-    theme_minimal()
-
-
-flexc2<- flexc2 + guides(fill=guide_legend(title="Changes")) # change the Legend title 
-
-
-
-# combine two diagram in one graph
-ggarrange(
-  flexc1,fixc1,flexc2, fixc2,
-  ncol = 2, nrow = 2,
-  vjust = 1,
-  widths = c(2, 2),
-  align = "hv",
-  common.legend = TRUE, legend = "bottom"
-  )
-
-```
-
-### Distribution average employee salary
 ```{r salary_distribution, echo=FALSE, fig.width=10, fig.height=4}
 library(ggthemes)
 # Treated group
@@ -272,7 +165,7 @@ s1<-
                outlier.shape=5,
                outlier.size=4) +
   labs(title="Salary Distributions in Treated Group", x="Regions", y="Hourly rate")+
-  geom_dotplot(binaxis='y', stackdir='center', dotsize=0.01)+ # add dots
+  geom_dotplot(binaxis='y', stackdir='center', dotsize=0.01, binwidth =1)+ # add dots
   theme_economist()
 
 # Control group
@@ -280,9 +173,9 @@ s2<-
   ggplot(control_data, aes(x = Q2, y= Q9)) +
   geom_boxplot(outlier.colour="red", 
                outlier.shape=5,
-               outlier.size=4) +
+               outlier.size=4)+
   labs(title="Salary Distributions in Control Group", x="Regions", y="Hourly rate")+
-  geom_dotplot(binaxis='y', stackdir='center', dotsize=0.01)+ #add dots
+  geom_dotplot(binaxis='y', stackdir='center', dotsize=0.01,binwidth =1)+ #add dots
   theme_economist()
 
 
@@ -298,20 +191,156 @@ ggarrange(
 
 ```
 
+```{r franchise, echo=FALSE, fig.width=10, fig.height=4}
+
+Pie1<-control_data%>%
+  ggplot(aes(x = control_data$Q4 ,fill = Q4)) +
+  geom_bar(stat = "count", position = "dodge") +
+  coord_polar("y", start=0)+   #Create a pie chart based on the barplot
+  labs(title = "Franchise restaurants slightly decrease in treated group ",x="Regions",y="Count in control group") +
+  theme_minimal() +
+  scale_fill_manual(values = c("Red", "Blue"))
+
+Pie2<-treated_data%>%
+  ggplot(aes(x = treated_data$Q4 ,fill = Q4)) +
+  geom_bar(stat = "count", position = "dodge") +
+  coord_polar("y", start=0)+
+  labs(title = "",x="Regions", y="Count in treated group") +
+  theme_minimal() +
+  scale_fill_manual(values = c("Red", "Blue"))
+
+#Merge twp graphs
+ggarrange(
+  Pie1, Pie2, 
+  ncol = 2, nrow = 1,
+  hjust = -0.5,
+  align = "hv"
+  )
+```
+
+```{r employee#, echo=FALSE, fig.width=10, fig.height=4}
+cxc <- 
+  simulated_data%>%
+  ggplot(aes(x = simulated_data$Q8 ,fill = type)) +
+  geom_bar(width = 0.7,position = "dodge") + 
+  coord_polar()+
+  scale_fill_manual(values = c("Red", "Blue"))+
+  labs(title = "Almost 0 restaurant has more than 30 employees in control group",x="", y="Count") +
+  theme_minimal()
+
+cxc
+```
+
+
+
+
+### T-Test
+```{r ttest,echo=FALSE}
+#install.packages("broom")
+library(broom)
+revenue_c <- control_data$Q13
+revenue_t <- treated_data$Q13
+t<-t.test(revenue_t, revenue_c)
+m<-tidy(t, digits=1)
+m%>%
+  select(-c(estimate,statistic,parameter))%>%
+  rename(
+    mean_of_Treated=estimate1,
+    mean_of_Control=estimate2
+  )%>%
+  kableExtra::kbl(caption = "T Test on the Restaurant's revenue") %>%
+  kableExtra::kable_styling(latex_options = "scale_down")%>% # use scale_down option to make the font
+  kable_styling()
+  
+```
+The T Test is used to compare the sample mean of our Treated group and Control group. The goal is to determine whether the intervention has an effective effect on the treated group. Our hypothesis is the intervention will have positive impact towards the restaurant's revenue. [@kim2015t] The T test results is represented in the Table2(Table \@ref(tab:ttest)). The package **Broom**[@broom1] is used to clean the t test results and convert it into the dataframe. The p value we get is < 2.2e-16, as the p value would indicate a significant result, meaning that the actual p value is even smaller than 2.2e-16 (a typical threshold is 0.05, anything smaller counts as statistically significant).[@kim2015t] So we can 
+interpret hypothesis not rejected which means the intervention has a significant effect on treated group.
+
+
+### Invention effect on Revenue distributions 
+
+```{r revenue_distribution, fig.cap="Revenue distribution",echo=FALSE}
+
+library(ggthemes)
+# Treated group
+rd1<-
+  ggplot(simulated_data, aes(x = simulated_data$Q13/1000, fill=type)) +
+  geom_histogram(position = "dodge", bins = 30,binwidth = 5) +
+  scale_fill_manual(values = c("red", "blue"))+
+  labs(title="Revenue Distributions Move to the right", x="Renvenue (Thousands)", y="Count")+
+  geom_density()+
+  theme_calc()
+
+rd1
+
+```
+Two merged histograms charts were used to illustrate the restaurant's revenue distribution. 
+
+(Figure \@ref(fig:revenue_distribution)) 
+
+
+
+
+
+### Invention effect on Flex and fiexed cost 
+
+```{r felx_fix, echo=FALSE, fig.width=6, fig.height=4}
+# Treated group
+
+# Fixed costs 
+fixc1<-
+  ggplot(simulated_data, aes(fill= type, x=Q11)) +
+  geom_bar(stat="count", width = 0.6,position = "dodge")+
+  scale_fill_manual(values = c("red", "blue"))+
+    ggtitle("Fixed costs increased in treated group and remain same in control group") +
+    coord_flip()+
+    xlab("Changes")+
+    ylab("Number of restaurants")+
+    theme_minimal()
+fixc1<- fixc1 + guides(fill=guide_legend(title="Changes")) # change the Legend title 
+
+# flex cost
+flexc1<-
+    ggplot(simulated_data, aes(fill= type, x=Q12)) +
+    geom_bar(stat="count", width = 0.7, position = "dodge")+
+    scale_fill_manual(values = c("red", "blue"))+
+    ggtitle("Flexible costs increased in most of treated group restaurants") +
+    coord_flip()+
+    xlab("Changes")+
+    ylab("Number of restaurants")+
+    theme_minimal()
+flexc1<- flexc1 + guides(fill=guide_legend(title="Changes")) # change the Legend title 
+
+
+
+# combine two diagram in one graph
+ggarrange(
+  flexc1,fixc1,
+  ncol = 1, nrow = 2,
+  vjust = 1,
+  widths = c(2, 2),
+  align = "hv",
+  common.legend = TRUE, legend = "bottom"
+  )
+
+```
+
+
+
 ### correlation matrix
-```{r correlation, echo=FALSE, fig.width=20, fig.height=20}
+```{r correlation, echo=FALSE, fig.width=20, fig.height=10}
 #install.packages("fastDummies")
 library(fastDummies)
-Dummy_data<-simulated_data[-c(1,2,10)]
+Dummy_data<-treated_data[-c(1,2)] #Remove Type and postcode columns
 
-Dummy_data<- fastDummies::dummy_cols(Dummy_data)
+Dummy_data<- fastDummies::dummy_cols(Dummy_data) #  change categorical var to factors 
 
-# correlation matrix for Big restaurants
-Dummy_data<-Dummy_data[-c(1:3,5:10,12,43)]
+# correlation matrix for restaurants in treated group
+Dummy_data<-Dummy_data[-c(1:3,5:7,9:11,13,44)] # remove big restaurant, cause it will always has -1 relationship with small restaurant
 
 
 # Compute a correlation matrix
-corr <- round(cor(Dummy_data), 1)
+corr <- round(cor(Dummy_data), 1) # round to 1 digit
 
 # Compute a matrix of correlation p-values
 #install.packages("ggcorrplot")
@@ -324,18 +353,21 @@ corr.plot1 <- ggcorrplot(
   corr, hc.order = TRUE, type = "lower",
   p.mat=p.mat
   )
-corr.plot1
 
-# correlation matrix for Small restaurants
-Dummy_data<-simulated_data[-c(1,2,10)]
-Dummy_data<- fastDummies::dummy_cols(Dummy_data)
-Dummy_data<-Dummy_data[-c(1:3,5:10,12,42)]
+# correlation matrix for restaurants in control group
+Dummy_data<-control_data[-c(1,2)] #Remove Type and postcode columns
+
+Dummy_data<- fastDummies::dummy_cols(Dummy_data) #  change categorical var to factors 
+
+
+Dummy_data<-Dummy_data[-c(1:3,5:7,9:11,13,44)]
 
 
 # Compute a correlation matrix
-corr <- round(cor(Dummy_data), 1)
+corr <- round(cor(Dummy_data), 1) # round to 1 digit
 
 # Compute a matrix of correlation p-values
+#install.packages("ggcorrplot")
 library(ggcorrplot)
 p.mat <- cor_pmat(Dummy_data)
 
@@ -345,14 +377,11 @@ corr.plot2 <- ggcorrplot(
   corr, hc.order = TRUE, type = "lower",
   p.mat=p.mat
   )
-corr.plot2
-
-
 # combine two diagram in one graph
 
 ggarrange(
   corr.plot1, corr.plot2, 
-  labels = c('Big restaurant', 'Small restaurant'),
+  labels = c('Treated group', 'Control group'),
   ncol = 2, nrow = 1,
   align = "hv"
   )
