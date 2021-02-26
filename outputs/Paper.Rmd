@@ -28,7 +28,7 @@ library(ggpubr)
 ```
 
 # Data 
-In this report, we use the R statistical programming language [@citeR]. To be specific, we use the “tidyverse” package to process data [@citetidyverse], "kableExtra" package to generate tables [@citekableExtra],  "ggplot2" is used to draw diagrams [@gg1] ADD ANY PACKAGE HERE. The survey conducted by Petit Poll collects the following data:
+In this report, we use the R statistical programming language [@citeR]. To be specific, we use the “tidyverse” package to process data [@citetidyverse], "kableExtra" package to generate tables [@citekableExtra],  "ggplot2" is used to draw diagrams [@gg1], "ggthemes" is used to change the diagram theme. [@themes]ADD ANY PACKAGE HERE. The survey conducted by Petit Poll collects the following data:
 
 * Geographical information (FSA, Region)
 * Type of restaurant (Fast food, fast casual, casual dining, premium casual, family style, fine dining)
@@ -353,20 +353,31 @@ Correlation matrix shows internal relationships between x variables and y variab
 ```{r correlation, fig.cap = "Correlation matrix",echo=FALSE, fig.width=10, fig.height=10}
 #install.packages("fastDummies")
 library(fastDummies)
-Dummy_data<-simulated_data[-c(1,2)] #Remove Type and postcode columns
-
+Dummy_data<-simulated_data[-c(1,2)] %>% #Remove Type and postcode columns
+rename(
+  Region = Q2,
+  operation_years = Q5,
+  Hourly_rate = Q9,
+  Total_renvenue =Q13,
+  Type=Q3,
+  Fanchise= Q4,
+  Takeout=Q6,
+  Delivery=Q7,
+  Size=Q8,
+  COVID = Q10,
+  Fixed=Q11,
+  Flex=Q12
+)
+  
+  
+  
 Dummy_data<- fastDummies::dummy_cols(Dummy_data) #  change categorical var to factors 
 
 # correlation matrix for restaurants in treated group
 Dummy_data<-Dummy_data[-c(1:3,5:7,9:11,13,44)] # remove big restaurant, cause it will always has -1 relationship with small restaurant
 
 Dummy_data<-   # change column names
-  Dummy_data%>% 
-rename(
-    operation_years = Q5,
-    Hourly_rate = Q9,
-    Total_renvenue =Q13
-  )
+  Dummy_data
 
 # Compute a correlation matrix
 corr <- round(cor(Dummy_data), 1) # round to 1 digit
