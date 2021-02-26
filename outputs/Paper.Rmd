@@ -39,7 +39,7 @@ In this report, we use the R statistical programming language [@citeR]. To be sp
 * Revenue per month
 * Potential COVID-19 cases
 
-[Appendix C](#appendixC) shows screen captures of the online version of the survey.In addition, we consulted several open datasets about the health inspection from each region. (CITATION)
+[Appendix C](#appendixC) shows screen captures of the online version of the survey.In addition, we consulted several open datasets about the health inspection from each region, including Peel[@citePeel], Halton[@citeHalton], York [@citeYork], Durham [@citeDurham], and Toronto [@citeToronto].
 
 The data section illustrates the intervention and data gathering methodology. Also, we describe detailed information on our dataset, with several data visualizations such as tables and graphs.
 

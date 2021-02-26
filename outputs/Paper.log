@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.29)  26 FEB 2021 12:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.29)  26 FEB 2021 13:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -840,15 +840,41 @@ l.462 \newpage
                                                   
 l.462 \newpage
               ]
-Underfull \hbox (badness 10000) in paragraph at lines 470--472
+Underfull \hbox (badness 10000) in paragraph at lines 473--475
 \T1/lmr/m/n/10 strati^^\ed _ random _ sampling . asp# : ~ : text = Advantages %
  20of % 20Strati^^\ed % 20Random % 20Sampling ,[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--481
+Underfull \hbox (badness 10000) in paragraph at lines 485--487
 []$\T1/lmr/m/n/10 https : / / www . investopedia . com / ask / answers / 041615
  / what -[] are -[] advantages -[] and -[] disadvantages -[] strati^^\ed -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--493
+\T1/lmr/m/n/10 311 / knowledgebase / kb / docs / articles / economic -[] develo
+pment -[] and -[] culture / program -[] support / number -[] of -[]
+ []
+
+
+Underfull \hbox (badness 3158) in paragraph at lines 497--499
+[][]\T1/lmr/m/n/10 ``Peel Health In-spec-tions.'' n.d. \T1/lmr/m/it/10 Peel\T1/
+lmr/m/n/10 . []$http : / / rmop . hedgerowsoftware . com / Portal / Food / Tabl
+e ?
+ []
+
+
+Overfull \hbox (533.54912pt too wide) in paragraph at lines 518--520
+\T1/lmr/m/n/10 z0 / pZDBbsIwDIafZQeOkxM2QXuMKkRbhJCYJnW5IA9Cm1GSkARE336mXFd24GL
+F8e^^[vw0SKpAGL7rGqK3BlvIvOdmUBcu4WLBynk1mTEzXH2n6mfCccyhBElCIeZHnBKzek4wJthLle
+JqwWcpvCvrndJIC5NaaqK4Rqs5v -[]
+ []
+
+
+Overfull \hbox (138.10713pt too wide) in paragraph at lines 518--520
+\T1/lmr/m/n/10 reJI9ZZf6AkRB3P _ Udjj4qiwjY2I6bNXm3JzDnsdFAYVECzc15diCWL9 _ 6Ae
+6VNcD1pnLe1x -[] Nt8tgvs2UN0mFsXknKQvWPIJkbFLzv -[]
  []
 
 [14] (./Paper.aux)
@@ -859,9 +885,9 @@ Package rerunfilecheck Info: File `Paper.out' has not changed.
 (rerunfilecheck)             Checksum: 59056E254461AD163BF900A8E0B3DD48;1697.
  ) 
 Here is how much of TeX's memory you used:
- 12637 strings out of 481252
- 183621 string characters out of 5914123
- 492142 words of memory out of 5000000
+ 12642 strings out of 481252
+ 183688 string characters out of 5914123
+ 493142 words of memory out of 5000000
  29231 multiletter control sequences out of 15000+600000
  470517 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -883,10 +909,10 @@ ist/fonts/type1/public/lm/lmr8.pfb><c:/Users/xujiq/AppData/Roaming/TinyTeX/texm
 f-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/xujiq/AppData/Roaming/TinyTeX/t
 exmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/xujiq/AppData/Roaming/Tiny
 TeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Paper.pdf (14 pages, 463425 bytes).
+Output written on Paper.pdf (14 pages, 467444 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 296 compressed objects within 3 object streams
- 78 named destinations out of 1000 (max. 500000)
+ 364 PDF objects out of 1000 (max. 8388607)
+ 314 compressed objects within 4 object streams
+ 83 named destinations out of 1000 (max. 500000)
  158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
