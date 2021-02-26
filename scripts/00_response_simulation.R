@@ -101,7 +101,9 @@ fsa_generate <- function(region) {
 # Q8: Number of employees in the restaurant
 # Q9: On average, how much do your restaurant employees earn per hour ($CAD)?
 # Q10: Has your restaurant been a site of a potential COVID case?
-
+# Q11: How has your FIXED costs to run the restaurant changed within this month?
+# Q12: How has your FLEX/VARIABLE costs to run the restaurant changed within this month?
+# Q13: How much revenue did your restaurant make in the past month? ($CAD)
 
 # Do this one for treated and once for control and then bring them together
 set.seed(116)

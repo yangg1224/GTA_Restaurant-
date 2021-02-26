@@ -15,6 +15,7 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
+library(here)
 #install.packages("PerformanceAnalytics")
 library("PerformanceAnalytics")
 library(ggplot2)
@@ -28,18 +29,79 @@ library(ggpubr)
 ```
 
 # Data 
+In this report, we use the R statistical programming language [@citeR]. To be specific, we use the “tidyverse” package to process data [@citetidyverse], "kableExtra" package to generate tables [@citekableExtra],  "ggplot2" is used to draw diagrams [@gg1] ADD ANY PACKAGE HERE. The survey conducted by Petit Poll collects the following data:
+
+* Geographical information (FSA, Region)
+* Type of restaurant (Fast food, fast casual, casual dining, premium casual, family style, fine dining)
+* Number of years opened so far
+* Services provided (delivery, take-out)
+* Number of employees and salary of employee
+* Cost to run the restaurant (Fixed, variable)
+* Revenue per month
+* Potential COVID-19 cases
+
+[Appendix C](#appendixC) shows screen captures of the online version of the survey.In addition, we consulted several open datasets about the health inspection from each region, including Peel[@citePeel], Halton[@citeHalton], York [@citeYork], Durham [@citeDurham], and Toronto [@citeToronto].
+
+The data section illustrates the intervention and data gathering methodology. Also, we describe detailed information on our dataset, with several data visualizations such as tables and graphs.
+
 
 ## Intervention 
 
+In this experiment, we conducted a randomized controlled trial and randomly assigned subjects to two groups: the treatment group and the control group. Within this experiment, the treatment group receives an intervention and the control group is not being treated. 
+
+In our case, the intervention is having restaurants open for indoor dining. Our experimental subjects are restaurants in the GTA that are currently in operation. We assumed all restaurants in Ontario are closed for indoor dining at the moment. During the shut-down, all restaurants in the control group were forbidden to offer dine-in and patio services according to the COVID-19 lockdown policy set out by the Ontario government [@citenews]. However, take-out and delivery services were acceptable. Our intervention involves randomly selecting restaurants to reopen for indoor dining in the GTA. The restaurants in the treatment and control group were picked through stratified sampling. This experiment was conducted by Petit Poll and was authorized by the Ontario Department of Public Health.
+
+We randomized the control and treatment groups through stratified sampling. In other words, we divided all restaurants in Ontario into smaller strata. Each strata was grouped based on region. After stratification, we took random samples from each region, in proportion to its share of the population within the total population [@citeSRS]. The distribution of all strata shows as following (see more information in [Appendix A](#appendixA)):
+
+* Toronto - 29.5%
+* Durham - 12.8%
+* York - 21.9%
+* Peel - 24.6%
+* Halton - 11%
+
+We then use a random number generator to randomly select a certain number of restaurants from a list of restaurants that was ordered alphanumerically. This list was procured by health inspection records that indicate all of the open restaurants within each region. Procedurally, we set the minimum number and the maximum number based on the number of restaurants within the given list. If the randomly generated number was 59, we chose the 59th restaurant in the list. We repeated the process until the treatment group and the control group were established with the corresponding number of restaurants. 
+
+To ensure the separation of treatment and non-treatment groups, we relied on stratified random sampling based on regions. After stratification, the number of restaurants in the treatment and control groups were the same. This ensures that the treatment is the only source of potential differences in outcomes between the two groups and not based on convenience of access for citizens within each region [@citeSRS]. Moreover, ad-hoc analysis showed that the proportion of restaurant types were the same between control and treatment groups. This reduces the likelihood that citizens would migrate between groups for particular restaurant types.
+
+The experiment ran for two and a half months from December 1, 2020 to February 15th, 2021.
+We distributed a consent form to 11,325 restaurants within the GTA on December 1st, 2020, and received 3,454 responses to participate in our survey by December 15th, 2020. We randomly sampled an equal number of respondents into the treatment group and control group. On December 16th, the intervention was announced for the selected 1,637 restaurants in the treatment group. We reserved half a month for the restaurant to prepare for reopening. The treatment group reopened the restaurant from January 1st to January 31st, 2021. We considered one month as the minimum effective period for a validity reopening. During the intervention, all restaurants in the treatment group were allowed to offer dine-in, patio services, delivery service, and takeout services. The survey itself was conducted for a half month from February 1st, 2021 to February 15th, 2021. Finally, we collected 3,274 responses in total from both the treatment group and control group by February 15th, 2021.
+
 ## Data Gathering Method 
+
+The population included all restaurants in the GTA, excluding the ones that were completely closed. The sampling frame was all restaurants listed in the health inspection reporting program of all five regions. Currently, GTA has approximately 25,351 restaurants, including 7500 in Toronto, 3260 in Durham, 5553 in York, 6235 in Peel, and 2803 in Halton. We use a stratified sampling method to randomly select restaurants in each region. We sent consent forms to 11,325 restaurants, and received 3,454 responses, which reflects a 30.5% response rate. The final sample was 3,274 restaurants that responded to the paper survey. We arrived at 3000 as a sample size to ensure enough statistical power in our sample. 
+
+We use stratified random sampling to obtain a sample that best represents the entire population. Unlike simple random sampling, which randomly selects data from the entire population, stratified random sampling takes each stratum in direct proportion to the population in each region compared to the total population in GTA. Stratified random sampling reflects the population more accurately than simple random sampling. With simple random sampling, it is not guaranteed that any particular subgroup or type of restaurant is chosen [@citeprocon]. In contrast, SRS ensures each subgroup within the population has proper representation within the sample. In other words, it captures key population characteristics in the sample. Stratification gives a smaller error in estimation and greater precision than the simple random sampling method. The greater the differences between the strata, the greater the gain in precision[@citeSRS1]. 
+
+The collection instrument for this survey was paper questionnaires sent by mail. We first sent consent forms to obtain permission within the early stages of the experiment to randomly selected restaurants in a list of all restaurants per region. We did not use electronic questionnaires or surveys sent by email in order to prevent a non-response bias from the few restaurants that do not have a commercial email address or who don’t check their email frequently. Additionally, we avoided choosing in-person interviews in order to reduce close contact and lessen the chance of virus transmission. 
+
+The total estimated cost was approximately \$20,958. To be specific, the average cost to print a page for black and white is around 5 cents [@citeprintcost]. According to Stamps, the cost of a one-ounce First Class Mail stamp is \$0.55 for one way [@citestampcost]. Each envelope cost 15 cents [@citeenevlopcost]. We sent 11,000 informed consents first, and then sent 3454 paper surveys after. When we mail the consent form and survey, we include a prepaid envelope with a stamp in each single package to encourage survey response. Therefore, we spent \$15,950 on consent forms and \$5,008 on paper surveys. See more details in [Appendix B](#appendixB).
+
+We took three steps to deal with the non-responses. First of all, we tested the survey before sending them out. We kept the survey short. A one-minute survey normally has a higher response rate than a 15 minutes survey [@citenonresponse]. Besides, we sent reminders to the participants through mail or phone, if we did not receive responses in the first week. It ensured the surveys were sent to the right address. In addition, we would offer incentives in exchange for completing the survey. 
+
+During the early stage of designing the survey, we determined that it was unnecessary to collect the personal information of the restaurant owner. Also, the survey did not ask the restaurant's name and address but only the first three digits of postal code (FSA code), which encodes region-level information. The survey was conducted anonymously; therefore, the risk of unauthorized collection, use, and disclosure of personal information was kept to a minimum. 
+
+We did not use an electronic questionnaire sent by email. An email survey will require participants to send their responses back to us by personal email. Meanwhile, physical questionnaires can be sent back anonymously, without the sender's name and return address. 
+
+In the questionnaire, most questions are multiple-choice, and we were not asking any open-end questions about the personal experience. In particular, when it comes to the cost structure of restaurant operations, which is deemed as sensitive questions by business owners, only the direction of change was asked instead of a specific amount. Thus, it would be impossible to reverse engineer the financial details and to infer private attributes about restaurants such as store names and locations using this dataset. 
+
+When conducting the survey, we strictly follow the terms of reference for the safe collection, retention, use, disclosure, and disposal of personal information, in accordance with the Act. During the survey, we reviewed the term of reference periodically. At the final stage of the experiment, we checked all conditions and made sure they were fully complied with.
+ 
+Participation in the survey was considered on a voluntary basis. Thus, we sent out the informed consent in order to provide participants as much information as possible. The consent should include the following:
+
+* The main purpose of the research.
+* The name of the institution that conducts the research.
+* How the information will be disclosed.
+* How much time the survey will take. 
+* How the respondent will be informed about the final result. 
+
+We have also considered how the data will be stored for future use. All data will be replaced with code and stored separately from the survey response. Petit Poll  will be responsible for ensuring the confidentiality, integrity, and accessibility of the dataset under supervision of the Ontario government. 
+
+
 
 ## Descriptive Analysis
 ```{r read_data, include=FALSE}
-#setwd("~/Downloads/Git/groupproject-")
-
 # read raw dataset from scripts, need to run survey_response _simulation first.
-simulated_data<- read_csv("inputs/simulated_data.csv") 
-
+simulated_data<- read_csv(here::here("inputs/simulated_data.csv"))
 
 # We add a new column To distinguish the restaurant size by employees number. 
 # if employees number >20 then we define it is big, otherwise it is small.
@@ -172,7 +234,6 @@ sd1<-
   scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
   labs(title="The salary distributions was higher for teatment group", x="Salary", y="Number of employee")+
   geom_density()
-sd1
 ```
 
 
@@ -212,11 +273,15 @@ ggarrange(
 ```
 
 
+<<<<<<< HEAD
 * The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts, we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants must follow the rules and policies set by their head office. [find a reference] Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
+=======
+* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor.[@nhamo2020restaurants] From the pie charts, we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group. 
+>>>>>>> 756d6dc61fabc00708c1a9ac52f36e83af22df18
 (Figure \@ref(fig:pie1))
 
 
-```{r pie1, fig.cap = "Restaurant franchise distribution", echo=FALSE, fig.width=7, fig.height=15}
+```{r pie1, fig.cap = "Restaurant franchise distribution", echo=FALSE, fig.width=10, fig.height=5}
 
 Pie1<-control_data%>%
   ggplot(aes(x = control_data$Q4 ,fill = Q4)) +
@@ -242,7 +307,12 @@ ggarrange(
   align = "hv"
   )
 ```
+<<<<<<< HEAD
 * The polar bar graph illustrates the distribution of employee numbers, as can be shown in figure below. (Figure \@ref(fig:employee)) Because of the COVID lockdown restriction, no restaurant is allowed to open for large group dine-in or outdoor patio, which in turn causes the layoff in servers. In particular, large restaurants would want to further cut labor costs by laying off extra helpers in the kitchen to maintain only essential operations for food production. So in the control group, there is 0 restaurant which has more than 30 employees. Most of the restaurants have 10 to 20 employees, as a result of labor force layoff. 
+=======
+
+* The polar chart illustrates the employee numbers distribution, as can be seen in figure below. (Figure \@ref(fig:employee)) Because of COVID rule, no restaurant is allowed to open for large group dine in. For large size restaurant, they all make corresponding actions to reduce their flexiable costs, such as reduce the full time employees. So in the control group, there is 0 restaurant which has more than 30 employees. Most of restaurant has 10 to 20 employees. 
+>>>>>>> 756d6dc61fabc00708c1a9ac52f36e83af22df18
 
 ```{r employee, fig.cap = "Employee numbers distribution",echo=FALSE, fig.width=10, fig.height=4}
 cxc <- 
@@ -463,7 +533,7 @@ Along with our Randomized Control Trial experiment framework, the study would pr
 \newpage
 # Appendix
 
-## Appendix A
+## Appendix A {#appendixA}
 ```{r AppendixA, message=FALSE, echo = FALSE}
 ### Number in GTA ### 
 number_of_Toronto = 7500
@@ -506,7 +576,7 @@ sample_size %>%
   kable_styling()
 ```
 
-## Appendix B
+## Appendix B {#appendixB}
 ```{r AppendixB, message=FALSE, echo = FALSE}
 ### basic information ###
 number_of_survey = 3454
@@ -540,6 +610,7 @@ estimated_cost %>%
 
 
 ```
+## Appendix C: Screenshot of the survey
 
 
 
