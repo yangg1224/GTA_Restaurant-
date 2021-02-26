@@ -360,6 +360,13 @@ Dummy_data<- fastDummies::dummy_cols(Dummy_data) #  change categorical var to fa
 # correlation matrix for restaurants in treated group
 Dummy_data<-Dummy_data[-c(1:3,5:7,9:11,13,44)] # remove big restaurant, cause it will always has -1 relationship with small restaurant
 
+Dummy_data<-   # change column names
+  Dummy_data%>% 
+rename(
+    operation_years = Q5,
+    Hourly_rate = Q9,
+    Total_renvenue =Q13
+  )
 
 # Compute a correlation matrix
 corr <- round(cor(Dummy_data), 1) # round to 1 digit
