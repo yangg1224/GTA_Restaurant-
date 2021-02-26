@@ -275,7 +275,7 @@ ggarrange(
 ```
 
 
-* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts, we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
+* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor.[@nhamo2020restaurants] From the pie charts, we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group. 
 (Figure \@ref(fig:pie1))
 
 
@@ -306,7 +306,7 @@ ggarrange(
   )
 ```
 
-* The polar chart illustrates the employee numbers distribution, as can be seen in figure below. (Figure \@ref(fig:employee)) Because of COVID rule, no restaurant is allowed to open for large group dine in. So in the control group, there is 0 restaurant which has more than 30 employees. Most of restaurant has 10 to 20 employees. 
+* The polar chart illustrates the employee numbers distribution, as can be seen in figure below. (Figure \@ref(fig:employee)) Because of COVID rule, no restaurant is allowed to open for large group dine in. For large size restaurant, they all make corresponding actions to reduce their flexiable costs, such as reduce the full time employees. So in the control group, there is 0 restaurant which has more than 30 employees. Most of restaurant has 10 to 20 employees. 
 
 ```{r employee, fig.cap = "Employee numbers distribution",echo=FALSE, fig.width=10, fig.height=4}
 cxc <- 
