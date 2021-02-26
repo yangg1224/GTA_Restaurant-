@@ -28,7 +28,7 @@ library(ggpubr)
 ```
 
 # Data 
-In this report, we use the R statistical programming language [@citeR]. To be specific, we use the “tidyverse” package to process data [@citetidyverse], "kableExtra" package to generate tables [@citekableExtra],  ADD ANY PACKAGE HERE. The survey conducted by Petit Poll collects the following data:
+In this report, we use the R statistical programming language [@citeR]. To be specific, we use the “tidyverse” package to process data [@citetidyverse], "kableExtra" package to generate tables [@citekableExtra],  "ggplot2" is used to draw diagrams [@gg1] ADD ANY PACKAGE HERE. The survey conducted by Petit Poll collects the following data:
 
 * Geographical information (FSA, Region)
 * Type of restaurant (Fast food, fast casual, casual dining, premium casual, family style, fine dining)
@@ -236,7 +236,6 @@ sd1<-
   scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
   labs(title="The salary distributions was higher for teatment group", x="Salary", y="Number of employee")+
   geom_density()
-sd1
 ```
 
 
@@ -280,7 +279,7 @@ ggarrange(
 (Figure \@ref(fig:pie1))
 
 
-```{r pie1, fig.cap = "Restaurant franchise distribution", echo=FALSE, fig.width=7, fig.height=15}
+```{r pie1, fig.cap = "Restaurant franchise distribution", echo=FALSE, fig.width=10, fig.height=5}
 
 Pie1<-control_data%>%
   ggplot(aes(x = control_data$Q4 ,fill = Q4)) +
@@ -306,6 +305,7 @@ ggarrange(
   align = "hv"
   )
 ```
+
 * The polar chart illustrates the employee numbers distribution, as can be seen in figure below. (Figure \@ref(fig:employee)) Because of COVID rule, no restaurant is allowed to open for large group dine in. So in the control group, there is 0 restaurant which has more than 30 employees. Most of restaurant has 10 to 20 employees. 
 
 ```{r employee, fig.cap = "Employee numbers distribution",echo=FALSE, fig.width=10, fig.height=4}
