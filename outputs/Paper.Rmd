@@ -35,7 +35,7 @@ library(ggpubr)
 
 ## Descriptive Analysis
 ```{r read_data, include=FALSE}
-setwd("~/Downloads/Git/groupproject-")
+#setwd("~/Downloads/Git/groupproject-")
 
 # read raw dataset from scripts, need to run survey_response _simulation first.
 simulated_data<- read_csv("inputs/simulated_data.csv") 
@@ -212,7 +212,7 @@ ggarrange(
 ```
 
 
-* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts, we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
+* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts, we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants must follow the rules and policies set by their head office. [find a reference] Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
 (Figure \@ref(fig:pie1))
 
 
@@ -242,7 +242,7 @@ ggarrange(
   align = "hv"
   )
 ```
-* The polar chart illustrates the employee numbers distribution, as can be seen in figure below. (Figure \@ref(fig:employee)) Because of COVID rule, no restaurant is allowed to open for large group dine in. So in the control group, there is 0 restaurant which has more than 30 employees. Most of restaurant has 10 to 20 employees. 
+* The polar bar graph illustrates the distribution of employee numbers, as can be shown in figure below. (Figure \@ref(fig:employee)) Because of the COVID lockdown restriction, no restaurant is allowed to open for large group dine-in or outdoor patio, which in turn causes the layoff in servers. In particular, large restaurants would want to further cut labor costs by laying off extra helpers in the kitchen to maintain only essential operations for food production. So in the control group, there is 0 restaurant which has more than 30 employees. Most of the restaurants have 10 to 20 employees, as a result of labor force layoff. 
 
 ```{r employee, fig.cap = "Employee numbers distribution",echo=FALSE, fig.width=10, fig.height=4}
 cxc <- 
@@ -261,8 +261,8 @@ cxc
 
 
 ### T-Test
-The T Test is used to compare the sample mean of our Treated group and Control group. The goal is to determine whether the intervention has an effective effect on the treated group. Our hypothesis is the intervention will have positive impact towards the restaurant's revenue. [@kim2015t] The T test results is represented in the Table2(Table \@ref(tab:ttest)). The package **Broom**[@broom1] is used to clean the t test results and convert it into the dataframe. The p value we get is < 2.2e-16, as the p value would indicate a significant result, meaning that the actual p value is even smaller than 2.2e-16 (a typical threshold is 0.05, anything smaller counts as statistically significant).[@kim2015t] So we can 
-interpret hypothesis not rejected which means the intervention has a significant effect on treated group.
+The t-test is used to compare the sample mean of our Treated group and Control group. The goal is to determine whether the intervention has an effective effect on the treated group. Our hypothesis is the intervention will have positive impact towards the restaurant's revenue. [@kim2015t] The t-test results is represented in the Table2(Table \@ref(tab:ttest)). The package **Broom** [@broom1] is used to clean the t test results and convert it into the dataframe. The p value we get is < 2.2e-16, as the p value would indicate a significant result, meaning that the actual p value is even smaller than 2.2e-16 (a typical threshold is 0.05, anything smaller counts as statistically significant).[@kim2015t] So we can 
+interpret hypothesis not rejected which means that the re-opening of restaurants has a significant effect on treated group in terms of revenue increase.
 
 ```{r ttest, echo=FALSE}
 #install.packages("broom")
@@ -284,7 +284,7 @@ m%>%
 ```
 
 ### Correlation matrix
-Correlation matrix shows internal relationships between x variables and y variable. (Figure \@ref(fig:correlation)) Intensity is indicated by the color(from red to blue). No significant coeffiency   is barred with symbol "x". More detailed analysis will be conducted in finding part. 
+Correlation matrix shows internal relationships between restaurant feature variables and our variable of interest, restaurant revenue. (Figure \@ref(fig:correlation)) Intensity and direction of relationship is indicated by the color scale from red to blue (+1 to -1. descendant). Categorical variables are encoded to factors. Insignificant coefficient is barred with symbol "x". More detailed analysis will be conducted in finding part. 
 
 ```{r correlation, fig.cap = "Correlation matrix",echo=FALSE, fig.width=10, fig.height=10}
 #install.packages("fastDummies")
@@ -328,12 +328,20 @@ ggcorrplot(
 
 ## Findings 
 
-### Finding ONE
+### Finding ONE: Higher salary and more job opportunities in treatment group
 
-### Finding TWO
-Invention effect on Flex and fiexed cost 
+The treated restaurants have been opening for in-door dining and patio for a month while the control group must comply with the lockdown policy during COVID-19 second waves in GTA. The additional operating channels (in-door dining and patio) demand rehiring of previously layoff servers in the dining rooms and extra chefs in the kitchen. Under the surging demand for labor force and the potential risk due to exposure to human-contact, the restaurants have to offer higher salaries to compensate for employees’ potential risk of infection and entice them away from competitor restaurants. 
+From the salary distribution boxplots (Figure \@ref(fig:Salary)) we can see that overall salary pay levels are higher in the treatment group across 5 regions in GTA, including average rate and all other distribution percentiles. 
+As for job opportunities, the treated restaurants hire more labor force. To cater to the increased demand from dine-in orders, the open restaurants hire more servers and chefs, which result in a size expansion in the number of employees. The number of restaurants having more than 10 employees are larger in the treatment group, whereas there are no restaurants operating with more than 30 employees in the control group. (Figure \@ref(fig:employee))
 
-```{r felx_fix, fig.cap = "Invention effect on Flex and fiexed cost",echo=FALSE, fig.width=6, fig.height=4}
+
+### Finding TWO: Cost structure changes in treatment group 
+
+Labor cost is one of the main components of variable cost for restaurants. The hiring surge for the restaurants open for dine-in increases the expenditure on human capital and thus an increase in variable cost. In addition, dine-in and patio options potentially increase the demand for food ingredients, which is another major source of variable cost. As a result, most of the open restaurants have increased variable costs. For fixed costs, about half of the open restaurants experience a cost increase and the other half have no change in fixed costs.    
+(Figure \@ref(fig:var_fix))
+
+
+```{r var_fix, fig.cap = "Invention effect on Variable and Fixed cost",echo=FALSE, fig.width=6, fig.height=4}
 # Treated group
 
 # Fixed costs 
@@ -353,7 +361,7 @@ flexc1<-
     ggplot(simulated_data, aes(fill= type, x=Q12)) +
     geom_bar(stat="count", width = 0.7, position = "dodge")+
     scale_fill_manual(values = c("#E85C34", "#2C92D5"))+
-    ggtitle("Flexible costs increased in most of treated group restaurants") +
+    ggtitle("Variable costs increased in most of treated group restaurants") +
     coord_flip()+
     xlab("Changes")+
     ylab("Number of restaurants")+
@@ -373,7 +381,11 @@ ggarrange(
   )
 
 ```
-### Finding THREE
+
+### Finding THREE: Significant revenue increase in treatment group
+
+The re-opening implementation enables the treated restaurants to operate indoor dining and patio services besides offering delivery and/or pickup as before during lockdown. The additional line of business attracts more customers to visit stores to order dishes and beverages. The increased food sales earn extra revenue for those restaurants. As demonstrated through the revenue histogram (Figure \@ref(fig:revenue_distribution)), the treatment group has higher revenue levels overall than the control group. The restaurants follow binomial distributions based on restaurant sizes. Restaurant size and revenue level are positively correlated. According to the correlation heatmap (Figure \@ref(fig:correlation)), bigger restaurants generate more revenues than small ones. Restaurants having fewer than 20 employees are defined to be small, which are most of the cases in the total samples. Both small and big restaurants generate higher revenues in the treated group. The t-test [cross ref: t-table] further verifies our finding that the restaurants allowed for re-opening earn significantly more than the control group; the average revenue for the treated is \$63,144 while below \$5,000 for the control group. 
+
 Invention effect on Revenue distributions 
 
 ```{r revenue_distribution, fig.cap="Invention effect on Revenue distributions",echo=FALSE}
@@ -391,13 +403,62 @@ rd1<-
 rd1
 
 ```
+
 ## Limitation
+
+### Self-selection, late-responders and non response bias
+
+In our consent form and followup survey, 30.5% of restaurants agreed to participate in our survey and 180 subjects dropped out in the survey. 
+On the one hand, participants can choose whether to participate in the survey. It is possible that the restaurant owners who operate smoothly during lockdown are more willing to discuss the topic on restaurant operations and more likely to agree to participate in the survey. Upward bias can exist in the statistics for the respondents which distorts the representation for the population caused by self-selection. On the other hand, within the short time experiment period, we might not receive all the survey mails back because some of them respond late. 
+Participants who do not respond may differ in characteristics and outcomes from those who respond. If that is the case, self-selection bias and non-response bias exist in the sampling procedures. Since we do not have data on non-responders, we cannot directly compare them with respondents to detect the bias. The paper claim that late-responders share similar characteristics with non-responders [@nonresponse], then the comparison can be made in order to check for potential non-response bias during data collection. [@preventnonres]
+
+
+### Response bias - desirability bias
+
+Since it is a self administered study that responders fill out the survey without an interviewer, the information reported by restaurant owners themselves may be inaccurate or even dishonest. Therefore, there are potential response biases such as social desirability bias and over/undervaluation, caused by the impression that responders are motivated to reinforce socially desirable behaviors and deny those that are not in their answers. Making the survey anonymous, employing a third party or choosing neutral tones can dis-associate sensitive questions with presumed social judgements and thus mitigate this bias. [@desirability]
+These methods were implemented by this survey. For example, the survey uses a neutral tone in questions, it did not ask for restaurant names, and the study was delegated by the Ontario government to us, a professional polling company.
+ 
+
+### Data unobtainable for those completely closed - imperfect sampling frame and potential sampling bias
+
+The choice of experiment population subjects are limited to all restaurants in GTA that are on the contact list provided by the Ontario government since the owners of restaurants that are completely closed are not reachable through mailing or phone. Although stratified sampling is conducted within the sampled population to ensure representativeness of the population, the excluded closed restaurants restricted our sampling coverage and made sampling procedures less random. {@samplingbias} If unsampled data characteristics are different from our population systematically in nature, the randomized control assumption would be weakened. Here we claim that our research interest lies on the impact of COVID shutdown on restaurant revenue, therefore it is reasonable to exclude the observations with null revenue. 
+
+
+### Experiment drop-outs
+
+There are an equal number of dropouts in the control and treatment groups during the survey (90 out of 3454 in each). Dropout occurs for many reasons: death, no longer willing to participate, no longer available, geographic move, or negatively impacted by treatment conditions. [@dropout]. Despite equal dropout rates, dropout might still affect internal validity if statistical behavior of dropouts are different from completers. [@diffdropout] Given that only a small portion of subjects dropped out, its impact is assumed to be negligible.   
+
+
+### Time length of our experiment - only one month
+
+Our experiment lasts for only a month, which is the minimal duration needed in order to observe any change in monthly accounting bookkeeping settled, employee paychecks paid along with other expenditures such as rent and hydro bills. It may take longer to observe any seasonality and time trends that could impact the operation conditions of the restaurant industry and confound our treatment result. The paper argues that one month is sufficient for our research purpose since statistical significance in business operation differences can be observed in the data between two groups according to the two-sample t-test result (Table \@ref(tab:ttest))). 
+
+
+### Privacy problem on postal code 
+
+Questions on identifying information are avoided or offset to a general level to abide by research ethics. For example, to protect the privacy of restaurants involved in the survey, We did not ask about restaurant names, and the location of restaurants is proxied by FSA code, the first three digits of postal code, which only encodes the region-level information. Thereby, it would be impossible to reverse engineer the restaurant identity by any ill-intended third parties. Furthermore, postal code is a proxy for socioeconomic status. Wealth level would confound the restaurant’s choice of location and its ability to pay rent and attract high-end customers, which correlates with revenue and eventually biases the model. [@zipcode] Consequently, the privacy concern is addressed by the use of FSA code.
+
+
+### Rough geographic representation by FSA
+Due to the limited geographic location information about restaurants, the exploratory spatial analysis on restaurant location distributions can not be realized. The FSA code only provides the region-level information, which is not detailed enough to plot a heat map. However, weighing the importance of data privacy in survey ethics, this limitation in rough geographic representation is negligible. 
+
+
 
 ## Future Directions 
 
-```{r}
+After addressing potential biases and limitations in our experiment design, we state that those problems are mitigated by our design in sampling, data gathering, and survey process under the Randomized Controlled Trial framework. There are no systematic biases in the experiment process, the variable features are randomized, and the restaurants in control and treatment groups share similar underlying characteristics other than the external implementation of reopening policy. Therefore the internal validity of treatment effect on variable of interest holds. [@RCT] The only source of variation in restaurant revenue comes from our treatment of reopening the restaurant for full-operation.
+Next we would like to explore the alternatives in enhancing our study from the aspect of external validity and quantitative modeling. 
 
-```
+### External validity
+
+In order for the findings to be generalizable to other situations and settings in the real world, experiments should be conducted in broader scales and longer durations. [@externalv] The choice of population could be every restaurant outside of GTA across provinces in Canada in order to control for region-specific influence on the restaurant industry. The experiment time frame can be prolonged to year-base, or multiple monthly experiments can be conducted in random months and compare their final result to rule out the time trend effect on restaurant business operations.
+
+### Model building
+
+In order to quantify the extent of statistical influence of each feature on the operating of restaurants besides the treatment effect of opening restaurants we have observed with the experiment treatment, linear regression and feature importance metrics can be applied in building a statistical model. Statistical inference can further identify the individual; statistical significant factors that cause variations in restaurants revenues. 
+Along with our Randomized Control Trial experiment framework, the study would provide our client, the Ontario government, with an insightful understanding of the effect of COVID-19 shut-downs on restaurant businesses.  
+
+
 
 \newpage
 # Appendix
