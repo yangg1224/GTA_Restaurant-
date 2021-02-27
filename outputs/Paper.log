@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.28)  26 FEB 2021 22:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.28)  26 FEB 2021 22:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -597,180 +597,169 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 {/Users/yang/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-[3]
+[3] [4]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-16.
+19.
 (/Users/yang/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [4]
-<Paper_files/figure-latex/restaurant1-1.pdf, id=124, 578.16pt x 361.35pt>
+)
+<Paper_files/figure-latex/restaurant1-1.pdf, id=122, 578.16pt x 361.35pt>
 File: Paper_files/figure-latex/restaurant1-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/restaurant1-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/restaurant1-1.pdf  used on in
-put line 285.
+put line 288.
 (pdftex.def)             Requested size: 469.75385pt x 293.59616pt.
-<Paper_files/figure-latex/restaurant2-1.pdf, id=125, 867.24pt x 289.08pt>
+<Paper_files/figure-latex/restaurant2-1.pdf, id=123, 867.24pt x 289.08pt>
 File: Paper_files/figure-latex/restaurant2-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/restaurant2-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/restaurant2-1.pdf  used on in
-put line 291.
+put line 294.
 (pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
-<Paper_files/figure-latex/salary1-1.pdf, id=128, 867.24pt x 289.08pt>
-File: Paper_files/figure-latex/salary1-1.pdf Graphic file (type pdf)
-<use Paper_files/figure-latex/salary1-1.pdf>
-Package pdftex.def Info: Paper_files/figure-latex/salary1-1.pdf  used on input 
-line 303.
-(pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
-<Paper_files/figure-latex/salary2-1.pdf, id=129, 722.7pt x 289.08pt>
-File: Paper_files/figure-latex/salary2-1.pdf Graphic file (type pdf)
-<use Paper_files/figure-latex/salary2-1.pdf>
-Package pdftex.def Info: Paper_files/figure-latex/salary2-1.pdf  used on input 
-line 309.
-(pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
-<Paper_files/figure-latex/pie1-1.pdf, id=131, 722.7pt x 361.35pt>
-File: Paper_files/figure-latex/pie1-1.pdf Graphic file (type pdf)
-<use Paper_files/figure-latex/pie1-1.pdf>
-Package pdftex.def Info: Paper_files/figure-latex/pie1-1.pdf  used on input lin
-e 321.
-(pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
-<Paper_files/figure-latex/employee-1.pdf, id=133, 722.7pt x 289.08pt>
-File: Paper_files/figure-latex/employee-1.pdf Graphic file (type pdf)
-<use Paper_files/figure-latex/employee-1.pdf>
-Package pdftex.def Info: Paper_files/figure-latex/employee-1.pdf  used on input
- line 333.
-(pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
 [5pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.342 
-      ] [6pdfTeX warning (ext4): destination with the same identifier (name{fig
-ure.1}) has been already used, duplicate ignored
+l.302 \end{itemize}
+                   ] [6pdfTeX warning (ext4): destination with the same identif
+ier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.342 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-2}) has been already used, duplicate ignored
+l.302 \end{itemize}
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.342 
-       <./Paper_files/figure-latex/restaurant1-1.pdf> <./Paper_files/figure-lat
-ex/restaurant2-1.pdf>] [7pdfTeX warning (ext4): destination with the same ident
-ifier (name{figure.3}) has been already used, duplicate ignored
+l.302 \end{itemize}
+                    <./Paper_files/figure-latex/restaurant1-1.pdf> <./Paper_fil
+es/figure-latex/restaurant2-1.pdf>]
+<Paper_files/figure-latex/salary1-1.pdf, id=151, 867.24pt x 289.08pt>
+File: Paper_files/figure-latex/salary1-1.pdf Graphic file (type pdf)
+<use Paper_files/figure-latex/salary1-1.pdf>
+Package pdftex.def Info: Paper_files/figure-latex/salary1-1.pdf  used on input 
+line 306.
+(pdftex.def)             Requested size: 469.75827pt x 156.58607pt.
+<Paper_files/figure-latex/salary2-1.pdf, id=152, 722.7pt x 289.08pt>
+File: Paper_files/figure-latex/salary2-1.pdf Graphic file (type pdf)
+<use Paper_files/figure-latex/salary2-1.pdf>
+Package pdftex.def Info: Paper_files/figure-latex/salary2-1.pdf  used on input 
+line 312.
+(pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
+<Paper_files/figure-latex/pie1-1.pdf, id=154, 722.7pt x 361.35pt>
+File: Paper_files/figure-latex/pie1-1.pdf Graphic file (type pdf)
+<use Paper_files/figure-latex/pie1-1.pdf>
+Package pdftex.def Info: Paper_files/figure-latex/pie1-1.pdf  used on input lin
+e 324.
+(pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.342 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-4}) has been already used, duplicate ignored
+l.332 \end{itemize}
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.342 
-       <./Paper_files/figure-latex/salary1-1.pdf> <./Paper_files/figure-latex/s
-alary2-1.pdf>] [8pdfTeX warning (ext4): destination with the same identifier (n
-ame{figure.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.342 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.342 
-       <./Paper_files/figure-latex/pie1-1.pdf> <./Paper_files/figure-latex/empl
-oyee-1.pdf>]
-<Paper_files/figure-latex/correlation-1.pdf, id=195, 722.7pt x 722.7pt>
+l.332 \end{itemize}
+                    <./Paper_files/figure-latex/salary1-1.pdf> <./Paper_files/f
+igure-latex/salary2-1.pdf>]
+<Paper_files/figure-latex/employee-1.pdf, id=177, 722.7pt x 289.08pt>
+File: Paper_files/figure-latex/employee-1.pdf Graphic file (type pdf)
+<use Paper_files/figure-latex/employee-1.pdf>
+Package pdftex.def Info: Paper_files/figure-latex/employee-1.pdf  used on input
+ line 336.
+(pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
+<Paper_files/figure-latex/correlation-1.pdf, id=180, 722.7pt x 722.7pt>
 File: Paper_files/figure-latex/correlation-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/correlation-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/correlation-1.pdf  used on in
-put line 364.
+put line 367.
 (pdftex.def)             Requested size: 469.76045pt x 469.76045pt.
 
-LaTeX Warning: Reference `fig:Salary2' on page 9 undefined on input line 381.
+LaTeX Warning: Reference `fig:Salary2' on page 8 undefined on input line 384.
 
-[9pdfTeX warning (ext4): destination with the same identifier (name{table.2}) h
-as been already used, duplicate ignored
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) 
+has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.389 
-      ] [10pdfTeX warning (ext4): destination with the same identifier (name{fi
-gure.7}) has been already used, duplicate ignored
+l.386 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.2
+}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.389 
-       <./Paper_files/figure-latex/correlation-1.pdf>]
-<Paper_files/figure-latex/var1-1.pdf, id=224, 433.62pt x 289.08pt>
+l.386 
+       <./Paper_files/figure-latex/pie1-1.pdf>]
+<Paper_files/figure-latex/var1-1.pdf, id=199, 433.62pt x 289.08pt>
 File: Paper_files/figure-latex/var1-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/var1-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/var1-1.pdf  used on input lin
-e 392.
+e 395.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<Paper_files/figure-latex/revenue1-1.pdf, id=228, 469.755pt x 325.215pt>
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.403 
+       <./Paper_files/figure-latex/employee-1.pdf>] [10pdfTeX warning (ext4): d
+estination with the same identifier (name{figure.7}) has been already used, dup
+licate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.403 
+       <./Paper_files/figure-latex/correlation-1.pdf>]
+<Paper_files/figure-latex/revenue1-1.pdf, id=230, 469.755pt x 325.215pt>
 File: Paper_files/figure-latex/revenue1-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/revenue1-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/revenue1-1.pdf  used on input
- line 405.
+ line 408.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [11pdfTeX warning (ext4): destination with the same identifier (name{figure.8})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.418 
+l.421 
        <./Paper_files/figure-latex/var1-1.pdf>] [12pdfTeX warning (ext4): desti
 nation with the same identifier (name{figure.9}) has been already used, duplica
 te ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.418 
+l.421 
        <./Paper_files/figure-latex/revenue1-1.pdf>] [13] [14] [15pdfTeX warning
  (ext4): destination with the same identifier (name{table.3}) has been already 
 used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.521 \newpage
+l.524 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.521 \newpage
+l.524 \newpage
               ]
-Underfull \hbox (badness 10000) in paragraph at lines 543--545
+Underfull \hbox (badness 10000) in paragraph at lines 546--548
 \T1/lmr/m/n/10 strati^^\ed _ random _ sampling . asp# : ~ : text = Advantages %
  20of % 20Strati^^\ed % 20Random % 20Sampling ,[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--569
+Underfull \hbox (badness 10000) in paragraph at lines 570--572
 []$\T1/lmr/m/n/10 https : / / www . investopedia . com / ask / answers / 041615
  / what -[] are -[] advantages -[] and -[] disadvantages -[] strati^^\ed -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 576--578
+Underfull \hbox (badness 10000) in paragraph at lines 579--581
 \T1/lmr/m/n/10 ca / 311 / knowledgebase / kb / docs / articles / economic -[] d
 evelopment -[] and -[] culture / program -[] support / number -[] of -[]
  []
 
 
-Underfull \hbox (badness 3158) in paragraph at lines 582--584
+Underfull \hbox (badness 3158) in paragraph at lines 585--587
 [][]\T1/lmr/m/n/10 ``Peel Health In-spec-tions.'' n.d. \T1/lmr/m/it/10 Peel\T1/
 lmr/m/n/10 . []$http : / / rmop . hedgerowsoftware . com / Portal / Food / Tabl
 e ?
  []
 
-[16]
-Overfull \hbox (504.10461pt too wide) in paragraph at lines 612--614
-\T1/lmr/m/n/10 pZDBbsIwDIafZQeOkxM2QXuMKkRbhJCYJnW5IA9Cm1GSkARE336mXFd24GLF8e^^
-[vw0SKpAGL7rGqK3BlvIvOdmUBcu4WLBynk1mTEzXH2n6mfCccyhBElCIeZHnBKzek4wJthLleJqwWc
-pvCvrndJIC5NaaqK4Rqs5v -[]
- []
-
-
-Overfull \hbox (123.10713pt too wide) in paragraph at lines 612--614
-\T1/lmr/m/n/10 reJI9ZZf6AkRB3P _ Udjj4qiwjY2I6bNXm3JzDnsdFAYVECzc15diCWL9 _ 6Ae
-6VNcD1pnLe1x -[] Nt8tgvs2UN0mFsXknKQvWPIJkbFLzv -[]
- []
-
-[17] (./Paper.aux)
+[16] [17] (./Paper.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -778,13 +767,13 @@ Package rerunfilecheck Info: File `Paper.out' has not changed.
 (rerunfilecheck)             Checksum: 049FC805AEB3C1FC8DB86FF5D323ABE8;1805.
  ) 
 Here is how much of TeX's memory you used:
- 12622 strings out of 481252
- 181716 string characters out of 5915076
- 498457 words of memory out of 5000000
- 29169 multiletter control sequences out of 15000+600000
+ 12621 strings out of 481252
+ 181699 string characters out of 5915076
+ 497058 words of memory out of 5000000
+ 29168 multiletter control sequences out of 15000+600000
  470517 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,10n,74p,1231b,385s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,74p,1411b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{appendixC} has been referenced but does not exist
 , replaced by a fixed one
 
@@ -800,10 +789,10 @@ lm/lmr6.pfb></Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.
 pfb></Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Us
 ers/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/ya
 ng/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Paper.pdf (17 pages, 487928 bytes).
+Output written on Paper.pdf (17 pages, 506056 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
- 399 compressed objects within 4 object streams
+ 449 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
  124 named destinations out of 1000 (max. 500000)
  166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

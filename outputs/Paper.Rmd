@@ -1,12 +1,13 @@
 ---
-title: "TITLE"
+title: "Opening Restaurants During COVID-19 Can Prove Beneficial for Restaurant Revenue in the GTA"
 author: "Adrian Wong, Yingying Zhou, Xinyi Xu, Yang Wu "
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
  bookdown::pdf_document2:
  toc: no
-subtitle: "SUBTITLE"
-abstract: "ABSTRACT"
+subtitle: "An analysis of restaurant businesses amidst COVID-19 in the GTA"
+abstract: "Restaurant businesses are suffering in the advent of COVID-19 lockdown restrictions. Within this paper, a randomized controlled trial was conducted in order to explore the effects of reopening dine-in services for restaurants within the GTA. It was discovered that restaurants that allow for dine-in services provide higher salaries and more job opportunities on average compared to restaurants that either offer take-out or delivery services only. Moreover, this analysis illustrated that expense structures between restaurants are likely to shift as a result of offering dine-in services during the pandemic, such that variable costs are likely to increase. Ultimately, restaurants that allow patrons to dine-in see a significant increase in revenue as a result (a difference of $5000 on average). By analyzing this data, results may help the government enact appropriate lockdown policies that take a nuanced consideration of restaurant businesses."
+
 thanks: 'Code and data are available at: https://github.com/yangg1224/groupproject-.git'
 bibliography: references.bib
 ---
@@ -24,12 +25,11 @@ library(ggpubr)
 ```
 
 # Introduction
-```{r}
-
-```
+Current COVID-19 lockdown policies are having a significant effect on restaurant businesses within the GTA. Previous research shows that over half of Canadian restaurants may be unable to operate in current conditions that were set out by the local government. This can be detrimental to the economic situation as restaurant businesses can contribute over 4% of the national GDP. As a result, the government needs to consider the business effects of these lockdown policies on restaurants across the GTA. A randomized controlled trial was conducted to investigate these factors. Within the treatment group, restaurants were given an intervention that allowed them to open for indoor/patio dining while a control group remained open only for delivery and take-out services. After one month, these restaurants were given a survey that asked them to indicate different business-related factors, such as their expense changes, employee salaries, revenue, and COVID-related exposures during the experimental condition. More details with regards to data collection, intervention, descriptive analysis, and overview of findings will be provided in subsequent sections. Finally, limitations of the study as well as future directions will be discussed. This analysis will ultimately inform decisions with regards to the severity of restrictions imposed on restaurants in the GTA during the current pandemic.
 
 # Data 
-In this report, we use the R statistical programming language [@citeR]. To be specific, we use the “tidyverse” package to process data [@citetidyverse], "kableExtra" package to generate tables [@citekableExtra],  "ggplot2" is used to draw diagrams [@gg1], "ggthemes" is used to change the diagram theme. [@themes]ADD ANY PACKAGE HERE. The survey conducted by Petit Poll collects the following data:
+In this report, we use the R statistical programming language [@citeR]. To be specific, we use the “tidyverse” package to process data [@citetidyverse], "kableExtra" package to generate tables [@citekableExtra],  "ggplot2" is used to draw diagrams [@gg1], "ggthemes" is used to change the diagram theme. [@themes].
+The survey conducted by Petit Poll collects the following data:
 
 * Geographical information (FSA, Region)
 * Type of restaurant (Fast food, fast casual, casual dining, premium casual, family style, fine dining)
@@ -189,41 +189,14 @@ R1
 
 
 ```{r restaurant2, fig.cap = "Restaurant types", echo=FALSE,fig.width=12, fig.height=4}
+R2<-simulated_data%>%
+  ggplot(aes(x = simulated_data$Q3 ,fill = type)) +
+  geom_bar(stat = "count", position = "dodge") +
+  labs(title = "More restuarants in GTA are casual dinning ",x="Regions") +
+  theme_minimal() +
+  scale_fill_manual(values = c("#E85C34", "#2C92D5"))
 
-library(viridisLite)
-
-# Treated group
-rt1<-
-  ggplot(treated_data, aes(fill= Q3, x= Q2)) +
-  geom_bar(position="stack", stat="count")+
-    ggtitle("Treated Group: Restaurant Types") +
-    xlab("Regions")+
-    ylab("Count of Numbers")+
-    theme_grey()
-
-    
-rt1<- rt1 + guides(fill=guide_legend(title="Types")) # change the Legend title 
-
-# Control group
-rt2<-
-  ggplot(control_data, aes(fill= Q3, x= Q2)) +
-  geom_bar(position="stack", stat="count")+
-    ggtitle("Control Group: Restaurant Types") +
-    xlab("Regions")+
-    ylab("Count of Numbers")+
-    theme_grey()
-    
-rt2<- rt2 + guides(fill=guide_legend(title="Types")) # change the Legend title 
-# combine two diagram in one graph
-ggarrange(
-  rt1, rt2, 
-  ncol = 2, nrow = 1,
-  vjust = 1,
-  widths = c(2, 2),
-  align = "hv",
-  common.legend = TRUE, legend = "bottom"
-  )
-
+R2
 ```
 
 * In terms of employees salary, the average hourly rate before and after intervention is both around 17 CAD. In contrast with two boxplots (Figure \@ref(fig:salary2)), we can see there is a slight increase in the treated group. The reason behind might because the employee take more risks to go for work, accordingly they will receive higher salary(Figure \@ref(fig:salary1)).  
@@ -330,7 +303,7 @@ cxc
 
 
 ### T-Test
-The t-test is used to compare the sample mean of our Treated group and Control group. The goal is to determine whether the intervention has an effective effect on the treated group. Our hypothesis is the intervention will have positive impact towards the restaurant's revenue. [@kim2015t] The t-test results is represented in the Table2(Table \@ref(tab:ttest)). The package **Broom** [@broom1] is used to clean the t test results and convert it into the dataframe. The p value we get is < 2.2e-16, as the p value would indicate a significant result, meaning that the actual p value is even smaller than 2.2e-16 (a typical threshold is 0.05, anything smaller counts as statistically significant).[@kim2015t] So we can 
+The t-test is used to compare the sample mean of our Treated group and Control group. The goal is to determine whether the intervention has an effective effect on the treated group. Our hypothesis is the intervention will have positive impact towards the restaurant's revenue. [@kim2015t] The t-test results is represented in the (Table \@ref(tab:ttest)). The package **Broom** [@broom1] is used to clean the t test results and convert it into the dataframe. The p value we get is < 2.2e-16, as the p value would indicate a significant result, meaning that the actual p value is even smaller than 2.2e-16 (a typical threshold is 0.05, anything smaller counts as statistically significant).[@kim2015t] So we can 
 interpret hypothesis not rejected which means that the re-opening of restaurants has a significant effect on treated group in terms of revenue increase.
 
 ```{r ttest, echo=FALSE}
@@ -418,7 +391,7 @@ ggcorrplot(
 ### Finding ONE: Higher salary and more job opportunities in treatment group
 
 The treated restaurants have been opening for in-door dining and patio for a month while the control group must comply with the lockdown policy during COVID-19 second waves in GTA. The additional operating channels (in-door dining and patio) demand rehiring of previously layoff servers in the dining rooms and extra chefs in the kitchen. Under the surging demand for labor force and the potential risk due to exposure to human-contact, the restaurants have to offer higher salaries to compensate for employees’ potential risk of infection and entice them away from competitor restaurants. 
-From the salary distribution boxplots (Figure \@ref(fig:Salary2)) we can see that overall salary pay levels are higher in the treatment group across 5 regions in GTA, including average rate and all other distribution percentiles. 
+From the salary distribution boxplots (Figure \@ref(fig:Salary2)),  we can see that overall salary pay levels are higher in the treatment group across 5 regions in GTA, including average rate and all other distribution percentiles. 
 As for job opportunities, the treated restaurants hire more labor force. To cater to the increased demand from dine-in orders, the open restaurants hire more servers and chefs, which result in a size expansion in the number of employees. The number of restaurants having more than 10 employees are larger in the treatment group, whereas there are no restaurants operating with more than 30 employees in the control group. (Figure \@ref(fig:employee))
 
 
