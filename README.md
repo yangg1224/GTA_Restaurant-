@@ -22,8 +22,8 @@ The dataset includes features such as:
 
 # File Structure
 * inputs : any inputs used in the analysis of this report
-  * data : includes the raw and the cleaned csv dataset
+  * the csv dataset
   * literature : any referenced articles, journals, or other literature
 * outputs : outputs of the report
   * paper : includes the markdown script, pdf export, and bibtex reference file
-* scripts : includes data import and cleaning scripts
+* scripts : includes data simulation script
