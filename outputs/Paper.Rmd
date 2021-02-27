@@ -28,7 +28,7 @@ library(ggpubr)
 Current COVID-19 lockdown policies are having a significant effect on restaurant businesses within the GTA. Previous research shows that over half of Canadian restaurants may be unable to operate in current conditions that were set out by the local government [@toronto_2020]. This can be detrimental to the economic situation as restaurant businesses can contribute over 4% of the national GDP [@lew_2020]. As a result, the government needs to consider the business effects of these lockdown policies on restaurants across the GTA. A randomized controlled trial was conducted to investigate these factors. Within the treatment group, restaurants were given an intervention that allowed them to open for indoor/patio dining while a control group remained open only for delivery and take-out services. After one month, these restaurants were given a survey that asked them to indicate different business-related factors, such as their expense changes, employee salaries, revenue, and COVID-related exposures during the experimental condition. More details with regards to data collection, intervention, descriptive analysis, and overview of findings will be provided in subsequent sections. Finally, limitations of the study as well as future directions will be discussed. This analysis will ultimately inform decisions with regards to the severity of restrictions imposed on restaurants in the GTA during the current pandemic.
 
 # Data 
-In this report, we use the R statistical programming language [@citeR]. To be specific, we use the “tidyverse” package to process data [@citetidyverse], "kableExtra" package to generate tables [@citekableExtra],  "ggplot2" is used to draw diagrams [@gg1], "ggthemes" is used to change the diagram theme [@themes].
+In this report, we use the R statistical programming language [@citeR]. To be specific, we use the `tidyvers` package to process data [@citetidyverse], `kableExtra` package to generate tables [@citekableExtra],  `ggplot2` is used to draw diagrams [@gg1], `ggthemes` is used to change the diagram theme [@themes].
 The survey conducted by Petit Poll collects the following data:
 
 * Geographical information (FSA, Region)
@@ -101,10 +101,10 @@ We have also considered how the data will be stored for future use. All data wil
 ## Descriptive Analysis
 ```{r read_data, include=FALSE}
 
-setwd("~/Downloads/Git/groupproject-") 
+library(here)
 
 # read raw dataset from scripts, need to run survey_response _simulation first.
-simulated_data<- read_csv("inputs/simulated_data.csv") 
+simulated_data<- read_csv(here::here("inputs/simulated_data.csv"))
 
 # We add a new column To distinguish the restaurant size by employees number. 
 # if employees number >20 then we define it is big, otherwise it is small.
