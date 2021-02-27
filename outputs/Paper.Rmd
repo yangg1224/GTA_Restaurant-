@@ -184,23 +184,7 @@ R1<-simulated_data%>%
   theme_minimal() +
   scale_fill_manual(values = c("#E85C34", "#2C92D5"))
 
-R2<-simulated_data%>%
-  ggplot(aes(x = simulated_data$Q3 ,fill = type)) +
-  geom_bar(stat = "count", position = "dodge") +
-  labs(title = "More restuarants in GTA are casual dinning ",x="Regions") +
-  theme_minimal() +
-  scale_fill_manual(values = c("#E85C34", "#2C92D5"))
-
-# combine two diagram in one graph
-ggarrange(
-  R1,R2,
-  ncol = 1, nrow = 2,
-  vjust = 1,
-  widths = c(2, 2),
-  align = "hv",
-  common.legend = TRUE, legend = "bottom"
-  )
-
+R1
 ```
 
 
@@ -242,9 +226,9 @@ ggarrange(
 
 ```
 
-* In terms of employees salary, the average hourly rate before and after intervention is both around 17 CAD. In contrast with two boxplots, we can see there is a slight increase in the treated group. The reason behind might because the employee take more risks to go for work, accordingly they will receive higher salary.  (Figure \@ref(fig:salary))  
+* In terms of employees salary, the average hourly rate before and after intervention is both around 17 CAD. In contrast with two boxplots (Figure \@ref(fig:salary2)), we can see there is a slight increase in the treated group. The reason behind might because the employee take more risks to go for work, accordingly they will receive higher salary(Figure \@ref(fig:salary1)).  
 
-```{r salary distribution, fig.cap = "Salary Distribution", echo=FALSE,fig.width=12, fig.height=4}
+```{r salary1, fig.cap = "Salary Distribution", echo=FALSE,fig.width=12, fig.height=4}
 sd1<-
   ggplot(simulated_data, aes(x = simulated_data$Q9, fill=type)) +
   geom_histogram(position = "dodge", bins = 30,binwidth = 0.5) +
@@ -256,7 +240,7 @@ sd1
 ```
 
 
-```{r salary, fig.cap = "Employee salary distribution",echo=FALSE, fig.width=10, fig.height=4}
+```{r salary2, fig.cap = "Employee salary distribution",echo=FALSE, fig.width=10, fig.height=4}
 library(ggthemes)
 # Treated group
 s1<-
@@ -292,12 +276,9 @@ ggarrange(
 ```
 
 
-<<<<<<< HEAD
-* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor. From the pie charts, we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants must follow the rules and policies set by their head office. [find a reference] Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group.
-=======
-* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor.[@nhamo2020restaurants] From the pie charts, we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group. 
->>>>>>> 756d6dc61fabc00708c1a9ac52f36e83af22df18
-(Figure \@ref(fig:pie1))
+
+* The attributes of the restaurant determine its management mode, so whether the restaurant is a franchise is quite important factor.[@nhamo2020restaurants] From the pie charts(Figure \@ref(fig:pie1)), we found the portion of franchise rate in treated group is slightly lower than control group. We assume in treated group, the branch franchise restaurants should follow the rules by the head office. Considering the potential cost of COVID issues, chain restaurants will face greater risks, which is why they are less likely to be in the treated group. 
+
 
 
 ```{r pie1, fig.cap = "Restaurant franchise distribution", echo=FALSE, fig.width=10, fig.height=5}
@@ -326,12 +307,11 @@ ggarrange(
   align = "hv"
   )
 ```
-<<<<<<< HEAD
-* The polar bar graph illustrates the distribution of employee numbers, as can be shown in figure below. (Figure \@ref(fig:employee)) Because of the COVID lockdown restriction, no restaurant is allowed to open for large group dine-in or outdoor patio, which in turn causes the layoff in servers. In particular, large restaurants would want to further cut labor costs by laying off extra helpers in the kitchen to maintain only essential operations for food production. So in the control group, there is 0 restaurant which has more than 30 employees. Most of the restaurants have 10 to 20 employees, as a result of labor force layoff. 
-=======
 
-* The polar chart illustrates the employee numbers distribution, as can be seen in figure below. (Figure \@ref(fig:employee)) Because of COVID rule, no restaurant is allowed to open for large group dine in. For large size restaurant, they all make corresponding actions to reduce their flexiable costs, such as reduce the full time employees. So in the control group, there is 0 restaurant which has more than 30 employees. Most of restaurant has 10 to 20 employees. 
->>>>>>> 756d6dc61fabc00708c1a9ac52f36e83af22df18
+
+* The polar bar graph illustrates the distribution of employee numbers, as can be shown in figure below (Figure \@ref(fig:employee)). Because of the COVID lockdown restriction, no restaurant is allowed to open for large group dine-in or outdoor patio, which in turn causes the layoff in servers. In particular, large restaurants would want to further cut labor costs by laying off extra helpers in the kitchen to maintain only essential operations for food production. So in the control group, there is 0 restaurant which has more than 30 employees. Most of the restaurants have 10 to 20 employees, as a result of labor force layoff. 
+
+
 
 ```{r employee, fig.cap = "Employee numbers distribution",echo=FALSE, fig.width=10, fig.height=4}
 cxc <- 
@@ -438,17 +418,17 @@ ggcorrplot(
 ### Finding ONE: Higher salary and more job opportunities in treatment group
 
 The treated restaurants have been opening for in-door dining and patio for a month while the control group must comply with the lockdown policy during COVID-19 second waves in GTA. The additional operating channels (in-door dining and patio) demand rehiring of previously layoff servers in the dining rooms and extra chefs in the kitchen. Under the surging demand for labor force and the potential risk due to exposure to human-contact, the restaurants have to offer higher salaries to compensate for employees’ potential risk of infection and entice them away from competitor restaurants. 
-From the salary distribution boxplots (Figure \@ref(fig:Salary)) we can see that overall salary pay levels are higher in the treatment group across 5 regions in GTA, including average rate and all other distribution percentiles. 
+From the salary distribution boxplots (Figure \@ref(fig:Salary2)) we can see that overall salary pay levels are higher in the treatment group across 5 regions in GTA, including average rate and all other distribution percentiles. 
 As for job opportunities, the treated restaurants hire more labor force. To cater to the increased demand from dine-in orders, the open restaurants hire more servers and chefs, which result in a size expansion in the number of employees. The number of restaurants having more than 10 employees are larger in the treatment group, whereas there are no restaurants operating with more than 30 employees in the control group. (Figure \@ref(fig:employee))
 
 
 ### Finding TWO: Cost structure changes in treatment group 
 
 Labor cost is one of the main components of variable cost for restaurants. The hiring surge for the restaurants open for dine-in increases the expenditure on human capital and thus an increase in variable cost. In addition, dine-in and patio options potentially increase the demand for food ingredients, which is another major source of variable cost. As a result, most of the open restaurants have increased variable costs. For fixed costs, about half of the open restaurants experience a cost increase and the other half have no change in fixed costs.    
-(Figure \@ref(fig:var_fix))
+(Figure \@ref(fig:var1))
 
 
-```{r var_fix, fig.cap = "Invention effect on Variable and Fixed cost",echo=FALSE, fig.width=6, fig.height=4}
+```{r var1, fig.cap = "Invention effect on Variable and Fixed cost",echo=FALSE, fig.width=6, fig.height=4}
 # Treated group
 
 # Fixed costs 
@@ -491,11 +471,11 @@ ggarrange(
 
 ### Finding THREE: Significant revenue increase in treatment group
 
-The re-opening implementation enables the treated restaurants to operate indoor dining and patio services besides offering delivery and/or pickup as before during lockdown. The additional line of business attracts more customers to visit stores to order dishes and beverages. The increased food sales earn extra revenue for those restaurants. As demonstrated through the revenue histogram (Figure \@ref(fig:revenue_distribution)), the treatment group has higher revenue levels overall than the control group. The restaurants follow binomial distributions based on restaurant sizes. Restaurant size and revenue level are positively correlated. According to the correlation heatmap (Figure \@ref(fig:correlation)), bigger restaurants generate more revenues than small ones. Restaurants having fewer than 20 employees are defined to be small, which are most of the cases in the total samples. Both small and big restaurants generate higher revenues in the treated group. The t-test [cross ref: t-table] further verifies our finding that the restaurants allowed for re-opening earn significantly more than the control group; the average revenue for the treated is \$63,144 while below \$5,000 for the control group. 
+The re-opening implementation enables the treated restaurants to operate indoor dining and patio services besides offering delivery and/or pickup as before during lockdown. The additional line of business attracts more customers to visit stores to order dishes and beverages. The increased food sales earn extra revenue for those restaurants. As demonstrated through the revenue histogram (Figure \@ref(fig:revenue1)), the treatment group has higher revenue levels overall than the control group. The restaurants follow binomial distributions based on restaurant sizes. Restaurant size and revenue level are positively correlated. According to the correlation heatmap (Figure \@ref(fig:correlation)), bigger restaurants generate more revenues than small ones. Restaurants having fewer than 20 employees are defined to be small, which are most of the cases in the total samples. Both small and big restaurants generate higher revenues in the treated group. The t-test [cross ref: t-table] further verifies our finding that the restaurants allowed for re-opening earn significantly more than the control group; the average revenue for the treated is \$63,144 while below \$5,000 for the control group. 
 
 Invention effect on Revenue distributions 
 
-```{r revenue_distribution, fig.cap="Invention effect on Revenue distributions",echo=FALSE}
+```{r revenue1, fig.cap="Invention effect on Revenue distributions",echo=FALSE}
 
 library(ggthemes)
 # Treated group
