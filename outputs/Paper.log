@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.28)  26 FEB 2021 22:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.28)  26 FEB 2021 22:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -723,43 +723,85 @@ te ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.421 
-       <./Paper_files/figure-latex/revenue1-1.pdf>] [13] [14] [15pdfTeX warning
- (ext4): destination with the same identifier (name{table.3}) has been already 
-used, duplicate ignored
+       <./Paper_files/figure-latex/revenue1-1.pdf>] [13] [14]
+</Users/yang/Downloads/Git/groupproject-/outputs/image/questionnaire1.png, id=2
+82, 522.95375pt x 745.78625pt>
+File: /Users/yang/Downloads/Git/groupproject-/outputs/image/questionnaire1.png 
+Graphic file (type png)
+<use /Users/yang/Downloads/Git/groupproject-/outputs/image/questionnaire1.png>
+Package pdftex.def Info: /Users/yang/Downloads/Git/groupproject-/outputs/image/
+questionnaire1.png  used on input line 526.
+(pdftex.def)             Requested size: 328.83221pt x 468.94882pt.
+</Users/yang/Downloads/Git/groupproject-/outputs/image/questionnaire2.png, id=2
+84, 521.95pt x 580.1675pt>
+File: /Users/yang/Downloads/Git/groupproject-/outputs/image/questionnaire2.png 
+Graphic file (type png)
+<use /Users/yang/Downloads/Git/groupproject-/outputs/image/questionnaire2.png>
+Package pdftex.def Info: /Users/yang/Downloads/Git/groupproject-/outputs/image/
+questionnaire2.png  used on input line 535.
+(pdftex.def)             Requested size: 328.83023pt x 365.50745pt.
+</Users/yang/Downloads/Git/groupproject-/outputs/image/questionnaire3.png, id=2
+85, 524.96124pt x 646.415pt>
+File: /Users/yang/Downloads/Git/groupproject-/outputs/image/questionnaire3.png 
+Graphic file (type png)
+<use /Users/yang/Downloads/Git/groupproject-/outputs/image/questionnaire3.png>
+Package pdftex.def Info: /Users/yang/Downloads/Git/groupproject-/outputs/image/
+questionnaire3.png  used on input line 544.
+(pdftex.def)             Requested size: 328.83691pt x 404.91582pt.
+[15pdfTeX warning (ext4): destination with the same identifier (name{table.3}) 
+has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.524 \newpage
+l.550 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.524 \newpage
-              ]
-Underfull \hbox (badness 10000) in paragraph at lines 546--548
+l.550 \newpage
+              ] [16pdfTeX warning (ext4): destination with the same identifier 
+(name{figure.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.550 \newpage
+               </Users/yang/Downloads/Git/groupproject-/outputs/image/questionn
+aire1.png>] [17pdfTeX warning (ext4): destination with the same identifier (nam
+e{figure.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.550 \newpage
+               </Users/yang/Downloads/Git/groupproject-/outputs/image/questionn
+aire2.png>] [18pdfTeX warning (ext4): destination with the same identifier (nam
+e{figure.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.550 \newpage
+               </Users/yang/Downloads/Git/groupproject-/outputs/image/questionn
+aire3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 572--574
 \T1/lmr/m/n/10 strati^^\ed _ random _ sampling . asp# : ~ : text = Advantages %
  20of % 20Strati^^\ed % 20Random % 20Sampling ,[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--572
+Underfull \hbox (badness 10000) in paragraph at lines 596--598
 []$\T1/lmr/m/n/10 https : / / www . investopedia . com / ask / answers / 041615
  / what -[] are -[] advantages -[] and -[] disadvantages -[] strati^^\ed -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 579--581
+Underfull \hbox (badness 10000) in paragraph at lines 605--607
 \T1/lmr/m/n/10 ca / 311 / knowledgebase / kb / docs / articles / economic -[] d
 evelopment -[] and -[] culture / program -[] support / number -[] of -[]
  []
 
 
-Underfull \hbox (badness 3158) in paragraph at lines 585--587
+Underfull \hbox (badness 3158) in paragraph at lines 611--613
 [][]\T1/lmr/m/n/10 ``Peel Health In-spec-tions.'' n.d. \T1/lmr/m/it/10 Peel\T1/
 lmr/m/n/10 . []$http : / / rmop . hedgerowsoftware . com / Portal / Food / Tabl
 e ?
  []
 
-[16] [17] (./Paper.aux)
+[19] [20] (./Paper.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -767,10 +809,10 @@ Package rerunfilecheck Info: File `Paper.out' has not changed.
 (rerunfilecheck)             Checksum: 049FC805AEB3C1FC8DB86FF5D323ABE8;1805.
  ) 
 Here is how much of TeX's memory you used:
- 12621 strings out of 481252
- 181699 string characters out of 5915076
- 497058 words of memory out of 5000000
- 29168 multiletter control sequences out of 15000+600000
+ 12656 strings out of 481252
+ 183449 string characters out of 5915076
+ 497271 words of memory out of 5000000
+ 29192 multiletter control sequences out of 15000+600000
  470517 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,10n,74p,1411b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -789,10 +831,10 @@ lm/lmr6.pfb></Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.
 pfb></Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Us
 ers/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/ya
 ng/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Paper.pdf (17 pages, 506056 bytes).
+Output written on Paper.pdf (20 pages, 682001 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 396 compressed objects within 4 object streams
- 124 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 474 PDF objects out of 1000 (max. 8388607)
+ 411 compressed objects within 5 object streams
+ 130 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -602,8 +602,20 @@ estimated_cost %>%
 ```
 ## Appendix C: Screenshot of the survey
 
+```{r page1, echo=FALSE, fig.cap="Screen capture of the first part of the Survey.", out.width = '70%', fig.align="center"} 
+library(here)
+knitr::include_graphics(here::here("outputs/image/questionnaire1.png"))
+```
 
+```{r page2, echo=FALSE, fig.cap="Screen capture of the first part of the Survey.", out.width = '70%', fig.align="center"} 
+library(here)
+knitr::include_graphics(here::here("outputs/image/questionnaire2.png"))
+```
 
+```{r page3, echo=FALSE, fig.cap="Screen capture of the first part of the Survey.", out.width = '70%', fig.align="center"} 
+library(here)
+knitr::include_graphics(here::here("outputs/image/questionnaire3.png"))
+```
 \newpage
 
 # References
