@@ -8,7 +8,7 @@ output:
 subtitle: "An analysis of restaurant businesses amidst COVID-19 in the GTA"
 abstract: "Restaurant businesses are suffering in the advent of COVID-19 lockdown restrictions. Within this paper, a randomized controlled trial was conducted in order to explore the effects of reopening dine-in services for restaurants within the GTA. It was discovered that restaurants that allow for dine-in services provide higher salaries and more job opportunities on average compared to restaurants that either offer take-out or delivery services only. Moreover, this analysis illustrated that expense structures between restaurants are likely to shift as a result of offering dine-in services during the pandemic, such that variable costs are likely to increase. Ultimately, restaurants that allow patrons to dine-in see a significant increase in revenue as a result (a difference of $5000 on average). By analyzing this data, results may help the government enact appropriate lockdown policies that take a nuanced consideration of restaurant businesses."
 
-thanks: 'Code and data are available at: https://github.com/yangg1224/groupproject-.git'
+thanks: 'Code and data are available at: https://github.com/yangg1224/GTA_Restaurant-.git'
 bibliography: references.bib
 ---
 
