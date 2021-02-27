@@ -25,5 +25,6 @@ The dataset includes features such as:
   * the csv dataset
   * literature : any referenced articles, journals, or other literature
 * outputs : outputs of the report
+  * images: includes images of the survey sent to restaurants
   * paper : includes the markdown script, pdf export, and bibtex reference file
 * scripts : includes data simulation script
