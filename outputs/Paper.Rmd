@@ -321,7 +321,7 @@ m%>%
   )%>%
   kableExtra::kbl(caption = "T Test on the Restaurant's revenue") %>%
   kableExtra::kable_styling(latex_options = "scale_down")%>% # use scale_down option to make the font
-  kable_styling( )
+  kableExtra::kable_styling(latex_options = c("hold_position"))
   
 ```
 
@@ -523,7 +523,7 @@ Along with our Randomized Control Trial experiment framework, the study would pr
 # Appendix
 
 ## Appendix A {#appendixA}
-```{r AppendixA, message=FALSE, echo = FALSE}
+```{r AppendixA, message=FALSE,echo = FALSE}
 ### Number in GTA ### 
 number_of_Toronto = 7500
 number_of_Durham = 3260
@@ -553,8 +553,7 @@ sample_Halton =proportion_Halton *number_of_sample
 sample_size <- data.frame(
   Region = c ("Toronto", "Durham" , "York" , "Peel" , "Halton","Total"),
   Number_of_Region = c (number_of_Toronto,number_of_Durham,number_of_York,number_of_Peel,number_of_Halton,number_of_GTA),
-  Proportion_of_Region= c (proportion_Toronto,proportion_Durham,proportion_York,proportion_Peel,proportion_Halton,Proportion_GTA)%>% round(digits = 2),
-  Sample_of_Region = c (sample_Toronto,sample_Durham,sample_York ,sample_Peel,sample_Halton,number_of_sample) %>% round(digits = 0)
+  Proportion_of_Region= c (proportion_Toronto,proportion_Durham,proportion_York,proportion_Peel,proportion_Halton,Proportion_GTA)%>% round(digits = 2), Sample_of_Region = c (sample_Toronto,sample_Durham,sample_York ,sample_Peel,sample_Halton,number_of_sample) %>% round(digits = 0)
   )
   
 ### Table ###
@@ -562,7 +561,7 @@ library(kableExtra)
 sample_size %>% 
   knitr::kable(caption = "Detailed information for stratification",
                col.names = c("Region", "Number of Restuarants", "Proportion(%)", "Sample Selected"))%>%
-  kable_styling()
+  kableExtra::kable_styling(latex_options = c("hold_position"))
 ```
 
 ## Appendix B {#appendixB}
@@ -595,11 +594,13 @@ library(kableExtra)
 estimated_cost %>% 
   knitr::kable(caption = "Estimated Cost",
                col.names = c("Components", "Cost per unit", "Total cost for each component"))%>%
-  kable_styling()
+  kableExtra::kable_styling(latex_options = c("hold_position"))
 
 
 ```
-## Appendix C: Screenshot of the survey
+
+\newpage
+## Appendix C: 
 
 ```{r page1, echo=FALSE, fig.cap="Screen capture of the first part of the Survey.", out.width = '70%', fig.align="center"} 
 library(here)
