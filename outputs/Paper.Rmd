@@ -321,7 +321,7 @@ m%>%
   )%>%
   kableExtra::kbl(caption = "T Test on the Restaurant's revenue") %>%
   kableExtra::kable_styling(latex_options = "scale_down")%>% # use scale_down option to make the font
-  kable_styling()
+  kable_styling( )
   
 ```
 
