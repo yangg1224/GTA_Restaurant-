@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.28)  26 FEB 2021 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.28)  26 FEB 2021 22:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -704,7 +704,7 @@ File: Paper_files/figure-latex/var1-1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Paper_files/figure-latex/var1-1.pdf  used on input lin
 e 392.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
-<Paper_files/figure-latex/revenue1-1.pdf, id=227, 469.755pt x 325.215pt>
+<Paper_files/figure-latex/revenue1-1.pdf, id=228, 469.755pt x 325.215pt>
 File: Paper_files/figure-latex/revenue1-1.pdf Graphic file (type pdf)
 <use Paper_files/figure-latex/revenue1-1.pdf>
 Package pdftex.def Info: Paper_files/figure-latex/revenue1-1.pdf  used on input
@@ -784,7 +784,7 @@ Here is how much of TeX's memory you used:
  29169 multiletter control sequences out of 15000+600000
  470517 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,10n,74p,1232b,385s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,74p,1231b,385s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{appendixC} has been referenced but does not exist
 , replaced by a fixed one
 
@@ -800,10 +800,10 @@ lm/lmr6.pfb></Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.
 pfb></Users/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Us
 ers/yang/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/ya
 ng/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Paper.pdf (17 pages, 487869 bytes).
+Output written on Paper.pdf (17 pages, 487928 bytes).
 PDF statistics:
- 451 PDF objects out of 1000 (max. 8388607)
- 398 compressed objects within 4 object streams
+ 452 PDF objects out of 1000 (max. 8388607)
+ 399 compressed objects within 4 object streams
  124 named destinations out of 1000 (max. 500000)
  166 words of extra memory for PDF output out of 10000 (max. 10000000)
 
