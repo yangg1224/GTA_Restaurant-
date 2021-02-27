@@ -90,20 +90,57 @@ fsa_generate <- function(region) {
 
 
 #### Simulate questions ####
-# Q1: What is the first three digits of your postal code?
+# Q1: What is the first three digits of your postal code? 
+
+# source from: https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_L
+
 # Q2: Which municipality is your restaurant located in?
+
+# source from:https://www.google.com/url?q=https://www.toronto.ca/311/knowledgebase/kb/docs/articles/economic-development-and-culture/program-support/number-of-restaurants-in-toronto.html%23:~:text%3DApproximately%25207%252C500&sa=D&source=editors&ust=1614396911629000&usg=AOvVaw2PeiaPLBOEmvvJhAM3z6Y_
+
 # Q3: What is the type of your restaurant?
+
+# source from: https://www.scrapehero.com/top-fast-food-chains-in-canada/
+
 # Q4: Is your restaurant a franchise?
+
+# source from: http://www.franchise101.net/canadian-franchise-statistics
+
 # Q5: How long has your restaurant been open (in years)?
+
+# source from: https://www.lightspeedhq.com/blog/why-do-restaurants-fail/
+
 # Q6: Have you offered a takeout service in the past month?
+
+# source from: https://www.zomato.com/toronto/restaurants
+
 # Q7: Have you offered a delivery service in the past month?
+
+# source from: https://www.doordash.com/en-CA
+
 # Q8: Number of employees in the restaurant
+
+# source from: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410002301&pickMembers%5B0%5D=1.7&pickMembers%5B1%5D=2.1&pickMembers%5B2%5D=4.1&pickMembers%5B3%5D=5.1&cubeTimeFrame.startYear=2016&cubeTimeFrame.endYear=2020&referencePeriods=20160101%2C20200101
+
 # Q9: On average, how much do your restaurant employees earn per hour ($CAD)?
+
+# source from: https://ca.indeed.com/career/restaurant-staff/salaries/Durham--ON?from=top_sb
+
 # Q10: Has your restaurant been a site of a potential COVID case?
+
+# source from: https://ottawa.ctvnews.ca/bars-restaurants-account-for-2-per-cent-of-covid-19-outbreaks-in-ottawa-14-per-cent-in-toronto-1.5166676
+
 # Q11: How has your FIXED costs to run the restaurant changed within this month?
+
+# source from: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2110017201&pickMembers%5B0%5D=1.7&pickMembers%5B1%5D=2.1&cubeTimeFrame.startYear=2015&cubeTimeFrame.endYear=2019&referencePeriods=20150101%2C20190101
+
 # Q12: How has your FLEX/VARIABLE costs to run the restaurant changed within this month?
+
+# source from: https://pos.toasttab.com/blog/on-the-line/how-much-does-it-cost-to-open-a-restaurant
+
 # Q13: How much revenue did your restaurant make in the past month? ($CAD)
 
+# source from: https://www.insureon.com/food-business-insurance/restaurants/cost
 
 # Do this one for treated and once for control and then bring them together
 
